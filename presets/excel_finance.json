@@ -1,0 +1,27 @@
+{
+  "name": "Excel & Financial Pro",
+  "category": "Productivity",
+  "desc": "Accounting auto-sums, currency formatting, freeze panes, filters, and cell manipulation macros.",
+  "color": "#059669",
+  "r": 5,
+  "g": 150,
+  "b": 105,
+  "keys": [
+    { "label": "AutoSum", "type": 2, "code": 61, "mod": 4, "macro": "" },
+    { "label": "$ Currency", "type": 2, "code": 52, "mod": 3, "macro": "" },
+    { "label": "% Percent", "type": 2, "code": 53, "mod": 3, "macro": "" },
+    { "label": "Insert Row", "type": 2, "code": 61, "mod": 3, "macro": "" },
+    { "label": "Delete Row", "type": 2, "code": 45, "mod": 1, "macro": "" },
+    { "label": "Filter On", "type": 2, "code": 108, "mod": 3, "macro": "" },
+    { "label": "Flash Fill", "type": 2, "code": 101, "mod": 1, "macro": "" },
+    { "label": "Select All", "type": 2, "code": 97, "mod": 1, "macro": "" },
+    { "label": "Copy", "type": 2, "code": 99, "mod": 1, "macro": "" },
+    { "label": "Paste", "type": 2, "code": 118, "mod": 1, "macro": "" },
+    { "label": "Paste Val", "type": 3, "code": 0, "mod": 0, "macro": "" },
+    { "label": "Bold", "type": 2, "code": 98, "mod": 1, "macro": "" },
+    { "label": "Undo", "type": 2, "code": 122, "mod": 1, "macro": "" },
+    { "label": "Redo", "type": 2, "code": 121, "mod": 1, "macro": "" },
+    { "label": "Save", "type": 2, "code": 115, "mod": 1, "macro": "" },
+    { "label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": "" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "AI Copilot Deck",
+  "category": "AI & Research",
+  "desc": "Quick access to ChatGPT, Claude, Gemini, plus pre-built prompt starters for code reviews, refactoring, and test writing.",
+  "color": "#06b6d4",
+  "r": 6,
+  "g": 182,
+  "b": 212,
+  "keys": [
+    { "label": "ChatGPT", "type": 5, "code": 0, "mod": 0, "macro": "start https://chatgpt.com" },
+    { "label": "Claude", "type": 5, "code": 0, "mod": 0, "macro": "start https://claude.ai" },
+    { "label": "Gemini", "type": 5, "code": 0, "mod": 0, "macro": "start https://gemini.google.com" },
+    { "label": "GitHub", "type": 5, "code": 0, "mod": 0, "macro": "start https://github.com" },
+    { "label": "Explain", "type": 3, "code": 0, "mod": 0, "macro": "Explain this code step-by-step:\n" },
+    { "label": "Refactor", "type": 3, "code": 0, "mod": 0, "macro": "Refactor and optimize this:\n" },
+    { "label": "FindBugs", "type": 3, "code": 0, "mod": 0, "macro": "Review for bugs, edge cases & security:\n" },
+    { "label": "UnitTests", "type": 3, "code": 0, "mod": 0, "macro": "Write comprehensive unit tests for:\n" },
+    { "label": "Summarize", "type": 3, "code": 0, "mod": 0, "macro": "Summarize in concise bullet points:\n" },
+    { "label": "Markdown", "type": 3, "code": 0, "mod": 0, "macro": "Generate markdown documentation for:\n" },
+    { "label": "Terminal", "type": 5, "code": 0, "mod": 0, "macro": "wt" },
+    { "label": "VS Code", "type": 5, "code": 0, "mod": 0, "macro": "code ." },
+    { "label": "Copy", "type": 2, "code": 99, "mod": 1, "macro": "" },
+    { "label": "Paste", "type": 2, "code": 118, "mod": 1, "macro": "" },
+    { "label": "Clear", "type": 2, "code": 108, "mod": 1, "macro": "" },
+    { "label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": "" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Power Multitask",
+  "category": "Productivity",
+  "desc": "Everyday Windows power user essentials: Snipping tool, Terminal, Explorer, Task Manager, Virtual Desktops, and Audio controls.",
+  "color": "#00bfff",
+  "r": 0,
+  "g": 191,
+  "b": 255,
+  "keys": [
+    { "label": "Snip Tool", "type": 2, "code": 115, "mod": 10, "macro": "" },
+    { "label": "Terminal", "type": 5, "code": 0, "mod": 0, "macro": "wt" },
+    { "label": "Explorer", "type": 5, "code": 0, "mod": 0, "macro": "explorer" },
+    { "label": "TaskMgr", "type": 2, "code": 177, "mod": 3, "macro": "" },
+    { "label": "Desk Left", "type": 2, "code": 216, "mod": 9, "macro": "" },
+    { "label": "Desk Right", "type": 2, "code": 215, "mod": 9, "macro": "" },
+    { "label": "Snap Left", "type": 2, "code": 216, "mod": 8, "macro": "" },
+    { "label": "Snap Right", "type": 2, "code": 215, "mod": 8, "macro": "" },
+    { "label": "Copy", "type": 2, "code": 99, "mod": 1, "macro": "" },
+    { "label": "Paste", "type": 2, "code": 118, "mod": 1, "macro": "" },
+    { "label": "Clip Hist", "type": 2, "code": 118, "mod": 8, "macro": "" },
+    { "label": "Lock PC", "type": 2, "code": 108, "mod": 8, "macro": "" },
+    { "label": "Presence", "type": 4, "code": 2, "mod": 0, "macro": "" },
+    { "label": "Mute Audio", "type": 1, "code": 226, "mod": 0, "macro": "" },
+    { "label": "Play/Pause", "type": 1, "code": 205, "mod": 0, "macro": "" },
+    { "label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": "" }
+  ]
+}

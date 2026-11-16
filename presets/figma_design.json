@@ -1,0 +1,27 @@
+{
+  "name": "Figma Design",
+  "category": "Creative",
+  "desc": "Streamlined vector design shortcuts: Frames, Text, Pen, Auto-Layout, Components, Grouping, Zoom, and Eyedropper.",
+  "color": "#a855f7",
+  "r": 168,
+  "g": 85,
+  "b": 247,
+  "keys": [
+    { "label": "Frame (F)", "type": 0, "code": 102, "mod": 0, "macro": "" },
+    { "label": "Text (T)", "type": 0, "code": 116, "mod": 0, "macro": "" },
+    { "label": "Pen (P)", "type": 0, "code": 112, "mod": 0, "macro": "" },
+    { "label": "Hand (H)", "type": 0, "code": 104, "mod": 0, "macro": "" },
+    { "label": "AutoLay", "type": 2, "code": 97, "mod": 2, "macro": "" },
+    { "label": "CreateComp", "type": 2, "code": 107, "mod": 5, "macro": "" },
+    { "label": "Group", "type": 2, "code": 103, "mod": 1, "macro": "" },
+    { "label": "Ungroup", "type": 2, "code": 103, "mod": 3, "macro": "" },
+    { "label": "Zoom 100", "type": 2, "code": 48, "mod": 2, "macro": "" },
+    { "label": "Zoom Sel", "type": 2, "code": 50, "mod": 2, "macro": "" },
+    { "label": "Duplicate", "type": 2, "code": 100, "mod": 1, "macro": "" },
+    { "label": "Dropper", "type": 0, "code": 105, "mod": 0, "macro": "" },
+    { "label": "Undo", "type": 2, "code": 122, "mod": 1, "macro": "" },
+    { "label": "Redo", "type": 2, "code": 121, "mod": 1, "macro": "" },
+    { "label": "Assets", "type": 2, "code": 50, "mod": 4, "macro": "" },
+    { "label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": "" }
+  ]
+}

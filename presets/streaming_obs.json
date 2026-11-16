@@ -1,0 +1,27 @@
+{
+  "name": "Streamer & Audio Deck (OBS)",
+  "category": "Media",
+  "desc": "Control microphone muting, deafen, scene changes, recording, stream toggle, and sound effects.",
+  "color": "#8b5cf6",
+  "r": 139,
+  "g": 92,
+  "b": 246,
+  "keys": [
+    { "label": "Mute Mic", "type": 2, "code": 240, "mod": 7, "macro": "" },
+    { "label": "Deafen", "type": 2, "code": 241, "mod": 7, "macro": "" },
+    { "label": "Stream On", "type": 2, "code": 242, "mod": 7, "macro": "" },
+    { "label": "Record On", "type": 2, "code": 243, mod: 7, "macro": "" },
+    { "label": "Scene 1", "type": 2, "code": 244, "mod": 7, "macro": "" },
+    { "label": "Scene 2", "type": 2, "code": 245, "mod": 7, "macro": "" },
+    { "label": "Clip That", "type": 2, "code": 246, "mod": 7, "macro": "" },
+    { "label": "Overlay", "type": 2, "code": 247, "mod": 7, "macro": "" },
+    { "label": "Vol Up", "type": 1, "code": 233, "mod": 0, "macro": "" },
+    { "label": "Vol Down", "type": 1, "code": 234, "mod": 0, "macro": "" },
+    { "label": "Mute Sound", "type": 1, "code": 226, "mod": 0, "macro": "" },
+    { "label": "Play/Pause", "type": 1, "code": 205, "mod": 0, "macro": "" },
+    { "label": "Presence", "type": 4, "code": 2, "mod": 0, "macro": "" },
+    { "label": "Prev Track", "type": 1, "code": 182, "mod": 0, "macro": "" },
+    { "label": "Next Track", "type": 1, "code": 181, "mod": 0, "macro": "" },
+    { "label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": "" }
+  ]
+}

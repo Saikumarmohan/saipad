@@ -1,0 +1,27 @@
+{
+  "name": "Video Editor (Premiere / DaVinci)",
+  "category": "Creative",
+  "desc": "Dedicated timeline shortcuts for rapid trimming, blade cuts, ripple deletion, and export render.",
+  "color": "#ec4899",
+  "r": 236,
+  "g": 72,
+  "b": 153,
+  "keys": [
+    { "label": "Cut (Razor)", "type": 0, "code": 99, "mod": 0, "macro": "" },
+    { "label": "Select (V)", "type": 0, "code": 118, "mod": 0, "macro": "" },
+    { "label": "Ripple Del", "type": 2, "code": 212, "mod": 2, "macro": "" },
+    { "label": "Play/Pause", "type": 1, "code": 205, "mod": 0, "macro": "" },
+    { "label": "Zoom In", "type": 0, "code": 61, "mod": 0, "macro": "" },
+    { "label": "Zoom Out", "type": 0, "code": 45, "mod": 0, "macro": "" },
+    { "label": "Mark In", "type": 0, "code": 105, "mod": 0, "macro": "" },
+    { "label": "Mark Out", "type": 0, "code": 111, "mod": 0, "macro": "" },
+    { "label": "Prev Cut", "type": 1, "code": 218, "mod": 0, "macro": "" },
+    { "label": "Next Cut", "type": 1, "code": 217, "mod": 0, "macro": "" },
+    { "label": "Add Marker", "type": 0, "code": 109, "mod": 0, "macro": "" },
+    { "label": "Export", "type": 2, "code": 109, "mod": 1, "macro": "" },
+    { "label": "Undo", "type": 2, "code": 122, "mod": 1, "macro": "" },
+    { "label": "Redo", "type": 2, "code": 121, "mod": 1, "macro": "" },
+    { "label": "Fullscrn", "type": 0, "code": 96, "mod": 0, "macro": "" },
+    { "label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": "" }
+  ]
+}

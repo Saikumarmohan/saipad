@@ -1,0 +1,15 @@
+# Build artifacts
+build/
+*.bin
+*.elf
+*.map
+
+# Arduino-cli portable tools
+arduino-cli/
+*.zip
+
+# Editor / OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

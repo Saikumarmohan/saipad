@@ -1,0 +1,27 @@
+{
+  "name": "Git & Dev Power",
+  "category": "Developer",
+  "desc": "Terminal commands, git macros, local servers, code formatting, and VS Code launching for rapid software engineering.",
+  "color": "#00ff7f",
+  "r": 0,
+  "g": 255,
+  "b": 127,
+  "keys": [
+    { "label": "git status", "type": 3, "code": 0, "mod": 0, "macro": "git status\n" },
+    { "label": "git pull", "type": 3, "code": 0, "mod": 0, "macro": "git pull --rebase\n" },
+    { "label": "git push", "type": 3, "code": 0, "mod": 0, "macro": "git push\n" },
+    { "label": "git commit", "type": 3, "code": 0, "mod": 0, "macro": "git commit -m \"" },
+    { "label": "git add .", "type": 3, "code": 0, "mod": 0, "macro": "git add .\n" },
+    { "label": "git diff", "type": 3, "code": 0, "mod": 0, "macro": "git diff\n" },
+    { "label": "git log", "type": 3, "code": 0, "mod": 0, "macro": "git log --oneline -n 10\n" },
+    { "label": "git stash", "type": 3, "code": 0, "mod": 0, "macro": "git stash\n" },
+    { "label": "Terminal", "type": 5, "code": 0, "mod": 0, "macro": "wt" },
+    { "label": "VS Code", "type": 5, "code": 0, "mod": 0, "macro": "code ." },
+    { "label": "npm dev", "type": 3, "code": 0, "mod": 0, "macro": "npm run dev\n" },
+    { "label": "Localhost", "type": 5, "code": 0, "mod": 0, "macro": "start http://localhost:3000" },
+    { "label": "Presence", "type": 4, "code": 2, "mod": 0, "macro": "" },
+    { "label": "Save All", "type": 2, "code": 115, "mod": 3, "macro": "" },
+    { "label": "Format", "type": 2, "code": 102, "mod": 6, "macro": "" },
+    { "label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": "" }
+  ]
+}

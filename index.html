@@ -1,0 +1,3239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0b0f17">
+  <link rel="manifest" href='data:application/manifest+json,{"name":"SaiPad Keyboard Studio","short_name":"SaiPad","display":"standalone","start_url":".","background_color":"#0b0f17","theme_color":"#3b82f6"}'>
+  <title>SaiPad Studio — 4x4 Mechanical Macropad & Developer Console</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card-bg: #141c28;
+      --card-border: #222e40;
+      --card-sub: #1a2434;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.4);
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --key-bg: #1e293b;
+      --key-border: #334155;
+      --key-active: #059669;
+      --key-selected: #0284c7;
+      --profile-glow: #3b82f6;
+    }
+
+    body.corporate-theme {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --card-sub: #f1f5f9;
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --accent: #059669;
+      --accent-glow: rgba(5, 150, 105, 0.2);
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --key-bg: #f1f5f9;
+      --key-border: #cbd5e1;
+      --key-active: #10b981;
+      --key-selected: #0284c7;
+    }
+
+    /* 1990s Vintage Keyboard Theme (IBM Model M Classic) */
+    body.theme-retro-90s {
+      --bg: #d0cab8;
+      --card-bg: #dfd9ca;
+      --card-border: #b3ab98;
+      --card-sub: #d3ccbc;
+      --primary: #475569;
+      --primary-hover: #334155;
+      --accent: #1e7e34;
+      --accent-glow: rgba(30, 126, 52, 0.35);
+      --text: #1c1c1c;
+      --text-muted: #575245;
+      --key-bg: #faf6ec;
+      --key-border: #aca491;
+      --key-active: #9c9480;
+      --key-selected: #2563eb;
+      font-family: 'Courier New', Courier, 'Lucida Console', monospace !important;
+    }
+
+    body.theme-retro-90s .key-cap {
+      background: linear-gradient(180deg, #fdfbf5 0%, #ebe5d7 100%);
+      border-top: 3px solid #ffffff;
+      border-left: 3px solid #ffffff;
+      border-right: 3px solid #948c7a;
+      border-bottom: 5px solid #78705e;
+      border-radius: 6px;
+      box-shadow: 0 4px 0 #605949, 0 6px 10px rgba(0,0,0,0.25);
+      color: #111111;
+    }
+
+    body.theme-retro-90s .key-cap:hover {
+      border-top-color: #ffffff;
+      border-left-color: #ffffff;
+      border-right-color: #475569;
+      border-bottom-color: #334155;
+    }
+
+    body.theme-retro-90s .key-cap.selected {
+      background: #dbeafe !important;
+      border-top-color: #eff6ff !important;
+      border-left-color: #eff6ff !important;
+      border-right-color: #1d4ed8 !important;
+      border-bottom-color: #1e40af !important;
+      box-shadow: 0 4px 0 #1e3a8a, 0 0 16px rgba(37, 99, 235, 0.45) !important;
+      color: #1e3a8a !important;
+    }
+
+    body.theme-retro-90s .key-cap.pressed {
+      transform: translateY(4px) !important;
+      border-bottom-width: 2px !important;
+      box-shadow: 0 1px 0 #605949, 0 2px 4px rgba(0,0,0,0.3) !important;
+      background: #ded7c6 !important;
+    }
+
+    body.theme-retro-90s .key-label {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    body.theme-retro-90s .key-num {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    body.theme-retro-90s .btn {
+      border-radius: 4px;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #78716c;
+      border-bottom: 3px solid #57534e;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 700;
+    }
+
+    .retro-badge-panel {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      background: #2b2b2b;
+      color: #dedede;
+      padding: 6px 16px;
+      border-radius: 6px;
+      border: 2px solid #1a1a1a;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.8);
+      margin-bottom: 14px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 11px;
+    }
+
+    body.theme-retro-90s .retro-badge-panel {
+      display: flex;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px 24px 60px 24px;
+      transition: background-color 0.25s, color 0.25s;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, #3b82f6, #10b981);
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      color: white;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .mode-pill {
+      display: inline-flex;
+      background: var(--card-border);
+      border-radius: 20px;
+      padding: 3px;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .mode-option {
+      padding: 5px 12px;
+      border-radius: 16px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+    .mode-option.active {
+      background: var(--card-bg);
+      color: var(--text);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--card-sub);
+      color: var(--text-muted);
+      border: 1px solid var(--card-border);
+    }
+    .status-badge.connected {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border-color: rgba(16, 185, 129, 0.35);
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+    .btn:hover:not(:disabled) { background: var(--primary-hover); transform: translateY(-1px); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+    .btn-secondary { background: var(--card-sub); color: var(--text); border: 1px solid var(--card-border); }
+    .btn-secondary:hover:not(:disabled) { background: #2a374a; }
+    .btn-success { background: #059669; color: white; }
+    .btn-success:hover:not(:disabled) { background: #047857; }
+    .btn-danger { background: #dc2626; color: white; }
+    .btn-danger:hover:not(:disabled) { background: #b91c1c; }
+
+    /* Active Profile Banner HUD */
+    .profile-hud {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(90deg, rgba(20, 28, 40, 0.95), rgba(15, 23, 42, 0.95));
+      border: 2px solid var(--profile-glow);
+      box-shadow: 0 0 24px rgba(59, 130, 246, 0.18);
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin-bottom: 18px;
+      transition: all 0.3s ease;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .hud-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .hud-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hud-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--profile-glow);
+      box-shadow: 0 0 12px var(--profile-glow);
+      cursor: pointer;
+      title: "Click to change profile LED color";
+    }
+    .hud-shortcuts {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .hud-shortcuts b { color: var(--text); }
+
+    /* Studio Navigation Bar (VIA/Keychron Style) */
+    .view-nav {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 10px;
+      overflow-x: auto;
+    }
+    .nav-tab {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-tab:hover { color: var(--text); background: var(--card-sub); }
+    .nav-tab.active {
+      background: var(--card-bg);
+      border-color: var(--primary);
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Main Grid Layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 20px;
+      flex: 1;
+    }
+    @media (max-width: 980px) {
+      .main-grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px;
+      transition: all 0.2s;
+    }
+
+    /* Profile Tabs */
+    .profile-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .tab {
+      padding: 7px 14px;
+      border-radius: 8px;
+      background: var(--key-bg);
+      border: 1px solid var(--key-border);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 12px;
+      transition: all 0.15s;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tab.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.35);
+    }
+
+    /* 4x4 Grid */
+    .keyboard-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 12px;
+      max-width: 520px;
+      margin: 0 auto 20px auto;
+    }
+
+    .key-cap {
+      background: var(--key-bg);
+      border: 2px solid var(--key-border);
+      border-radius: 12px;
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.1s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      user-select: none;
+    }
+    .key-cap:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .key-cap.selected {
+      border-color: #38bdf8 !important;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45) !important;
+      background: #172554 !important;
+      transform: translateY(-2px);
+    }
+    .key-cap.pressed {
+      background: var(--key-active) !important;
+      border-color: #34d399 !important;
+      color: white !important;
+      box-shadow: 0 0 20px var(--accent-glow) !important;
+      transform: scale(0.96) translateY(2px) !important;
+    }
+    .key-cap.hold-key { border-style: dashed; }
+    .key-num {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+    }
+    .key-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      word-break: break-word;
+      color: var(--text);
+    }
+    .key-type-badge {
+      align-self: flex-end;
+      font-size: 9px;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: rgba(125,125,125,0.18);
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* Keycode Palette (VIA Style) */
+    .palette-box {
+      background: var(--card-sub);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+    .palette-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .palette-categories {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .cat-btn {
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--key-bg);
+      border: 1px solid var(--key-border);
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .cat-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+      gap: 8px;
+      max-height: 220px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .palette-chip {
+      background: var(--key-bg);
+      border: 1px solid var(--key-border);
+      border-radius: 8px;
+      padding: 8px 6px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.1s;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+    .palette-chip:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+    .palette-chip .chip-sub {
+      font-size: 9px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .palette-chip:hover .chip-sub { color: rgba(255,255,255,0.8); }
+
+    /* Preset Library Cards */
+    .preset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .preset-card {
+      background: var(--card-sub);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s;
+    }
+    .preset-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+    .preset-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .preset-category {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--primary);
+      width: fit-content;
+      margin-bottom: 8px;
+    }
+    .preset-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .preset-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      margin-bottom: 14px;
+      background: var(--key-bg);
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .mini-key {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+      font-size: 9px;
+      text-align: center;
+      padding: 4px 2px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    /* Matrix Tester */
+    .tester-stats {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .stat-pill {
+      background: var(--card-sub);
+      border: 1px solid var(--card-border);
+      padding: 10px 16px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 130px;
+    }
+    .stat-val { font-size: 20px; font-weight: 800; color: var(--text); }
+    .stat-lbl { font-size: 11px; color: var(--text-muted); font-weight: 600; }
+    .tester-key.verified {
+      background: rgba(16, 185, 129, 0.25) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+    }
+
+    /* JSON Studio */
+    .json-textarea {
+      width: 100%;
+      height: 320px;
+      background: #090d14;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 14px;
+      color: #38bdf8;
+      font-family: 'Consolas', 'Fira Code', monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      resize: vertical;
+    }
+    .drop-zone {
+      border: 2px dashed var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      cursor: pointer;
+      background: var(--card-sub);
+      transition: all 0.2s;
+      margin-bottom: 16px;
+    }
+    .drop-zone.dragover {
+      border-color: var(--primary);
+      background: rgba(59, 130, 246, 0.15);
+    }
+
+    /* Hardware Console Drawer */
+    .console-drawer {
+      display: none;
+      background: #080c14;
+      border-top: 1px solid var(--card-border);
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 220px;
+      z-index: 90;
+      padding: 12px 24px;
+      flex-direction: column;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+    }
+    .console-logs {
+      flex: 1;
+      overflow-y: auto;
+      font-family: 'Consolas', monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      padding: 6px 0;
+    }
+    .log-tx { color: #f59e0b; }
+    .log-rx { color: #10b981; }
+    .log-sys { color: #38bdf8; }
+    .console-input-bar {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .jiggler-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px;
+      background: var(--card-sub);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 26px;
+    }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #64748b;
+      transition: .3s;
+      border-radius: 26px;
+    }
+    .slider:before {
+      position: absolute; content: ""; height: 18px; width: 18px; left: 4px; bottom: 4px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+    input:checked + .slider { background-color: var(--accent); }
+    input:checked + .slider:before { transform: translateX(22px); }
+
+    .test-input {
+      width: 100%;
+      height: 90px;
+      background: var(--card-sub);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 10px;
+      color: var(--text);
+      font-family: monospace;
+      font-size: 13px;
+      resize: none;
+    }
+    .test-input:focus { outline: none; border-color: var(--primary); }
+
+    /* Toast Notification */
+    .toast-container {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .toast {
+      background: #1e293b;
+      color: white;
+      border: 1px solid var(--primary);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: toastIn 0.3s ease, toastOut 0.3s ease 2.7s forwards;
+    }
+    @keyframes toastIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes toastOut { from { opacity: 1; } to { opacity: 0; transform: translateY(-20px); } }
+
+    /* Modals */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+    .modal {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      width: 500px;
+      max-width: 92vw;
+      padding: 24px;
+      color: var(--text);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+    .form-control {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      background: var(--card-sub);
+      color: var(--text);
+      font-size: 13px;
+    }
+    .form-control:focus { outline: none; border-color: var(--primary); }
+    .modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+
+    /* Color Swatch Picker */
+    .color-swatches {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .color-swatch {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.15s;
+    }
+    .color-swatch:hover { transform: scale(1.15); }
+    .color-swatch.active { border-color: white; transform: scale(1.15); box-shadow: 0 0 10px rgba(255,255,255,0.5); }
+
+    /* Boss / Emergency Screen */
+    #bossScreen {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #f1f5f9;
+      color: #0f172a;
+      z-index: 999;
+      padding: 40px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .boss-calculator {
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 320px;
+      padding: 20px;
+    }
+    .calc-screen {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      height: 48px;
+      text-align: right;
+      padding: 10px;
+      font-size: 24px;
+      font-family: monospace;
+      margin-bottom: 15px;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .calc-btn {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 14px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+    }
+    .calc-btn:hover { background: #e2e8f0; }
+  </style>
+</head>
+<body>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Emergency Boss Screen -->
+  <div id="bossScreen">
+    <div style="font-size: 12px; color: #64748b; margin-bottom: 8px;">Standard Office Calculator (Press Esc to return)</div>
+    <div class="boss-calculator">
+      <div class="calc-screen">0.00</div>
+      <div class="calc-grid">
+        <div class="calc-btn">7</div><div class="calc-btn">8</div><div class="calc-btn">9</div><div class="calc-btn">/</div>
+        <div class="calc-btn">4</div><div class="calc-btn">5</div><div class="calc-btn">6</div><div class="calc-btn">*</div>
+        <div class="calc-btn">1</div><div class="calc-btn">2</div><div class="calc-btn">3</div><div class="calc-btn">-</div>
+        <div class="calc-btn">0</div><div class="calc-btn">.</div><div class="calc-btn" style="background:#0284c7; color:white;">=</div><div class="calc-btn">+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="logo-badge">SAI</div>
+      <div>
+        <h2 id="appTitle" style="font-size: 17px; font-weight: 800;">SaiPad Studio</h2>
+        <p id="appSubtitle" style="font-size: 11px; color: var(--text-muted);">WebSerial 4×4 Macropad Companion & Firmware Manager</p>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <!-- Corporate vs Geek vs 90s Vintage Mode Switcher -->
+      <div class="mode-pill">
+        <div class="mode-option" id="modeCorporate">🏢 Corporate Safe</div>
+        <div class="mode-option active" id="modeGeek">⚡ Pro Geek</div>
+        <div class="mode-option" id="modeRetro90s">💾 90s Vintage</div>
+      </div>
+
+      <!-- Boss Screen Button -->
+      <button id="bossBtn" class="btn btn-secondary" style="padding: 6px 10px; font-size: 12px;" title="Emergency screen cover (or press Esc)">🛡️ Stealth Cover</button>
+
+      <!-- Advanced Settings Button -->
+      <button id="settingsBtn" class="btn btn-secondary" style="padding: 6px 10px; font-size: 12px;">⚙️ Hardware</button>
+
+      <!-- Console Toggle -->
+      <button id="consoleToggleBtn" class="btn btn-secondary" style="padding: 6px 10px; font-size: 12px;">📟 Serial Monitor</button>
+
+      <!-- Release Check Button -->
+      <button id="releaseCheckBtn" class="btn btn-secondary" style="padding: 6px 10px; font-size: 12px;">📦 Releases</button>
+
+      <!-- GitHub Repository Link -->
+      <a href="https://github.com/Saikumarmohan/saipad" target="_blank" class="btn btn-secondary" style="padding: 6px 10px; font-size: 12px; text-decoration: none;">⭐ GitHub</a>
+
+      <div id="statusBadge" class="status-badge">
+        <span class="status-dot"></span>
+        <span id="statusText">Disconnected</span>
+      </div>
+      <button id="connectBtn" class="btn">Connect Keyboard</button>
+      <button id="saveFlashBtn" class="btn btn-success" disabled title="Save current mappings & settings permanently to RP2040 Flash memory">💾 Sync to Flash</button>
+    </div>
+  </header>
+
+  <!-- 90s Vintage Retro Status & Bezel Badge -->
+  <div class="retro-badge-panel" id="retroBadge">
+    <div style="font-weight: bold; letter-spacing: 1px;">IBM ENHANCED MECHANICAL KEYBOARD • MODEL M (RP2040 EDITION)</div>
+    <div style="display:flex; gap:16px; align-items:center;">
+      <span style="display:inline-flex; align-items:center; gap:4px;"><span style="width:8px; height:8px; border-radius:50%; background:#22c55e; box-shadow:0 0 6px #22c55e;"></span> NUM</span>
+      <span style="display:inline-flex; align-items:center; gap:4px;"><span style="width:8px; height:8px; border-radius:50%; background:#22c55e; box-shadow:0 0 6px #22c55e;"></span> SCROLL</span>
+      <span style="display:inline-flex; align-items:center; gap:4px;"><span style="width:8px; height:8px; border-radius:50%; background:#f59e0b; box-shadow:0 0 6px #f59e0b;"></span> LAYER</span>
+    </div>
+  </div>
+
+  <!-- Big Active Profile HUD Banner -->
+  <div class="profile-hud" id="profileHud">
+    <div>
+      <div class="hud-title">Currently Active Profile (Layer)</div>
+      <div class="hud-name">
+        <span class="hud-dot" id="hudDot" title="Click to change profile LED color"></span>
+        <span id="hudProfileName">Profile 1: Numpad</span>
+        <button id="editProfileNameBtn" class="btn btn-secondary" style="padding: 2px 7px; font-size: 11px; border-radius: 6px;" title="Rename active profile">✏️</button>
+        <span id="hudSyncStatus" style="font-size: 11px; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 2px 8px; border-radius: 10px; font-weight: 600;">💾 Synced</span>
+      </div>
+    </div>
+    
+    <div class="hud-shortcuts">
+      <div>🎯 <b>Direct Jump:</b> Hold #16 + Tap #1..#4 to jump directly!</div>
+      <div>⚡ <b>2-Key Combo:</b> Press #13 + #16 together to cycle profile</div>
+      <div>⏱️ <b>Hold Key #16 (2.0s):</b> Deliberate hold to cycle profiles (avoids accidental switching)</div>
+    </div>
+
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+      <!-- Switch Sound Selector -->
+      <div style="font-size: 11px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; background: var(--card-sub); padding: 4px 8px; border-radius: 8px; border: 1px solid var(--card-border);">
+        <span>🔊 Sound:</span>
+        <select id="soundSelect" style="background:transparent; border:none; color:var(--text); font-size:11px; font-weight:600; cursor:pointer;">
+          <option value="buckling">💾 IBM Model M (Buckling Spring)</option>
+          <option value="blue">Cherry Blue (Clicky)</option>
+          <option value="red">Cherry Red (Linear)</option>
+          <option value="navy">Box Navy (Deep)</option>
+          <option value="off">Off (Mute)</option>
+        </select>
+      </div>
+
+      <button id="nextProfileHudBtn" class="btn btn-secondary" style="padding: 6px 12px; font-size: 12px;">Cycle Profile ➔</button>
+      <button id="hudSyncBtn" class="btn btn-success" style="padding: 6px 14px; font-size: 12px; font-weight: 700;" disabled title="Permanently write active profile & keymaps to hardware Flash">💾 Sync to Flash</button>
+    </div>
+  </div>
+
+  <!-- Studio View Switcher Tabs (VIA / Keychron Style) -->
+  <div class="view-nav">
+    <button class="nav-tab active" data-view="keymapStudio">⌨️ Keymap Studio & Palette</button>
+    <button class="nav-tab" data-view="presetLibrary">📚 Preset Library (JSON Packs)</button>
+    <button class="nav-tab" data-view="aiCopilot">🤖 AI Keymap Copilot</button>
+    <button class="nav-tab" data-view="matrixTester">🧪 Matrix Tester & Latency</button>
+    <button class="nav-tab" data-view="jsonStudio">📜 JSON Backup & Raw Config</button>
+  </div>
+
+  <!-- VIEW 1: KEYMAP STUDIO (Matrix + VIA-style Keycode Palette) -->
+  <div id="viewKeymapStudio" class="main-grid">
+    <div class="card">
+      <div class="profile-tabs" id="profileTabs"></div>
+
+      <!-- 4x4 Grid -->
+      <div class="keyboard-grid" id="keyboardGrid"></div>
+
+      <!-- Visual Keycode Palette (VIA / VIAL Style) -->
+      <div class="palette-box">
+        <div class="palette-header">
+          <div>
+            <span style="font-weight: 700; font-size: 13px;">🎨 Quick Keycode Palette</span>
+            <span id="selectedKeyHint" style="font-size: 11px; color: #38bdf8; margin-left: 8px; font-weight: 600;">👉 Select a key above to assign</span>
+          </div>
+          <div class="palette-categories" id="paletteCategories">
+            <button class="cat-btn active" data-cat="basic">🔤 Basic</button>
+            <button class="cat-btn" data-cat="media">🎵 Media</button>
+            <button class="cat-btn" data-cat="dev">💻 Dev & Git</button>
+            <button class="cat-btn" data-cat="windows">🪟 Windows</button>
+            <button class="cat-btn" data-cat="scripts">⚡ Scripts</button>
+            <button class="cat-btn" data-cat="actions">⚙️ Actions</button>
+          </div>
+        </div>
+
+        <div class="palette-grid" id="paletteGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+          <button id="openAdvancedModalBtn" class="btn btn-secondary" style="font-size: 11px; padding: 5px 10px;">✏️ Advanced Custom Text / Macro Editor...</button>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--card-border); padding-top: 14px; margin-top: 14px; flex-wrap: wrap; gap: 10px;">
+        <span id="footerTip" style="font-size: 12px; color: var(--text-muted);">💡 Click a key on matrix, then click any chip in palette to assign instantly</span>
+        <div style="display: flex; gap: 8px;">
+          <button id="footerSyncBtn" class="btn btn-success" style="padding: 6px 14px; font-size: 12px; font-weight: 700;" disabled title="Save all profiles permanently to RP2040 flash memory">⚡ Sync Config to Flash</button>
+          <button id="resetBtn" class="btn btn-danger" style="padding: 6px 12px; font-size: 12px;">Reset Defaults</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar">
+      <!-- Jiggler / Presence Card -->
+      <div class="card">
+        <h3 id="jigglerTitle" style="font-size: 15px; margin-bottom: 6px;">Stealth Anti-Away</h3>
+        <p id="jigglerDesc" style="font-size: 11px; color: var(--text-muted); margin-bottom: 12px;">
+          Hardware micro-movements (±1px every 45s) keep computer awake. Undetectable by corporate EDR.
+        </p>
+
+        <div class="jiggler-box">
+          <div>
+            <div id="jigglerLabel" style="font-weight: 600; font-size: 13px;">Presence Keeper</div>
+            <div id="jigglerStatus" style="font-size: 11px; color: var(--text-muted);">Inactive</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="jigglerToggle" disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Live Test Scratchpad -->
+      <div class="card">
+        <h3 style="font-size: 14px; margin-bottom: 4px;">Test Scratchpad</h3>
+        <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">Click inside and press your physical keys to test real typing output:</p>
+        <textarea class="test-input" placeholder="Type here with your 4x4 keypad..."></textarea>
+      </div>
+
+      <!-- Quick Tips Card -->
+      <div class="card" style="font-size: 12px; line-height: 1.6; color: var(--text-muted);">
+        <div style="font-weight: 700; color: var(--text); margin-bottom: 6px;">✨ Pro Features:</div>
+        <div>• <b>Zero Flashing Needed:</b> Modifying keys & profiles writes to internal flash in 1ms.</div>
+        <div>• <b>Drag & Drop:</b> Drop any <code>.json</code> backup anywhere on the page to restore.</div>
+        <div>• <b>Multi-Device:</b> Unplug and take to work — all key bindings stay in hardware memory.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW 2: PRESET LIBRARY (Curated JSON Packs) -->
+  <div id="viewPresetLibrary" style="display: none;">
+    <div class="card" style="margin-bottom: 18px;">
+      <h3 style="font-size: 16px; margin-bottom: 4px;">📚 1-Click Curated Layout Library</h3>
+      <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;">
+        Pre-built professional configurations crafted for power users, developers, designers, video editors, and gamers. Customize LED color and apply any preset directly into your active profile or export as JSON.
+      </p>
+
+      <div class="preset-grid" id="presetGrid">
+        <!-- Generated dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW 3: AI KEYMAP COPILOT -->
+  <div id="viewAiCopilot" style="display: none;">
+    <div class="card" style="margin-bottom: 18px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom: 12px;">
+        <div>
+          <h3 style="font-size: 16px;">🤖 AI Keymap Copilot & Custom Layout Studio</h3>
+          <p style="font-size: 12px; color: var(--text-muted);">
+            Use ChatGPT, Claude, or Gemini to instantly design tailored 16-key macropad profiles with shortcuts, scripts, and LED status colors.
+          </p>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button class="btn btn-primary" id="copyAiPromptBtn">📋 Copy Formatted AI Prompt</button>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-top: 14px;">
+        <!-- Left: Prompt Generator Options -->
+        <div style="background:var(--card-sub); padding:16px; border-radius:10px; border:1px solid var(--card-border);">
+          <h4 style="font-size:13px; margin-bottom:12px; color:var(--primary);">1. Choose Your Target Application</h4>
+          
+          <div class="form-group">
+            <label>Application / Software Preset</label>
+            <select id="aiAppSelect" class="form-control">
+              <option value="Blender 3D (3D Viewport navigation, Extrude, Inset, Bevel, Shading mode, Render)">Blender 3D Modeling</option>
+              <option value="Adobe Photoshop (Brush sizes, Eraser, Layers, Masking, Free Transform, Zoom, Eyedropper)">Adobe Photoshop</option>
+              <option value="Figma & UI/UX Design (Frames, Text, Auto-Layout, Component creation, Zoom selection, Eye dropper)">Figma UI/UX Design</option>
+              <option value="DaVinci Resolve / Premiere Pro (Razor blade cut, Ripple delete, Timeline playback, Mark In/Out, Export)">DaVinci Resolve / Premiere</option>
+              <option value="Discord & PC Gaming (Mute mic, Deafen, Stream toggle, Push to talk, Clip replay, Volume)">Discord & Gaming</option>
+              <option value="Visual Studio Code (Command palette, Terminal, Git shortcuts, Multi-cursor, Format code)">VS Code & Dev</option>
+              <option value="Microsoft Excel & Financial Modeling (AutoSum, Filter, Insert row, Currency format, Paste values)">Excel Financial Modeling</option>
+              <option value="AutoCAD / 3D CAD (Line, Trim, Extend, Dimension, Snap, Extrude, Pan)">AutoCAD / CAD</option>
+              <option value="TradingView & Crypto / Stock Trading (Buy, Sell, 1m/5m/1h timeframes, Trendlines, Indicators)">TradingView & Markets</option>
+              <option value="custom">Custom Application / Workflow...</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="aiCustomAppGroup" style="display:none;">
+            <label>Describe Your Custom App or Needs</label>
+            <input type="text" id="aiCustomAppInput" class="form-control" placeholder="e.g. Ableton Live, SolidWorks, Spotify Podcast, Unity Engine...">
+          </div>
+
+          <div class="form-group">
+            <label>Preferred RP2040 RGB LED Status Color</label>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <input type="color" id="aiColorPicker" value="#00ffcc" style="width:36px; height:32px; border:none; border-radius:6px; cursor:pointer; background:none;">
+              <input type="text" id="aiColorHex" class="form-control" value="#00ffcc" style="width:100px; font-family:monospace; font-size:12px;" readonly>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Live Preview of Generated AI Prompt</label>
+            <textarea id="aiPromptPreview" class="form-control" rows="7" readonly style="font-family:monospace; font-size:11px;"></textarea>
+          </div>
+        </div>
+
+        <!-- Right: AI Response Importer -->
+        <div style="background:var(--card-sub); padding:16px; border-radius:10px; border:1px solid var(--card-border); display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h4 style="font-size:13px; margin-bottom:12px; color:var(--accent);">2. Paste AI Response JSON</h4>
+            <p style="font-size:11px; color:var(--text-muted); margin-bottom:10px;">
+              Copy the JSON block generated by ChatGPT, Gemini, or Claude and paste it below:
+            </p>
+            <textarea id="aiResponseInput" class="form-control" rows="10" placeholder='{\n  "name": "Blender 3D",\n  "color": "#ff7700",\n  "r": 255, "g": 119, "b": 0,\n  "keys": [\n    {"label": "Extrude", "type": 0, "code": 101, "mod": 0, "macro": ""}, ...\n  ]\n}' style="font-family:monospace; font-size:11px;"></textarea>
+          </div>
+
+          <div style="margin-top:14px;">
+            <div class="form-group" style="margin-bottom:8px;">
+              <label>Target Profile to Overwrite:</label>
+              <select id="aiTargetProfile" class="form-control" style="font-size:12px;">
+                <option value="0">Profile 1 (Numpad)</option>
+                <option value="1">Profile 2 (Git & Dev)</option>
+                <option value="2">Profile 3 (Snippets)</option>
+                <option value="3">Profile 4 (Windows)</option>
+              </select>
+            </div>
+            <button class="btn btn-success" id="applyAiJsonBtn" style="width:100%;">⚡ Validate & Apply AI Layout to Keyboard</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW 3: MATRIX TESTER & DIAGNOSTICS -->
+  <div id="viewMatrixTester" style="display: none;">
+    <div class="card">
+      <h3 style="font-size: 16px; margin-bottom: 4px;">🧪 Hardware Matrix Continuity & Sound Tester</h3>
+      <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 18px;">
+        Test every switch on your 4x4 matrix. As you press physical keys, each key lights up green with keystroke counters.
+      </p>
+
+      <div class="tester-stats">
+        <div class="stat-pill">
+          <div class="stat-val" id="testerCount">0 / 16</div>
+          <div class="stat-lbl">Keys Verified Working</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-val" id="totalHits">0</div>
+          <div class="stat-lbl">Total Keystrokes Logged</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-val" id="lastLatency">< 5 ms</div>
+          <div class="stat-lbl">Hardware Scan Latency</div>
+        </div>
+      </div>
+
+      <div class="keyboard-grid" id="testerGrid" style="max-width: 480px;"></div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 14px;">
+        <button id="resetTesterBtn" class="btn btn-secondary" style="font-size: 12px;">Reset Matrix Verification</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW 4: JSON BACKUP & RAW CONFIG -->
+  <div id="viewJsonStudio" style="display: none;">
+    <div class="card">
+      <h3 style="font-size: 16px; margin-bottom: 4px;">📜 JSON Profile Studio & Drag-and-Drop</h3>
+      <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;">
+        Full structural representation of your keyboard profiles, key assignments, macros, hold threshold, and RGB colors.
+      </p>
+
+      <!-- Drag & Drop Zone -->
+      <div class="drop-zone" id="dropZone">
+        <div style="font-size: 28px; margin-bottom: 6px;">📂</div>
+        <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Drag & Drop a <code>.json</code> Profile File Here</div>
+        <div style="font-size: 12px; color: var(--text-muted);">or click to select file from your computer</div>
+        <input type="file" id="jsonFileInput" accept=".json" style="display: none;">
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700;">Live Configuration JSON:</span>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button id="copyJsonBtn" class="btn btn-secondary" style="font-size: 11px; padding: 5px 10px;">📋 Copy JSON</button>
+          <button id="exportActiveProfileBtn" class="btn btn-secondary" style="font-size: 11px; padding: 5px 10px;">📥 Export Active Profile (.json)</button>
+          <button id="exportAllProfilesBtn" class="btn btn-primary" style="font-size: 11px; padding: 5px 10px;">💾 Backup All 4 Profiles (.json)</button>
+          <button id="applyRawJsonBtn" class="btn btn-success" style="font-size: 11px; padding: 5px 10px;">⚡ Push JSON to Keyboard</button>
+        </div>
+      </div>
+
+      <textarea id="jsonViewer" class="json-textarea" spellcheck="false"></textarea>
+    </div>
+  </div>
+
+  <!-- Real-Time Serial Monitor Console Drawer -->
+  <div class="console-drawer" id="consoleDrawer">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 6px;">
+      <span style="font-size: 12px; font-weight: 700; color: #38bdf8;">📟 RP2040 Live Serial Protocol Monitor</span>
+      <div style="display: flex; gap: 8px;">
+        <button id="clearConsoleBtn" class="btn btn-secondary" style="padding: 2px 8px; font-size: 10px;">Clear</button>
+        <button id="closeConsoleBtn" class="btn btn-secondary" style="padding: 2px 8px; font-size: 10px;">Close ✖</button>
+      </div>
+    </div>
+    <div class="console-logs" id="consoleLogs">
+      <div class="log-sys">[SYSTEM] Serial monitor initialized. Connect keyboard to inspect real-time packets.</div>
+    </div>
+    <div class="console-input-bar">
+      <input type="text" id="consoleInput" class="form-control" placeholder="Send raw command (e.g. GET_STATE, SAVE_FLASH, RESET_DEFAULTS)..." style="font-family: monospace; font-size: 12px;">
+      <button id="consoleSendBtn" class="btn btn-primary" style="font-size: 12px;">Send</button>
+    </div>
+  </div>
+
+  <!-- Key Edit Modal (Advanced Customizer) -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal">
+      <div class="modal-title">Customize Key <span id="modalKeyNum"></span></div>
+      
+      <div class="form-group">
+        <label>Preset Macro Library</label>
+        <select id="presetSelect" class="form-control">
+          <option value="">-- Choose a Preset Macro --</option>
+          <optgroup label="Git Commands">
+            <option value="git status\n">git status</option>
+            <option value="git pull --rebase\n">git pull --rebase</option>
+            <option value="git push\n">git push</option>
+            <option value="git commit -m &quot;&quot;">git commit -m ""</option>
+            <option value="git add .\n">git add .</option>
+            <option value="git stash\n">git stash</option>
+          </optgroup>
+          <optgroup label="Developer Snippets">
+            <option value="() => {\n">() => {} (Arrow Function)</option>
+            <option value="console.log();">console.log()</option>
+            <option value="// TODO: ">// TODO: comment</option>
+            <option value="const [state, setState] = useState();">React useState</option>
+            <option value="npm run dev\n">npm run dev</option>
+            <option value="docker compose up -d\n">docker compose up</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Display Label (Max 11 chars)</label>
+        <input type="text" id="editLabel" class="form-control" maxlength="11" placeholder="e.g. git status">
+      </div>
+
+      <div class="form-group">
+        <label>Key Type</label>
+        <select id="editType" class="form-control">
+          <option value="3">Text Macro (Types full string)</option>
+          <option value="5">⚡ Script / App Launcher (Win+R Injection)</option>
+          <option value="0">Single Character (e.g. 7, A, /)</option>
+          <option value="1">Special Key / Media Key (Enter, Mute, Volume)</option>
+          <option value="2">Modifier Shortcut (Ctrl / Win / Alt / Shift)</option>
+          <option value="4">Hardware Action (Profile Jump, Jiggler, Apps)</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="codeGroup">
+        <label>Keycode / Decimal Code</label>
+        <input type="number" id="editCode" class="form-control" placeholder="e.g. 176 for Enter, 226 for Mute">
+      </div>
+
+      <div class="form-group" id="modifierGroup">
+        <label>Modifiers</label>
+        <div style="display: flex; gap: 12px; margin-top: 4px;">
+          <label style="font-size: 12px;"><input type="checkbox" id="modCtrl"> Ctrl</label>
+          <label style="font-size: 12px;"><input type="checkbox" id="modShift"> Shift</label>
+          <label style="font-size: 12px;"><input type="checkbox" id="modAlt"> Alt</label>
+          <label style="font-size: 12px;"><input type="checkbox" id="modWin"> Win</label>
+        </div>
+      </div>
+
+      <div class="form-group" id="macroGroup">
+        <label>Macro Content (Use \n for Enter)</label>
+        <input type="text" id="editMacro" class="form-control" placeholder="e.g. git status\n">
+      </div>
+
+      <div class="form-group" id="actionGroup" style="display: none;">
+        <label>Action Function</label>
+        <select id="editAction" class="form-control">
+          <option value="1">Cycle to Next Profile</option>
+          <option value="5">Jump to Profile 1 (Numpad)</option>
+          <option value="6">Jump to Profile 2 (Git & Dev)</option>
+          <option value="7">Jump to Profile 3 (Snippets)</option>
+          <option value="8">Jump to Profile 4 (Windows)</option>
+          <option value="2">Toggle Presence Keeper / Jiggler</option>
+          <option value="3">Launch Windows Terminal (Win+R -> wt)</option>
+          <option value="4">Launch VS Code (Win+R -> code)</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="scriptGroup" style="display: none;">
+        <label style="display:flex; justify-content:space-between;">
+          <span>⚡ Script / Windows Command (Win+R)</span>
+          <span id="scriptCharCount" style="font-size:11px; color:var(--text-muted);">0 / 63 chars</span>
+        </label>
+        <input type="text" id="editScript" class="form-control" maxlength="63" placeholder="e.g. wt, calc, explorer ., start https://chatgpt.com" style="font-family: monospace;">
+        <div style="margin-top:6px;">
+          <select id="scriptPresetSelect" class="form-control" style="font-size:11px;">
+            <option value="">-- Or choose a 1-click script template --</option>
+            <option value="wt">💻 Windows Terminal (wt)</option>
+            <option value="code .">💻 VS Code in Directory (code .)</option>
+            <option value="calc">🔢 Windows Calculator (calc)</option>
+            <option value="explorer .">📂 File Explorer (explorer .)</option>
+            <option value="taskmgr">🛠️ Task Manager (taskmgr)</option>
+            <option value="snippingtool">📸 Snipping Tool (snippingtool)</option>
+            <option value="start https://chatgpt.com">🌐 Open ChatGPT</option>
+            <option value="start https://claude.ai">🌐 Open Claude</option>
+            <option value="start https://gemini.google.com">🌐 Open Gemini</option>
+            <option value="start https://github.com">🌐 Open GitHub</option>
+            <option value="start http://localhost:3000">🌐 Open Localhost (Port 3000)</option>
+            <option value="powershell -c &quot;rundll32.exe user32.dll,LockWorkStation&quot;">🔒 Instant Workstation Lock</option>
+            <option value="powershell -c &quot;Stop-Process -Name node -Force&quot;">⚡ Kill Node & Free Port 3000</option>
+          </select>
+        </div>
+        <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">
+          Directly injected via USB keyboard Run dialog (Win+R). Launches terminals, scripts, apps, or websites in 1 tap without installing software!
+        </p>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="modalCancel">Cancel</button>
+        <button class="btn btn-success" id="modalSave">Save & Sync</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Color & Name Modal -->
+  <div class="modal-overlay" id="profileColorModal">
+    <div class="modal" style="width: 440px;">
+      <div class="modal-title">🎨 Profile Customizer & LED Color</div>
+
+      <div class="form-group">
+        <label>Profile Name</label>
+        <input type="text" id="profileCustomName" class="form-control" maxlength="15" placeholder="e.g. CAD Design">
+      </div>
+
+      <div class="form-group">
+        <label>Onboard WS2812 RGB LED Color</label>
+        <div class="color-swatches" id="colorSwatches">
+          <div class="color-swatch" style="background: #0082ff;" data-r="0" data-g="130" data-b="255"></div>
+          <div class="color-swatch" style="background: #00ff3c;" data-r="0" data-g="255" data-b="60"></div>
+          <div class="color-swatch" style="background: #dc00ff;" data-r="220" data-g="0" data-b="255"></div>
+          <div class="color-swatch" style="background: #ff8c00;" data-r="255" data-g="140" data-b="0"></div>
+          <div class="color-swatch" style="background: #00f0ff;" data-r="0" data-g="240" data-b="255"></div>
+          <div class="color-swatch" style="background: #ff0055;" data-r="255" data-g="0" data-b="85"></div>
+          <div class="color-swatch" style="background: #ffdd00;" data-r="255" data-g="220" data-b="0"></div>
+          <div class="color-swatch" style="background: #ffffff;" data-r="255" data-g="255" data-b="255"></div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="closeColorModalBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveProfileColorBtn">Apply & Save to Flash</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Hardware & Flashing Settings Modal -->
+  <div class="modal-overlay" id="settingsModal">
+    <div class="modal" style="width: 520px;">
+      <div class="modal-title">⚙️ Advanced Hardware & Flashing Settings</div>
+
+      <!-- Info Callout: Configuration vs Firmware Flashing -->
+      <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 16px;">
+        <div style="font-weight: 700; font-size: 13px; color: #60a5fa; margin-bottom: 4px;">💡 Important: Configuration vs Firmware Flashing</div>
+        <div style="font-size: 12px; line-height: 1.5; color: var(--text-muted);">
+          <b>Customizing keys, macros, hold time, or profiles?</b> You do <u>not</u> need to flash firmware! All settings save directly into internal RP2040 Flash memory using the green <b>"💾 Sync to Flash"</b> button.<br>
+          <b>Firmware flashing (UF2)</b> is only needed if you are upgrading the keyboard's core C++ operating system.
+        </div>
+      </div>
+
+      <div style="background: var(--card-sub); border: 1px solid var(--card-border); border-radius: 8px; padding: 14px; margin-bottom: 16px;">
+        <div style="font-weight: 700; font-size: 14px; margin-bottom: 6px;">⚡ Firmware Update & Bootloader (UF2)</div>
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+          Reboot RP2040 into BOOTSEL mode to flash <code>4x4keyboard_rp2040_zero_v1.5.1.uf2</code> without pressing any physical buttons.
+        </p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button id="rebootBootloaderBtn" class="btn btn-danger" style="font-size: 12px;">⚡ Reboot to BOOTSEL</button>
+          <a href="4x4keyboard_rp2040_zero_v1.5.1.uf2" download="4x4keyboard_rp2040_zero_v1.5.1.uf2" class="btn btn-secondary" style="font-size: 12px; text-decoration: none;">📥 Download 4x4keyboard_rp2040_zero_v1.5.1.uf2</a>
+          <button id="webFlashBtn" class="btn btn-primary" style="font-size: 12px;">🔥 1-Click Copy to RPI-RP2</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label style="display:flex; justify-content:space-between;">
+          <span>⏱️ Profile Switch Hold Time</span>
+          <span id="holdTimeVal" style="font-weight:700; color:var(--primary);">2000 ms</span>
+        </label>
+        <input type="range" id="holdTimeRange" min="800" max="5000" step="100" value="2000" style="width: 100%;">
+        <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">
+          Hold Key #16 or Key #13 for this duration to cycle profiles. Recommended: <strong>2000 ms</strong> to prevent accidental switching during rapid typing.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Stealth Jiggler Interval: <span id="jigglerIntervalVal">45</span> seconds</label>
+        <input type="range" id="jigglerIntervalRange" min="15" max="180" step="5" value="45" style="width: 100%;">
+      </div>
+
+      <div class="form-group">
+        <label>RGB LED Brightness: <span id="brightnessVal">120</span> / 255</label>
+        <input type="range" id="brightnessRange" min="0" max="255" step="15" value="120" style="width: 100%;">
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="closeSettingsBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootloader Guide Modal -->
+  <div class="modal-overlay" id="bootloaderGuideModal">
+    <div class="modal" style="width: 520px;">
+      <div class="modal-title" style="color: #f59e0b; display: flex; align-items: center; gap: 8px;">
+        <span>⚡</span> Keyboard is in BOOTSEL Mode!
+      </div>
+      <div style="font-size: 13px; line-height: 1.6; color: var(--text); margin-bottom: 16px;">
+        <p style="margin-bottom: 10px;">
+          The RP2040 has successfully restarted into the Raspberry Pi ROM Bootloader. A USB drive named <b style="color: #38bdf8;">RPI-RP2</b> is now open in Windows Explorer.
+        </p>
+        
+        <div style="background: var(--card-sub); border: 1px solid var(--card-border); border-radius: 8px; padding: 12px; margin-bottom: 14px;">
+          <div style="font-weight: 700; margin-bottom: 6px;">How to Flash Firmware:</div>
+          <ol style="padding-left: 20px; font-size: 12px; color: var(--text-muted); line-height: 1.6;">
+            <li><b>Drag & Drop (Simplest):</b> Download <code>4x4keyboard_rp2040_zero_v1.5.1.uf2</code> below and drag it directly into the <b>RPI-RP2</b> drive in Windows Explorer.</li>
+            <li><b>1-Click Copy:</b> Click the button below, select the <b>RPI-RP2</b> drive in the folder selector, and the browser will copy it automatically.</li>
+          </ol>
+        </div>
+
+        <p style="font-size: 12px; color: #10b981; font-weight: 600;">
+          ✨ Once the UF2 binary is copied, the keyboard immediately flashes and restarts! Then click <b>"Connect Keyboard"</b> at the top right to resume.
+        </p>
+      </div>
+      <div class="modal-actions" style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <a href="4x4keyboard_rp2040_zero_v1.5.1.uf2" download="4x4keyboard_rp2040_zero_v1.5.1.uf2" class="btn btn-primary" style="text-decoration:none; font-size: 12px;">📥 Download 4x4keyboard_rp2040_zero_v1.5.1.uf2</a>
+        <button id="guideWebFlashBtn" class="btn btn-success" style="font-size: 12px;">🔥 1-Click Copy to RPI-RP2</button>
+        <button class="btn btn-secondary" id="closeBootloaderGuideBtn" style="font-size: 12px;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Releases & Updates Modal -->
+  <div class="modal-overlay" id="releaseModal">
+    <div class="modal" style="width: 500px;">
+      <div class="modal-title">Firmware Releases & Updates</div>
+      <div id="releaseContent" style="font-size: 13px; line-height: 1.6; color: var(--text); margin-bottom: 18px;">
+        Checking for release info...
+      </div>
+      <div class="modal-actions" style="display:flex; gap:8px; flex-wrap:wrap;">
+        <a id="downloadFirmwareBtn" href="4x4keyboard_rp2040_zero_v1.5.1.uf2" download="4x4keyboard_rp2040_zero_v1.5.1.uf2" class="btn btn-primary" style="text-decoration:none;">📥 Download Tagged UF2 (v1.5.1)</a>
+        <a href="firmware.uf2" download="firmware.uf2" class="btn btn-secondary" style="text-decoration:none; font-size:12px;">📥 firmware.uf2 (Alias)</a>
+        <button class="btn btn-secondary" id="closeReleaseModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Global State
+    let port = null;
+    let reader = null;
+    let writer = null;
+    let currentProfile = 0;
+    let jigglerEnabled = false;
+    let selectedKeyIndex = 0;
+    let editingKeyIndex = -1;
+    let isCorporateMode = false;
+    let currentSound = "blue";
+    let audioCtx = null;
+
+    // Tester metrics
+    let verifiedKeys = new Set();
+    let totalHitCount = 0;
+
+    // Default 4 Profiles
+    let profiles = [
+      {
+        name: "Numpad",
+        r: 0, g: 130, b: 255,
+        keys: [
+          { label: "7", type: 0, code: 55, mod: 0, macro: "" },
+          { label: "8", type: 0, code: 56, mod: 0, macro: "" },
+          { label: "9", type: 0, code: 57, mod: 0, macro: "" },
+          { label: "/", type: 0, code: 47, mod: 0, macro: "" },
+          { label: "4", type: 0, code: 52, mod: 0, macro: "" },
+          { label: "5", type: 0, code: 53, mod: 0, macro: "" },
+          { label: "6", type: 0, code: 54, mod: 0, macro: "" },
+          { label: "*", type: 0, code: 42, mod: 0, macro: "" },
+          { label: "1", type: 0, code: 49, mod: 0, macro: "" },
+          { label: "2", type: 0, code: 50, mod: 0, macro: "" },
+          { label: "3", type: 0, code: 51, mod: 0, macro: "" },
+          { label: "-", type: 0, code: 45, mod: 0, macro: "" },
+          { label: "0", type: 0, code: 48, mod: 0, macro: "" },
+          { label: ".", type: 0, code: 46, mod: 0, macro: "" },
+          { label: "Enter", type: 1, code: 176, mod: 0, macro: "" },
+          { label: "+", type: 0, code: 43, mod: 0, macro: "" }
+        ]
+      },
+      {
+        name: "Git & Dev",
+        r: 0, g: 255, b: 60,
+        keys: [
+          { label: "git status", type: 3, code: 0, mod: 0, macro: "git status\n" },
+          { label: "git pull", type: 3, code: 0, mod: 0, macro: "git pull --rebase\n" },
+          { label: "git push", type: 3, code: 0, mod: 0, macro: "git push\n" },
+          { label: "git commit", type: 3, code: 0, mod: 0, macro: 'git commit -m "' },
+          { label: "git add .", type: 3, code: 0, mod: 0, macro: "git add .\n" },
+          { label: "git diff", type: 3, code: 0, mod: 0, macro: "git diff\n" },
+          { label: "git log", type: 3, code: 0, mod: 0, macro: "git log --oneline -n 10\n" },
+          { label: "git stash", type: 3, code: 0, mod: 0, macro: "git stash\n" },
+          { label: "Terminal", type: 4, code: 3, mod: 0, macro: "" },
+          { label: "VS Code", type: 4, code: 4, mod: 0, macro: "" },
+          { label: "npm dev", type: 3, code: 0, mod: 0, macro: "npm run dev\n" },
+          { label: "Clear", type: 2, code: 108, mod: 1, macro: "" },
+          { label: "Presence", type: 4, code: 2, mod: 0, macro: "" },
+          { label: "Save All", type: 2, code: 115, mod: 3, macro: "" },
+          { label: "Format", type: 2, code: 102, mod: 6, macro: "" },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      },
+      {
+        name: "Code Snippets",
+        r: 220, g: 0, b: 255,
+        keys: [
+          { label: "=>", type: 3, code: 0, mod: 0, macro: "=> " },
+          { label: "()=>{}", type: 3, code: 0, mod: 0, macro: "() => {\n" },
+          { label: "log()", type: 3, code: 0, mod: 0, macro: "console.log();" },
+          { label: "TODO:", type: 3, code: 0, mod: 0, macro: "// TODO: " },
+          { label: "{ }", type: 3, code: 0, mod: 0, macro: "{\n\n}" },
+          { label: "[ ]", type: 3, code: 0, mod: 0, macro: "[\n\n]" },
+          { label: "&&", type: 3, code: 0, mod: 0, macro: " && " },
+          { label: "||", type: 3, code: 0, mod: 0, macro: " || " },
+          { label: "===", type: 3, code: 0, mod: 0, macro: " === " },
+          { label: "!==", type: 3, code: 0, mod: 0, macro: " !== " },
+          { label: "``", type: 3, code: 0, mod: 0, macro: "``" },
+          { label: "/* */", type: 3, code: 0, mod: 0, macro: "/*  */" },
+          { label: "return", type: 3, code: 0, mod: 0, macro: "return " },
+          { label: "await", type: 3, code: 0, mod: 0, macro: "await " },
+          { label: "async", type: 3, code: 0, mod: 0, macro: "async " },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      },
+      {
+        name: "Windows Nav",
+        r: 255, g: 140, b: 0,
+        keys: [
+          { label: "Snap Left", type: 2, code: 216, mod: 8, macro: "" },
+          { label: "Snap Right", type: 2, code: 215, mod: 8, macro: "" },
+          { label: "Maximize", type: 2, code: 218, mod: 8, macro: "" },
+          { label: "Minimize", type: 2, code: 217, mod: 8, macro: "" },
+          { label: "Desk Left", type: 2, code: 216, mod: 9, macro: "" },
+          { label: "Desk Right", type: 2, code: 215, mod: 9, macro: "" },
+          { label: "Task View", type: 2, code: 179, mod: 8, macro: "" },
+          { label: "Lock PC", type: 2, code: 108, mod: 8, macro: "" },
+          { label: "Copy", type: 2, code: 99, mod: 1, macro: "" },
+          { label: "Paste", type: 2, code: 118, mod: 1, macro: "" },
+          { label: "Undo", type: 2, code: 122, mod: 1, macro: "" },
+          { label: "Redo", type: 2, code: 121, mod: 1, macro: "" },
+          { label: "Presence", type: 4, code: 2, mod: 0, macro: "" },
+          { label: "Mute", type: 1, code: 226, mod: 0, macro: "" }, // KEY_MUTE
+          { label: "Play/Pause", type: 1, code: 205, mod: 0, macro: "" }, // KEY_PLAY_PAUSE
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      }
+    ];
+
+    // Curated Library of High-Utility Presets (JSON Packs)
+    const PRESETS = [
+      {
+        id: "everyday_power",
+        name: "Everyday Power User",
+        category: "Productivity",
+        desc: "Windows productivity essentials: Snipping Tool, Terminal, File Explorer, Task Manager, Desktops, and Audio controls.",
+        color: "#00bfff",
+        r: 0, g: 191, b: 255,
+        keys: [
+          { label: "Snip Tool", type: 2, code: 115, mod: 10, macro: "" },
+          { label: "Terminal", type: 5, code: 0, mod: 0, macro: "wt" },
+          { label: "Explorer", type: 5, code: 0, mod: 0, macro: "explorer" },
+          { label: "TaskMgr", type: 2, code: 177, mod: 3, macro: "" },
+          { label: "Desk Left", type: 2, code: 216, mod: 9, macro: "" },
+          { label: "Desk Right", type: 2, code: 215, mod: 9, macro: "" },
+          { label: "Snap Left", type: 2, code: 216, mod: 8, macro: "" },
+          { label: "Snap Right", type: 2, code: 215, mod: 8, macro: "" },
+          { label: "Copy", type: 2, code: 99, mod: 1, macro: "" },
+          { label: "Paste", type: 2, code: 118, mod: 1, macro: "" },
+          { label: "Clip Hist", type: 2, code: 118, mod: 8, macro: "" },
+          { label: "Lock PC", type: 2, code: 108, mod: 8, macro: "" },
+          { label: "Presence", type: 4, code: 2, mod: 0, macro: "" },
+          { label: "Mute Audio", type: 1, code: 226, mod: 0, macro: "" },
+          { label: "Play/Pause", type: 1, code: 205, mod: 0, macro: "" },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      },
+      {
+        id: "dev_git",
+        name: "Git & Developer Console",
+        category: "Developer",
+        desc: "Terminal commands, git macros, local servers, code formatting, and VS Code launching for rapid software engineering.",
+        color: "#00ff7f",
+        r: 0, g: 255, b: 127,
+        keys: [
+          { label: "git status", type: 3, code: 0, mod: 0, macro: "git status\n" },
+          { label: "git pull", type: 3, code: 0, mod: 0, macro: "git pull --rebase\n" },
+          { label: "git push", type: 3, code: 0, mod: 0, macro: "git push\n" },
+          { label: "git commit", type: 3, code: 0, mod: 0, macro: 'git commit -m "' },
+          { label: "git add .", type: 3, code: 0, mod: 0, macro: "git add .\n" },
+          { label: "git diff", type: 3, code: 0, mod: 0, macro: "git diff\n" },
+          { label: "git log", type: 3, code: 0, mod: 0, macro: "git log --oneline -n 10\n" },
+          { label: "git stash", type: 3, code: 0, mod: 0, macro: "git stash\n" },
+          { label: "Terminal", type: 5, code: 0, mod: 0, macro: "wt" },
+          { label: "VS Code", type: 5, code: 0, mod: 0, macro: "code ." },
+          { label: "npm dev", type: 3, code: 0, mod: 0, macro: "npm run dev\n" },
+          { label: "Localhost", type: 5, code: 0, mod: 0, macro: "start http://localhost:3000" },
+          { label: "Presence", type: 4, code: 2, mod: 0, macro: "" },
+          { label: "Save All", type: 2, code: 115, mod: 3, macro: "" },
+          { label: "Format", type: 2, code: 102, mod: 6, macro: "" },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      },
+      {
+        id: "retro_accounting",
+        name: "90s Retro Accounting",
+        category: "Retro & Finance",
+        desc: "Classic numeric keypad layout with 1-click Windows Calculator app launcher, decimal, Enter, and math operators.",
+        color: "#ffb000",
+        r: 255, g: 176, b: 0,
+        keys: [
+          { label: "7", type: 0, code: 55, mod: 0, macro: "" },
+          { label: "8", type: 0, code: 56, mod: 0, macro: "" },
+          { label: "9", type: 0, code: 57, mod: 0, macro: "" },
+          { label: "/", type: 0, code: 47, mod: 0, macro: "" },
+          { label: "4", type: 0, code: 52, mod: 0, macro: "" },
+          { label: "5", type: 0, code: 53, mod: 0, macro: "" },
+          { label: "6", type: 0, code: 54, mod: 0, macro: "" },
+          { label: "*", type: 0, code: 42, mod: 0, macro: "" },
+          { label: "1", type: 0, code: 49, mod: 0, macro: "" },
+          { label: "2", type: 0, code: 50, mod: 0, macro: "" },
+          { label: "3", type: 0, code: 51, mod: 0, macro: "" },
+          { label: "-", type: 0, code: 45, mod: 0, macro: "" },
+          { label: "Calc", type: 5, code: 0, mod: 0, macro: "calc" },
+          { label: "0", type: 0, code: 48, mod: 0, macro: "" },
+          { label: "Enter", type: 1, code: 176, mod: 0, macro: "" },
+          { label: "+", type: 0, code: 43, mod: 0, macro: "" }
+        ]
+      },
+      {
+        id: "figma_design",
+        name: "UI/UX & Figma Designer",
+        category: "Creative",
+        desc: "Streamlined vector design shortcuts: Frames, Text, Pen, Auto-Layout, Components, Grouping, Zoom, and Eyedropper.",
+        color: "#a855f7",
+        r: 168, g: 85, b: 247,
+        keys: [
+          { label: "Frame (F)", type: 0, code: 102, mod: 0, macro: "" },
+          { label: "Text (T)", type: 0, code: 116, mod: 0, macro: "" },
+          { label: "Pen (P)", type: 0, code: 112, mod: 0, macro: "" },
+          { label: "Hand (H)", type: 0, code: 104, mod: 0, macro: "" },
+          { label: "AutoLay", type: 2, code: 97, mod: 2, macro: "" },
+          { label: "CreateComp", type: 2, code: 107, mod: 5, macro: "" },
+          { label: "Group", type: 2, code: 103, mod: 1, macro: "" },
+          { label: "Ungroup", type: 2, code: 103, mod: 3, macro: "" },
+          { label: "Zoom 100", type: 2, code: 48, mod: 2, macro: "" },
+          { label: "Zoom Sel", type: 2, code: 50, mod: 2, macro: "" },
+          { label: "Duplicate", type: 2, code: 100, mod: 1, macro: "" },
+          { label: "Dropper", type: 0, code: 105, mod: 0, macro: "" },
+          { label: "Undo", type: 2, code: 122, mod: 1, macro: "" },
+          { label: "Redo", type: 2, code: 121, mod: 1, macro: "" },
+          { label: "Assets", type: 2, code: 50, mod: 4, macro: "" },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      },
+      {
+        id: "video_editing",
+        name: "Video Editor Pro (Premiere/DaVinci)",
+        category: "Creative",
+        desc: "Dedicated timeline editing keys: Razor cut, Selection, Ripple delete, Timeline playback, and Export rendering.",
+        color: "#ef4444",
+        r: 239, g: 68, b: 68,
+        keys: [
+          { label: "Cut (Razor)", type: 0, code: 99, mod: 0, macro: "" },
+          { label: "Select (V)", type: 0, code: 118, mod: 0, macro: "" },
+          { label: "Ripple Del", type: 2, code: 212, mod: 2, macro: "" },
+          { label: "Play/Pause", type: 1, code: 205, mod: 0, macro: "" },
+          { label: "Zoom In", type: 0, code: 61, mod: 0, macro: "" },
+          { label: "Zoom Out", type: 0, code: 45, mod: 0, macro: "" },
+          { label: "Mark In", type: 0, code: 105, mod: 0, macro: "" },
+          { label: "Mark Out", type: 0, code: 111, mod: 0, macro: "" },
+          { label: "Prev Cut", type: 1, code: 218, mod: 0, macro: "" },
+          { label: "Next Cut", type: 1, code: 217, mod: 0, macro: "" },
+          { label: "Add Marker", type: 0, code: 109, mod: 0, macro: "" },
+          { label: "Export", type: 2, code: 109, mod: 1, macro: "" },
+          { label: "Undo", type: 2, code: 122, mod: 1, macro: "" },
+          { label: "Redo", type: 2, code: 121, mod: 1, macro: "" },
+          { label: "Fullscrn", type: 0, code: 96, mod: 0, macro: "" },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      },
+      {
+        id: "streaming_obs",
+        name: "Stream Deck & Voice Deck",
+        category: "Media",
+        desc: "Control microphone muting, deafen, scene changes, recording, stream toggle, and audio mastering.",
+        color: "#f43f5e",
+        r: 244, g: 63, b: 94,
+        keys: [
+          { label: "Mute Mic", type: 2, code: 240, mod: 7, macro: "" },
+          { label: "Deafen", type: 2, code: 241, mod: 7, macro: "" },
+          { label: "Stream On", type: 2, code: 242, mod: 7, macro: "" },
+          { label: "Record On", type: 2, code: 243, mod: 7, macro: "" },
+          { label: "Scene 1", type: 2, code: 244, mod: 7, macro: "" },
+          { label: "Scene 2", type: 2, code: 245, mod: 7, macro: "" },
+          { label: "Clip That", type: 2, code: 246, mod: 7, macro: "" },
+          { label: "Overlay", type: 2, code: 247, mod: 7, macro: "" },
+          { label: "Vol Up", type: 1, code: 233, mod: 0, macro: "" },
+          { label: "Vol Down", type: 1, code: 234, mod: 0, macro: "" },
+          { label: "Mute Sound", type: 1, code: 226, mod: 0, macro: "" },
+          { label: "Play/Pause", type: 1, code: 205, mod: 0, macro: "" },
+          { label: "Presence", type: 4, code: 2, mod: 0, macro: "" },
+          { label: "Prev Track", type: 1, code: 182, mod: 0, macro: "" },
+          { label: "Next Track", type: 1, code: 181, mod: 0, macro: "" },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      },
+      {
+        id: "ai_engineer",
+        name: "AI Prompt & Research Deck",
+        category: "AI & Research",
+        desc: "Quick access to ChatGPT, Claude, Gemini, plus pre-built prompt starters for code reviews, refactoring, and test writing.",
+        color: "#06b6d4",
+        r: 6, g: 182, b: 212,
+        keys: [
+          { label: "ChatGPT", type: 5, code: 0, mod: 0, macro: "start https://chatgpt.com" },
+          { label: "Claude", type: 5, code: 0, mod: 0, macro: "start https://claude.ai" },
+          { label: "Gemini", type: 5, code: 0, mod: 0, macro: "start https://gemini.google.com" },
+          { label: "GitHub", type: 5, code: 0, mod: 0, macro: "start https://github.com" },
+          { label: "Explain", type: 3, code: 0, mod: 0, macro: "Explain this code step-by-step:\n" },
+          { label: "Refactor", type: 3, code: 0, mod: 0, macro: "Refactor and optimize this:\n" },
+          { label: "FindBugs", type: 3, code: 0, mod: 0, macro: "Review for bugs, edge cases & security:\n" },
+          { label: "UnitTests", type: 3, code: 0, mod: 0, macro: "Write comprehensive unit tests for:\n" },
+          { label: "Summarize", type: 3, code: 0, mod: 0, macro: "Summarize in concise bullet points:\n" },
+          { label: "Markdown", type: 3, code: 0, mod: 0, macro: "Generate markdown documentation for:\n" },
+          { label: "Terminal", type: 5, code: 0, mod: 0, macro: "wt" },
+          { label: "VS Code", type: 5, code: 0, mod: 0, macro: "code ." },
+          { label: "Copy", type: 2, code: 99, mod: 1, macro: "" },
+          { label: "Paste", type: 2, code: 118, mod: 1, macro: "" },
+          { label: "Clear", type: 2, code: 108, mod: 1, macro: "" },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      },
+      {
+        id: "gamer_deck",
+        name: "Gamer & Tactical Voice Deck",
+        category: "Gaming",
+        desc: "Voice chat muting, deafen, clipping highlights, screenshotting, Discord overlay, volume controls, and Windows lock.",
+        color: "#84cc16",
+        r: 132, g: 204, b: 22,
+        keys: [
+          { label: "Overlay", type: 2, code: 96, mod: 2, macro: "" },
+          { label: "ScreenShot", type: 2, code: 206, mod: 12, macro: "" },
+          { label: "ShadowClip", type: 2, code: 203, mod: 4, macro: "" },
+          { label: "Mute Mic", type: 2, code: 109, mod: 3, macro: "" },
+          { label: "Deafen", type: 2, code: 100, mod: 3, macro: "" },
+          { label: "Vol Up", type: 1, code: 233, mod: 0, macro: "" },
+          { label: "Vol Down", type: 1, code: 234, mod: 0, macro: "" },
+          { label: "Mute Audio", type: 1, code: 226, mod: 0, macro: "" },
+          { label: "Play/Pause", type: 1, code: 205, mod: 0, macro: "" },
+          { label: "Next Track", type: 1, code: 181, mod: 0, macro: "" },
+          { label: "Prev Track", type: 1, code: 182, mod: 0, macro: "" },
+          { label: "Wiki", type: 5, code: 0, mod: 0, macro: "start https://google.com" },
+          { label: "Presence", type: 4, code: 2, mod: 0, macro: "" },
+          { label: "TaskMgr", type: 2, code: 177, mod: 3, macro: "" },
+          { label: "Lock PC", type: 2, code: 108, mod: 8, macro: "" },
+          { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+        ]
+      }
+    ];
+
+    // Palette Items Definition
+    const PALETTE_DATA = {
+      basic: [
+        { label: "7", type: 0, code: 55, sub: "Num 7" },
+        { label: "8", type: 0, code: 56, sub: "Num 8" },
+        { label: "9", type: 0, code: 57, sub: "Num 9" },
+        { label: "/", type: 0, code: 47, sub: "Slash" },
+        { label: "4", type: 0, code: 52, sub: "Num 4" },
+        { label: "5", type: 0, code: 53, sub: "Num 5" },
+        { label: "6", type: 0, code: 54, sub: "Num 6" },
+        { label: "*", type: 0, code: 42, sub: "Star" },
+        { label: "1", type: 0, code: 49, sub: "Num 1" },
+        { label: "2", type: 0, code: 50, sub: "Num 2" },
+        { label: "3", type: 0, code: 51, sub: "Num 3" },
+        { label: "-", type: 0, code: 45, sub: "Minus" },
+        { label: "0", type: 0, code: 48, sub: "Num 0" },
+        { label: ".", type: 0, code: 46, sub: "Dot" },
+        { label: "Enter", type: 1, code: 176, sub: "Return" },
+        { label: "+", type: 0, code: 43, sub: "Plus" },
+        { label: "Esc", type: 1, code: 177, sub: "Escape" },
+        { label: "Space", type: 0, code: 32, sub: "Spacebar" },
+        { label: "Bksp", type: 1, code: 178, sub: "Delete" },
+        { label: "Tab", type: 1, code: 179, sub: "Tab" },
+        { label: "Del", type: 1, code: 212, sub: "Del" },
+        { label: "Up ↑", type: 1, code: 218, sub: "Arrow" },
+        { label: "Down ↓", type: 1, code: 217, sub: "Arrow" },
+        { label: "Left ←", type: 1, code: 216, sub: "Arrow" },
+        { label: "Right →", type: 1, code: 215, sub: "Arrow" }
+      ],
+      media: [
+        { label: "Vol Up", type: 1, code: 233, sub: "Media" },
+        { label: "Vol Down", type: 1, code: 234, sub: "Media" },
+        { label: "Mute", type: 1, code: 226, sub: "Media" },
+        { label: "Play/Pause", type: 1, code: 205, sub: "Media" },
+        { label: "Next Track", type: 1, code: 181, sub: "Media" },
+        { label: "Prev Track", type: 1, code: 182, sub: "Media" },
+        { label: "Stop", type: 1, code: 183, sub: "Media" }
+      ],
+      dev: [
+        { label: "git status", type: 3, code: 0, macro: "git status\n", sub: "Git" },
+        { label: "git pull", type: 3, code: 0, macro: "git pull --rebase\n", sub: "Git" },
+        { label: "git push", type: 3, code: 0, macro: "git push\n", sub: "Git" },
+        { label: "git commit", type: 3, code: 0, macro: 'git commit -m "', sub: "Git" },
+        { label: "git add .", type: 3, code: 0, macro: "git add .\n", sub: "Git" },
+        { label: "git diff", type: 3, code: 0, macro: "git diff\n", sub: "Git" },
+        { label: "git log", type: 3, code: 0, macro: "git log --oneline -n 10\n", sub: "Git" },
+        { label: "npm dev", type: 3, code: 0, macro: "npm run dev\n", sub: "Macro" },
+        { label: "Format", type: 2, code: 102, mod: 6, sub: "Alt+Sh+F" },
+        { label: "Save All", type: 2, code: 115, mod: 3, sub: "Ct+Sh+S" },
+        { label: "log()", type: 3, code: 0, macro: "console.log();", sub: "JS" },
+        { label: "=>", type: 3, code: 0, macro: "=> ", sub: "Arrow" }
+      ],
+      windows: [
+        { label: "Snap Left", type: 2, code: 216, mod: 8, sub: "Win+←" },
+        { label: "Snap Right", type: 2, code: 215, mod: 8, sub: "Win+→" },
+        { label: "Maximize", type: 2, code: 218, mod: 8, sub: "Win+↑" },
+        { label: "Minimize", type: 2, code: 217, mod: 8, sub: "Win+↓" },
+        { label: "Desk Left", type: 2, code: 216, mod: 9, sub: "Ct+W+←" },
+        { label: "Desk Right", type: 2, code: 215, mod: 9, sub: "Ct+W+→" },
+        { label: "Task View", type: 2, code: 179, mod: 8, sub: "Win+Tab" },
+        { label: "Lock PC", type: 2, code: 108, mod: 8, sub: "Win+L" },
+        { label: "Copy", type: 2, code: 99, mod: 1, sub: "Ctrl+C" },
+        { label: "Paste", type: 2, code: 118, mod: 1, sub: "Ctrl+V" },
+        { label: "Undo", type: 2, code: 122, mod: 1, sub: "Ctrl+Z" },
+        { label: "Redo", type: 2, code: 121, mod: 1, sub: "Ctrl+Y" },
+        { label: "Calculator", type: 1, code: 402, sub: "App" }
+      ],
+      scripts: [
+        { label: "Terminal", type: 5, macro: "wt", sub: "wt (Win+R)" },
+        { label: "VS Code", type: 5, macro: "code .", sub: "code (Win+R)" },
+        { label: "Calculator", type: 5, macro: "calc", sub: "calc (Win+R)" },
+        { label: "Explorer", type: 5, macro: "explorer", sub: "explorer" },
+        { label: "TaskMgr", type: 5, macro: "taskmgr", sub: "taskmgr" },
+        { label: "Snip Tool", type: 5, macro: "snippingtool", sub: "snippingtool" },
+        { label: "ChatGPT", type: 5, macro: "start https://chatgpt.com", sub: "Browser" },
+        { label: "Claude", type: 5, macro: "start https://claude.ai", sub: "Browser" },
+        { label: "Gemini", type: 5, macro: "start https://gemini.google.com", sub: "Browser" },
+        { label: "GitHub", type: 5, macro: "start https://github.com", sub: "Browser" },
+        { label: "Localhost", type: 5, macro: "start http://localhost:3000", sub: "Port 3000" },
+        { label: "Lock PC", type: 5, macro: "powershell -c \"rundll32.exe user32.dll,LockWorkStation\"", sub: "Lock PC" },
+        { label: "Kill Node", type: 5, macro: "powershell -c \"Stop-Process -Name node -Force\"", sub: "Kill Node" }
+      ],
+      actions: [
+        { label: "Next Profile", type: 4, code: 1, sub: "Action" },
+        { label: "Jump P1", type: 4, code: 5, sub: "Numpad" },
+        { label: "Jump P2", type: 4, code: 6, sub: "Dev" },
+        { label: "Jump P3", type: 4, code: 7, sub: "Snippets" },
+        { label: "Jump P4", type: 4, code: 8, sub: "Windows" },
+        { label: "Presence", type: 4, code: 2, sub: "Jiggler" },
+        { label: "Terminal", type: 4, code: 3, sub: "wt" },
+        { label: "VS Code", type: 4, code: 4, sub: "code" }
+      ]
+    };
+
+    // Realistic Web Audio API Mechanical Switch Sound Synthesizer
+    function playSwitchSound() {
+      if (currentSound === "off") return;
+      try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === "suspended") audioCtx.resume();
+
+        const t = audioCtx.currentTime;
+
+        if (currentSound === "buckling") {
+          // IBM Model M Buckling Spring (Sharp Snap + Metallic Ping Ring)
+          const osc1 = audioCtx.createOscillator();
+          const osc2 = audioCtx.createOscillator();
+          const gain1 = audioCtx.createGain();
+          const gain2 = audioCtx.createGain();
+
+          osc1.type = "sine";
+          osc1.frequency.setValueAtTime(3600, t);
+          osc1.frequency.exponentialRampToValueAtTime(700, t + 0.035);
+          gain1.gain.setValueAtTime(0.35, t);
+          gain1.gain.exponentialRampToValueAtTime(0.001, t + 0.035);
+          osc1.connect(gain1);
+          gain1.connect(audioCtx.destination);
+          osc1.start(t);
+          osc1.stop(t + 0.04);
+
+          osc2.type = "triangle";
+          osc2.frequency.setValueAtTime(1400, t + 0.008);
+          osc2.frequency.exponentialRampToValueAtTime(1150, t + 0.09);
+          gain2.gain.setValueAtTime(0.2, t + 0.008);
+          gain2.gain.exponentialRampToValueAtTime(0.001, t + 0.09);
+          osc2.connect(gain2);
+          gain2.connect(audioCtx.destination);
+          osc2.start(t + 0.008);
+          osc2.stop(t + 0.095);
+        } else if (currentSound === "blue") {
+          // Cherry MX Blue (Crisp Click)
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = "sine";
+          osc.frequency.setValueAtTime(3200, t);
+          osc.frequency.exponentialRampToValueAtTime(800, t + 0.04);
+          gain.gain.setValueAtTime(0.3, t);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(t);
+          osc.stop(t + 0.045);
+        } else if (currentSound === "red") {
+          // Cherry MX Red (Soft Linear Thock)
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = "triangle";
+          osc.frequency.setValueAtTime(450, t);
+          osc.frequency.exponentialRampToValueAtTime(120, t + 0.06);
+          gain.gain.setValueAtTime(0.25, t);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.06);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(t);
+          osc.stop(t + 0.065);
+        } else if (currentSound === "navy") {
+          // Box Navy (Heavy Click Bar)
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = "sawtooth";
+          osc.frequency.setValueAtTime(2600, t);
+          osc.frequency.exponentialRampToValueAtTime(350, t + 0.05);
+          gain.gain.setValueAtTime(0.35, t);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(t);
+          osc.stop(t + 0.055);
+        }
+      } catch (e) {}
+    }
+
+    function logConsole(msg, type = "rx") {
+      const logs = document.getElementById("consoleLogs");
+      const div = document.createElement("div");
+      const time = new Date().toLocaleTimeString();
+      div.className = `log-${type}`;
+      div.innerText = `[${time}] ${msg}`;
+      logs.appendChild(div);
+      logs.scrollTop = logs.scrollHeight;
+    }
+
+    function showToast(msg) {
+      const container = document.getElementById("toastContainer");
+      const toast = document.createElement("div");
+      toast.className = "toast";
+      toast.innerHTML = `<span>🚀</span> <span>${msg}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+    }
+
+    // Set Theme: Geek vs Corporate vs 90s Vintage
+    let currentTheme = localStorage.getItem("kb_theme") || "geek";
+
+    function setTheme(theme) {
+      currentTheme = theme;
+      localStorage.setItem("kb_theme", theme);
+
+      document.body.classList.remove("corporate-theme", "theme-retro-90s");
+      document.getElementById("modeCorporate").classList.remove("active");
+      document.getElementById("modeGeek").classList.remove("active");
+      document.getElementById("modeRetro90s").classList.remove("active");
+
+      if (theme === "corporate") {
+        document.body.classList.add("corporate-theme");
+        document.getElementById("modeCorporate").classList.add("active");
+        document.getElementById("appTitle").innerText = "Ergonomic Numeric Console";
+        document.getElementById("appSubtitle").innerText = "Document & Productivity Controller";
+        document.getElementById("jigglerTitle").innerText = "Presentation Stay-Awake";
+        document.getElementById("jigglerDesc").innerText = "Maintains active screen state during presentations.";
+        document.getElementById("jigglerLabel").innerText = "Stay-Awake";
+      } else if (theme === "retro90s") {
+        document.body.classList.add("theme-retro-90s");
+        document.getElementById("modeRetro90s").classList.add("active");
+        document.getElementById("appTitle").innerText = "IBM Model M MacroPad (1990s)";
+        document.getElementById("appSubtitle").innerText = "Mechanical Terminal Controller & Buckling Spring Engine";
+        document.getElementById("jigglerTitle").innerText = "Screen Anti-Idle";
+        document.getElementById("jigglerDesc").innerText = "Hardware micro-movements (±1px every 45s) keep terminal session active.";
+        document.getElementById("jigglerLabel").innerText = "Anti-Idle";
+        currentSound = "buckling";
+        document.getElementById("soundSelect").value = "buckling";
+      } else {
+        // geek
+        document.getElementById("modeGeek").classList.add("active");
+        document.getElementById("appTitle").innerText = "RP2040 Keyboard Studio";
+        document.getElementById("appSubtitle").innerText = "WebHID / WebSerial Advanced Companion & Firmware Manager";
+        document.getElementById("jigglerTitle").innerText = "Stealth Anti-Away";
+        document.getElementById("jigglerDesc").innerText = "Hardware micro-movements (±1px every 45s) keep computer awake.";
+        document.getElementById("jigglerLabel").innerText = "Presence Keeper";
+      }
+    }
+
+    document.getElementById("modeCorporate").onclick = () => setTheme("corporate");
+    document.getElementById("modeGeek").onclick = () => setTheme("geek");
+    document.getElementById("modeRetro90s").onclick = () => setTheme("retro90s");
+
+    // Emergency Boss Key
+    const bossScreen = document.getElementById("bossScreen");
+    function toggleBossScreen() {
+      const isVisible = bossScreen.style.display === "flex";
+      bossScreen.style.display = isVisible ? "none" : "flex";
+    }
+    document.getElementById("bossBtn").onclick = toggleBossScreen;
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") bossScreen.style.display = "none";
+    });
+
+    // Sound Selector
+    document.getElementById("soundSelect").onchange = (e) => {
+      currentSound = e.target.value;
+      playSwitchSound();
+    };
+
+    // Navigation Switcher (Tabs)
+    const navTabs = document.querySelectorAll(".nav-tab");
+    navTabs.forEach(tab => {
+      tab.onclick = () => {
+        navTabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const target = tab.dataset.view;
+        document.getElementById("viewKeymapStudio").style.display = (target === "keymapStudio") ? "grid" : "none";
+        document.getElementById("viewPresetLibrary").style.display = (target === "presetLibrary") ? "block" : "none";
+        document.getElementById("viewAiCopilot").style.display = (target === "aiCopilot") ? "block" : "none";
+        document.getElementById("viewMatrixTester").style.display = (target === "matrixTester") ? "block" : "none";
+        document.getElementById("viewJsonStudio").style.display = (target === "jsonStudio") ? "block" : "none";
+
+        if (target === "aiCopilot") updateAiPromptPreview();
+        if (target === "jsonStudio") updateJsonViewer();
+      };
+    });
+
+    // Console Toggle
+    const consoleDrawer = document.getElementById("consoleDrawer");
+    document.getElementById("consoleToggleBtn").onclick = () => {
+      consoleDrawer.style.display = (consoleDrawer.style.display === "flex") ? "none" : "flex";
+    };
+    document.getElementById("closeConsoleBtn").onclick = () => consoleDrawer.style.display = "none";
+    document.getElementById("clearConsoleBtn").onclick = () => {
+      document.getElementById("consoleLogs").innerHTML = "";
+    };
+
+    document.getElementById("consoleSendBtn").onclick = async () => {
+      const input = document.getElementById("consoleInput");
+      const cmd = input.value.trim();
+      if (cmd) {
+        logConsole(`TX ➔ ${cmd}`, "tx");
+        await sendCommand(cmd);
+        input.value = "";
+      }
+    };
+    document.getElementById("consoleInput").onkeydown = (e) => {
+      if (e.key === "Enter") document.getElementById("consoleSendBtn").click();
+    };
+
+    // HUD Update
+    function updateHud() {
+      const p = profiles[currentProfile];
+      const color = (p && p.r !== undefined) ? `rgb(${p.r}, ${p.g}, ${p.b})` : "#3b82f6";
+      document.documentElement.style.setProperty("--profile-glow", color);
+      document.getElementById("profileHud").style.borderColor = color;
+      document.getElementById("profileHud").style.boxShadow = `0 0 24px ${color}33`;
+      document.getElementById("hudDot").style.background = color;
+      document.getElementById("hudDot").style.boxShadow = `0 0 12px ${color}`;
+      document.getElementById("hudProfileName").innerText = `Profile ${currentProfile + 1}: ${p ? p.name : 'Unknown'}`;
+    }
+
+    // Profile Tabs Render
+    function renderTabs() {
+      const tabs = document.getElementById("profileTabs");
+      tabs.innerHTML = "";
+      profiles.forEach((p, idx) => {
+        const btn = document.createElement("button");
+        btn.className = `tab ${idx === currentProfile ? 'active' : ''}`;
+        const dotColor = (p.r !== undefined) ? `rgb(${p.r},${p.g},${p.b})` : "#3b82f6";
+        btn.innerHTML = `<span style="width:8px; height:8px; border-radius:50%; background:${dotColor};"></span> [P${idx + 1}] ${p.name}`;
+        btn.onclick = () => switchProfile(idx);
+        tabs.appendChild(btn);
+      });
+    }
+
+    // Render Matrix Grid
+    function renderGrid() {
+      const grid = document.getElementById("keyboardGrid");
+      grid.innerHTML = "";
+      const p = profiles[currentProfile];
+      if (!p) return;
+
+      p.keys.forEach((k, idx) => {
+        const cap = document.createElement("div");
+        const isHoldKey = (idx === 12 || idx === 15);
+        cap.className = `key-cap ${isHoldKey ? 'hold-key' : ''} ${idx === selectedKeyIndex ? 'selected' : ''}`;
+        cap.id = `key-${idx}`;
+        
+        cap.onclick = () => {
+          selectedKeyIndex = idx;
+          renderGrid();
+          document.getElementById("selectedKeyHint").innerText = `Selected Key #${idx + 1} (${k.label}) • Pick a keycode below`;
+          playSwitchSound();
+        };
+
+        const typeLabels = ["Char", "Special", "Shortcut", "Macro", "Action", "Script"];
+        let holdBadge = '';
+        if (idx === 15) holdBadge = `<span style="font-size:8px; color:#f59e0b; font-weight:700;">⏱️HOLD 2.0s</span>`;
+        else if (idx === 12) holdBadge = `<span style="font-size:8px; color:#3b82f6; font-weight:700;">⏱️HOLD 2.0s</span>`;
+
+        cap.innerHTML = `
+          <div class="key-num">
+            <span>#${idx + 1}</span>
+            ${holdBadge}
+          </div>
+          <div class="key-label">${k.label || '—'}</div>
+          <div class="key-type-badge">${typeLabels[k.type] || 'KEY'}</div>
+        `;
+        grid.appendChild(cap);
+      });
+    }
+
+    // Render Keycode Palette Grid
+    let currentPaletteCat = "basic";
+    function renderPalette() {
+      const grid = document.getElementById("paletteGrid");
+      grid.innerHTML = "";
+      const items = PALETTE_DATA[currentPaletteCat] || [];
+
+      items.forEach(item => {
+        const chip = document.createElement("div");
+        chip.className = "palette-chip";
+        chip.innerHTML = `
+          <div>${item.label}</div>
+          <div class="chip-sub">${item.sub || ''}</div>
+        `;
+
+        chip.onclick = async () => {
+          playSwitchSound();
+          const targetKey = profiles[currentProfile].keys[selectedKeyIndex];
+          targetKey.label = item.label;
+          targetKey.type = item.type;
+          targetKey.code = item.code || 0;
+          targetKey.mod = item.mod || 0;
+          targetKey.macro = item.macro || "";
+
+          renderGrid();
+          showToast(`Assigned '${item.label}' to Key #${selectedKeyIndex + 1}!`);
+
+          if (port && writer) {
+            await sendCommand(`SET_KEY:${currentProfile},${selectedKeyIndex},${targetKey.type},${targetKey.mod},${targetKey.code},${targetKey.label},${targetKey.macro}`);
+            await sendCommand("SAVE_FLASH");
+          }
+        };
+
+        grid.appendChild(chip);
+      });
+    }
+
+    document.querySelectorAll(".cat-btn").forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentPaletteCat = btn.dataset.cat;
+        renderPalette();
+      };
+    });
+
+    // Update Preset LED Color from Card Color Picker
+    function updatePresetColor(presetId, hex) {
+      const preset = PRESETS.find(p => p.id === presetId);
+      if (!preset) return;
+      preset.color = hex;
+      const rgb = hexToRgb(hex);
+      preset.r = rgb.r;
+      preset.g = rgb.g;
+      preset.b = rgb.b;
+
+      const hexEl = document.getElementById(`presetHex-${presetId}`);
+      if (hexEl) hexEl.innerText = hex;
+      const dotEl = document.getElementById(`presetDot-${presetId}`);
+      if (dotEl) {
+        dotEl.style.background = hex;
+        dotEl.style.boxShadow = `0 0 10px ${hex}`;
+      }
+    }
+
+    // Render Presets Library
+    function renderPresets() {
+      const grid = document.getElementById("presetGrid");
+      grid.innerHTML = "";
+
+      PRESETS.forEach(preset => {
+        const card = document.createElement("div");
+        card.className = "preset-card";
+        
+        let miniKeysHtml = "";
+        preset.keys.forEach(k => {
+          miniKeysHtml += `<div class="mini-key" title="${k.label}">${k.label}</div>`;
+        });
+
+        card.innerHTML = `
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span class="preset-category">${preset.category}</span>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <input type="color" id="presetColor-${preset.id}" value="${preset.color}" title="Customize LED status color for this preset" 
+                  style="width:24px; height:24px; padding:0; border:none; border-radius:50%; cursor:pointer; background:none;"
+                  onchange="updatePresetColor('${preset.id}', this.value)">
+                <span id="presetHex-${preset.id}" style="font-size:11px; font-family:monospace; color:var(--text-muted); font-weight:700;">${preset.color}</span>
+              </div>
+            </div>
+            <div class="preset-title">
+              <span id="presetDot-${preset.id}" style="width:12px; height:12px; border-radius:50%; background:${preset.color}; box-shadow:0 0 8px ${preset.color}; display:inline-block;"></span>
+              ${preset.name}
+            </div>
+            <div class="preset-desc">${preset.desc}</div>
+            <div class="preset-mini-grid">${miniKeysHtml}</div>
+          </div>
+          <div style="display: flex; flex-direction:column; gap: 8px;">
+            <div style="display:flex; gap:6px; align-items:center;">
+              <label style="font-size:11px; color:var(--text-muted); white-space:nowrap;">Target Profile:</label>
+              <select id="targetSelect-${preset.id}" class="form-control" style="font-size:11px; padding:4px 6px;">
+                <option value="0" ${currentProfile === 0 ? "selected" : ""}>Profile 1: ${profiles[0].name}</option>
+                <option value="1" ${currentProfile === 1 ? "selected" : ""}>Profile 2: ${profiles[1].name}</option>
+                <option value="2" ${currentProfile === 2 ? "selected" : ""}>Profile 3: ${profiles[2].name}</option>
+                <option value="3" ${currentProfile === 3 ? "selected" : ""}>Profile 4: ${profiles[3].name}</option>
+              </select>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-primary" style="flex:1; font-size:11px;" onclick="applyPresetToTarget('${preset.id}')">⚡ Apply Layout & LED Color</button>
+              <button class="btn btn-secondary" style="font-size:11px;" onclick="exportPresetJson('${preset.id}')">Export</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    async function applyPresetToTarget(presetId) {
+      const preset = PRESETS.find(p => p.id === presetId);
+      if (!preset) return;
+      const targetSelect = document.getElementById(`targetSelect-${presetId}`);
+      const targetIdx = targetSelect ? parseInt(targetSelect.value) : currentProfile;
+      await applyPreset(presetId, targetIdx);
+    }
+
+    async function applyPreset(presetId, targetProfileIdx) {
+      const preset = PRESETS.find(p => p.id === presetId);
+      if (!preset) return;
+
+      profiles[targetProfileIdx].name = preset.name.substring(0, 15);
+      profiles[targetProfileIdx].r = preset.r;
+      profiles[targetProfileIdx].g = preset.g;
+      profiles[targetProfileIdx].b = preset.b;
+      profiles[targetProfileIdx].keys = JSON.parse(JSON.stringify(preset.keys));
+
+      if (currentProfile !== targetProfileIdx) {
+        switchProfile(targetProfileIdx, true);
+      } else {
+        updateHud();
+        renderTabs();
+        renderGrid();
+      }
+      playSwitchSound();
+      showToast(`Applied preset '${preset.name}' & LED color to Profile ${targetProfileIdx + 1}!`);
+
+      if (port && writer) {
+        await sendCommand(`SET_PROFILE_NAME:${targetProfileIdx},${profiles[targetProfileIdx].name}`);
+        await sendCommand(`SET_PROFILE_COLOR:${targetProfileIdx},${preset.r},${preset.g},${preset.b}`);
+        for (let k = 0; k < 16; k++) {
+          const key = profiles[targetProfileIdx].keys[k];
+          await sendCommand(`SET_KEY:${targetProfileIdx},${k},${key.type},${key.mod},${key.code},${key.label},${key.macro}`);
+        }
+        await sendCommand("SAVE_FLASH");
+        showToast(`💾 Synced Profile ${targetProfileIdx + 1} layout & LED color to RP2040 Flash!`);
+      }
+    }
+
+    function exportPresetJson(presetId) {
+      const preset = PRESETS.find(p => p.id === presetId);
+      if (!preset) return;
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(preset, null, 2));
+      const a = document.createElement('a');
+      a.href = dataStr;
+      a.download = `${preset.id}_macropad_profile.json`;
+      a.click();
+    }
+
+    // Render Matrix Tester Grid
+    function renderTesterGrid() {
+      const grid = document.getElementById("testerGrid");
+      grid.innerHTML = "";
+      for (let i = 0; i < 16; i++) {
+        const cap = document.createElement("div");
+        cap.className = `key-cap tester-key ${verifiedKeys.has(i) ? 'verified' : ''}`;
+        cap.id = `tester-key-${i}`;
+        cap.innerHTML = `
+          <div class="key-num">#${i + 1}</div>
+          <div class="key-label">${verifiedKeys.has(i) ? '✓ OK' : '—'}</div>
+          <div class="key-type-badge">${verifiedKeys.has(i) ? 'PASS' : 'TEST'}</div>
+        `;
+        grid.appendChild(cap);
+      }
+    }
+
+    document.getElementById("resetTesterBtn").onclick = () => {
+      verifiedKeys.clear();
+      totalHitCount = 0;
+      document.getElementById("testerCount").innerText = "0 / 16";
+      document.getElementById("totalHits").innerText = "0";
+      renderTesterGrid();
+      showToast("Matrix tester reset");
+    };
+
+    // Profile Color Modal
+    document.getElementById("hudDot").onclick = () => openColorModal();
+    document.getElementById("editProfileNameBtn").onclick = () => openColorModal();
+
+    function openColorModal() {
+      const p = profiles[currentProfile];
+      document.getElementById("profileCustomName").value = p ? p.name : "";
+      document.getElementById("profileColorModal").style.display = "flex";
+    }
+
+    document.querySelectorAll(".color-swatch").forEach(swatch => {
+      swatch.onclick = () => {
+        document.querySelectorAll(".color-swatch").forEach(s => s.classList.remove("active"));
+        swatch.classList.add("active");
+      };
+    });
+
+    document.getElementById("closeColorModalBtn").onclick = () => {
+      document.getElementById("profileColorModal").style.display = "none";
+    };
+
+    document.getElementById("saveProfileColorBtn").onclick = async () => {
+      const newName = document.getElementById("profileCustomName").value.trim() || `Profile ${currentProfile + 1}`;
+      const activeSwatch = document.querySelector(".color-swatch.active");
+      
+      profiles[currentProfile].name = newName;
+      if (activeSwatch) {
+        profiles[currentProfile].r = parseInt(activeSwatch.dataset.r);
+        profiles[currentProfile].g = parseInt(activeSwatch.dataset.g);
+        profiles[currentProfile].b = parseInt(activeSwatch.dataset.b);
+      }
+
+      updateHud();
+      renderTabs();
+      document.getElementById("profileColorModal").style.display = "none";
+
+      if (port && writer) {
+        await sendCommand(`SET_PROFILE_NAME:${currentProfile},${newName}`);
+        if (activeSwatch) {
+          await sendCommand(`SET_PROFILE_COLOR:${currentProfile},${activeSwatch.dataset.r},${activeSwatch.dataset.g},${activeSwatch.dataset.b}`);
+        }
+        await sendCommand("SAVE_FLASH");
+      }
+      showToast("Profile name & color updated and saved to Flash!");
+    };
+
+    // JSON Studio Functionality
+    function updateJsonViewer() {
+      const fullConfig = {
+        version: "1.4.1",
+        exportedAt: new Date().toISOString(),
+        activeProfile: currentProfile,
+        profiles: profiles
+      };
+      document.getElementById("jsonViewer").value = JSON.stringify(fullConfig, null, 2);
+    }
+
+    document.getElementById("copyJsonBtn").onclick = () => {
+      const textarea = document.getElementById("jsonViewer");
+      textarea.select();
+      navigator.clipboard.writeText(textarea.value);
+      showToast("JSON copied to clipboard!");
+    };
+
+    document.getElementById("exportActiveProfileBtn").onclick = () => {
+      const p = profiles[currentProfile];
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(p, null, 2));
+      const a = document.createElement('a');
+      a.href = dataStr;
+      a.download = `profile_${currentProfile + 1}_${p.name.replace(/\s+/g, '_')}.json`;
+      a.click();
+    };
+
+    document.getElementById("exportAllProfilesBtn").onclick = () => {
+      const fullConfig = {
+        version: "1.4.1",
+        exportedAt: new Date().toISOString(),
+        activeProfile: currentProfile,
+        profiles: profiles
+      };
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(fullConfig, null, 2));
+      const a = document.createElement('a');
+      a.href = dataStr;
+      a.download = `rp2040_4x4_macropad_backup.json`;
+      a.click();
+    };
+
+    // Drag and Drop JSON
+    const dropZone = document.getElementById("dropZone");
+    const jsonFileInput = document.getElementById("jsonFileInput");
+    dropZone.onclick = () => jsonFileInput.click();
+
+    dropZone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropZone.classList.add("dragover");
+    });
+    dropZone.addEventListener("dragleave", () => dropZone.classList.remove("dragover"));
+    dropZone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      dropZone.classList.remove("dragover");
+      if (e.dataTransfer.files.length > 0) {
+        handleJsonFile(e.dataTransfer.files[0]);
+      }
+    });
+    jsonFileInput.onchange = (e) => {
+      if (e.target.files.length > 0) {
+        handleJsonFile(e.target.files[0]);
+      }
+    };
+
+    function handleJsonFile(file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          applyImportedJson(parsed);
+        } catch (err) {
+          alert("Invalid JSON file: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    async function applyImportedJson(data) {
+      if (data.profiles && Array.isArray(data.profiles)) {
+        profiles = data.profiles;
+        showToast("Imported all 4 profiles from backup!");
+      } else if (data.keys && Array.isArray(data.keys)) {
+        profiles[currentProfile].keys = data.keys;
+        if (data.name) profiles[currentProfile].name = data.name;
+        showToast(`Imported profile '${data.name || 'Custom'}' into Profile ${currentProfile + 1}!`);
+      } else {
+        alert("Unrecognized JSON format. Expected 'profiles' array or single profile with 'keys'.");
+        return;
+      }
+
+      updateHud();
+      renderTabs();
+      renderGrid();
+      updateJsonViewer();
+
+      if (port && writer) {
+        showToast("Syncing imported JSON to RP2040 flash...");
+        for (let p = 0; p < profiles.length; p++) {
+          await sendCommand(`SET_PROFILE_NAME:${p},${profiles[p].name}`);
+          if (profiles[p].r !== undefined) {
+            await sendCommand(`SET_PROFILE_COLOR:${p},${profiles[p].r},${profiles[p].g},${profiles[p].b}`);
+          }
+          for (let k = 0; k < 16; k++) {
+            const key = profiles[p].keys[k];
+            await sendCommand(`SET_KEY:${p},${k},${key.type},${key.mod},${key.code},${key.label},${key.macro}`);
+          }
+        }
+        await sendCommand("SAVE_FLASH");
+        showToast("✅ Full JSON configuration saved to hardware Flash!");
+      }
+    }
+
+    document.getElementById("applyRawJsonBtn").onclick = () => {
+      try {
+        const text = document.getElementById("jsonViewer").value;
+        const parsed = JSON.parse(text);
+        applyImportedJson(parsed);
+      } catch (err) {
+        alert("JSON Syntax Error: " + err.message);
+      }
+    };
+
+    // Advanced Modal Open
+    document.getElementById("openAdvancedModalBtn").onclick = () => {
+      openKeyEditor(selectedKeyIndex);
+    };
+
+    // Switch Profile Function
+    async function switchProfile(idx, fromHardware = false) {
+      currentProfile = idx;
+      updateHud();
+      renderTabs();
+      renderGrid();
+
+      const p = profiles[currentProfile];
+      playSwitchSound();
+      showToast(`Switched to Profile ${idx + 1}: ${p ? p.name : ''}`);
+
+      if (!fromHardware && port && writer) {
+        await sendCommand(`SET_PROFILE:${idx}`);
+        await sendCommand("SAVE_FLASH");
+      }
+    }
+
+    document.getElementById("nextProfileHudBtn").onclick = () => {
+      switchProfile((currentProfile + 1) % profiles.length);
+    };
+
+    // Clean Serial Disconnect
+    async function handleDisconnectCleanly() {
+      if (reader) {
+        try { await reader.cancel(); } catch (e) {}
+        try { reader.releaseLock(); } catch (e) {}
+        reader = null;
+      }
+      if (writer) {
+        try { await writer.close(); } catch (e) {}
+        try { writer.releaseLock(); } catch (e) {}
+        writer = null;
+      }
+      if (port) {
+        try { await port.close(); } catch (e) {}
+        port = null;
+      }
+
+      document.getElementById("statusBadge").className = "status-badge";
+      document.getElementById("statusText").innerText = "Disconnected";
+      document.getElementById("connectBtn").innerText = "Connect Keyboard";
+      document.getElementById("jigglerToggle").disabled = true;
+      document.getElementById("saveFlashBtn").disabled = true;
+      const hudSync = document.getElementById("hudSyncBtn");
+      if (hudSync) hudSync.disabled = true;
+      const footerSync = document.getElementById("footerSyncBtn");
+      if (footerSync) footerSync.disabled = true;
+
+      logConsole("Serial port closed / disconnected cleanly.", "sys");
+    }
+
+    // Open a specific Serial Port (used for both manual click and auto-reconnect)
+    async function openSerialPort(targetPort) {
+      try {
+        port = targetPort;
+        await port.open({ baudRate: 115200 });
+
+        document.getElementById("statusBadge").className = "status-badge connected";
+        document.getElementById("statusText").innerText = "Connected to RP2040";
+        document.getElementById("connectBtn").innerText = "Disconnect";
+        document.getElementById("jigglerToggle").disabled = false;
+        document.getElementById("saveFlashBtn").disabled = false;
+        const hudSync = document.getElementById("hudSyncBtn");
+        if (hudSync) hudSync.disabled = false;
+        const footerSync = document.getElementById("footerSyncBtn");
+        if (footerSync) footerSync.disabled = false;
+
+        const textEncoder = new TextEncoderStream();
+        textEncoder.readable.pipeTo(port.writable);
+        writer = textEncoder.writable.getWriter();
+
+        readLoop();
+        sendCommand("GET_STATE");
+        playSwitchSound();
+        showToast("Connected to RP2040 Keyboard!");
+        logConsole("Connected to RP2040 CDC Serial.", "sys");
+      } catch (err) {
+        console.error("Open port error:", err);
+        port = null;
+        writer = null;
+      }
+    }
+
+    if (navigator.serial) {
+      navigator.serial.addEventListener("disconnect", (event) => {
+        logConsole("USB device physically disconnected / entered bootloader.", "sys");
+        handleDisconnectCleanly();
+        showToast("Keyboard disconnected / entered bootloader");
+      });
+
+      // Auto-reconnect when device is plugged in without opening device picker!
+      navigator.serial.addEventListener("connect", async (event) => {
+        logConsole("RP2040 Keyboard plugged in. Auto-connecting...", "sys");
+        if (!port && event.target) {
+          await openSerialPort(event.target);
+        }
+      });
+    }
+
+    // Connect WebSerial
+    async function connectSerial() {
+      if (port) {
+        await handleDisconnectCleanly();
+        showToast("Keyboard disconnected");
+        return;
+      }
+
+      try {
+        const p = await navigator.serial.requestPort();
+        await openSerialPort(p);
+      } catch (err) {
+        console.error("Connect error:", err);
+        if (err.name !== 'NotFoundError') {
+          showToast("Connection failed: " + err.message);
+        }
+      }
+    }
+
+    // Auto-connect check on page load if user already paired device once!
+    async function checkAutoConnect() {
+      if (navigator.serial) {
+        try {
+          const ports = await navigator.serial.getPorts();
+          if (ports && ports.length > 0 && !port) {
+            logConsole("Remembered keyboard detected. Auto-connecting without picker...", "sys");
+            await openSerialPort(ports[0]);
+          }
+        } catch (e) {
+          console.log("Auto-connect check:", e);
+        }
+      }
+    }
+
+    async function sendCommand(cmd) {
+      if (writer) {
+        try {
+          await writer.write(cmd + "\n");
+          logConsole(`TX ➔ ${cmd}`, "tx");
+        } catch (e) {
+          console.warn("Write error:", e);
+        }
+      }
+    }
+
+    async function readLoop() {
+      try {
+        const textDecoder = new TextDecoderStream();
+        port.readable.pipeTo(textDecoder.writable);
+        reader = textDecoder.readable.getReader();
+
+        let buffer = "";
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          buffer += value;
+          const lines = buffer.split("\n");
+          buffer = lines.pop();
+
+          for (const line of lines) {
+            handleIncoming(line.trim());
+          }
+        }
+      } catch (err) {
+        console.warn("Serial connection stream ended:", err);
+      } finally {
+        handleDisconnectCleanly();
+      }
+    }
+
+    function handleIncoming(line) {
+      if (!line) return;
+      logConsole(`RX ⬅ ${line}`, "rx");
+
+      try {
+        const data = JSON.parse(line);
+
+        if (data.event === "down") {
+          playSwitchSound();
+          const el = document.getElementById(`key-${data.idx}`);
+          if (el) el.classList.add("pressed");
+
+          // Update tester
+          verifiedKeys.add(data.idx);
+          totalHitCount++;
+          document.getElementById("testerCount").innerText = `${verifiedKeys.size} / 16`;
+          document.getElementById("totalHits").innerText = totalHitCount;
+          const testEl = document.getElementById(`tester-key-${data.idx}`);
+          if (testEl) {
+            testEl.classList.add("verified");
+            testEl.querySelector(".key-label").innerText = "✓ OK";
+            testEl.querySelector(".key-type-badge").innerText = "PASS";
+          }
+        }
+        else if (data.event === "up") {
+          const el = document.getElementById(`key-${data.idx}`);
+          if (el) el.classList.remove("pressed");
+        }
+        else if (data.event === "profile") {
+          switchProfile(data.index, true);
+        }
+        else if (data.event === "jiggler") {
+          jigglerEnabled = data.enabled;
+          document.getElementById("jigglerToggle").checked = jigglerEnabled;
+          document.getElementById("jigglerStatus").innerText = jigglerEnabled ? "Active (Running stealth loop)" : "Inactive";
+          showToast(jigglerEnabled ? "Stay-Awake / Jiggler Enabled" : "Stay-Awake Disabled");
+        }
+        else if (data.status === "saved") {
+          const statusEl = document.getElementById("hudSyncStatus");
+          if (statusEl) {
+            statusEl.innerText = "💾 Flash Synced (" + new Date().toLocaleTimeString() + ")";
+            statusEl.style.color = "#10b981";
+          }
+        }
+        else if (data.type === "state") {
+          currentProfile = data.profile;
+          jigglerEnabled = data.jiggler;
+          document.getElementById("jigglerToggle").checked = jigglerEnabled;
+          document.getElementById("jigglerStatus").innerText = jigglerEnabled ? "Active (Running stealth loop)" : "Inactive";
+
+          if (data.holdTime) {
+            document.getElementById("holdTimeRange").value = data.holdTime;
+            document.getElementById("holdTimeVal").innerText = data.holdTime;
+          }
+          if (data.jigglerInterval) {
+            document.getElementById("jigglerIntervalRange").value = data.jigglerInterval;
+            document.getElementById("jigglerIntervalVal").innerText = data.jigglerInterval;
+          }
+          if (data.rgbBrightness) {
+            document.getElementById("brightnessRange").value = data.rgbBrightness;
+            document.getElementById("brightnessVal").innerText = data.rgbBrightness;
+          }
+
+          if (data.profiles && data.profiles.length > 0) {
+            profiles = data.profiles;
+          }
+          updateHud();
+          renderTabs();
+          renderGrid();
+          updateJsonViewer();
+        }
+      } catch (e) {}
+    }
+
+    // Modal Key Editor
+    function openKeyEditor(idx) {
+      editingKeyIndex = idx;
+      const k = profiles[currentProfile].keys[idx];
+
+      document.getElementById("modalKeyNum").innerText = `#${idx + 1}`;
+      document.getElementById("editLabel").value = k.label || "";
+      document.getElementById("editType").value = k.type;
+      document.getElementById("editCode").value = k.code || 0;
+      document.getElementById("editMacro").value = k.macro || "";
+      document.getElementById("editAction").value = k.code || 1;
+      document.getElementById("presetSelect").value = "";
+      document.getElementById("scriptPresetSelect").value = "";
+
+      if (k.type === 5) {
+        document.getElementById("editScript").value = k.macro || "";
+        document.getElementById("scriptCharCount").innerText = `${(k.macro || "").length} / 63 chars`;
+      } else {
+        document.getElementById("editScript").value = "";
+        document.getElementById("scriptCharCount").innerText = "0 / 63 chars";
+      }
+
+      document.getElementById("modCtrl").checked = (k.mod & 1) !== 0;
+      document.getElementById("modShift").checked = (k.mod & 2) !== 0;
+      document.getElementById("modAlt").checked = (k.mod & 4) !== 0;
+      document.getElementById("modWin").checked = (k.mod & 8) !== 0;
+
+      updateModalFields();
+      document.getElementById("editModal").style.display = "flex";
+    }
+
+    function updateModalFields() {
+      const type = document.getElementById("editType").value;
+      document.getElementById("macroGroup").style.display = (type === "3") ? "block" : "none";
+      document.getElementById("scriptGroup").style.display = (type === "5") ? "block" : "none";
+      document.getElementById("actionGroup").style.display = (type === "4") ? "block" : "none";
+      document.getElementById("codeGroup").style.display = (type === "0" || type === "1" || type === "2") ? "block" : "none";
+      document.getElementById("modifierGroup").style.display = (type === "2") ? "block" : "none";
+    }
+
+    document.getElementById("editScript").oninput = (e) => {
+      document.getElementById("scriptCharCount").innerText = `${e.target.value.length} / 63 chars`;
+    };
+
+    document.getElementById("scriptPresetSelect").onchange = (e) => {
+      const val = e.target.value;
+      if (val) {
+        document.getElementById("editScript").value = val;
+        document.getElementById("scriptCharCount").innerText = `${val.length} / 63 chars`;
+        document.getElementById("editType").value = "5";
+        const opt = e.target.selectedOptions[0];
+        const textParts = opt.text.split(" ");
+        document.getElementById("editLabel").value = textParts.length > 2 ? textParts.slice(1, 3).join(" ") : textParts[1];
+        updateModalFields();
+      }
+    };
+
+    document.getElementById("presetSelect").onchange = (e) => {
+      const val = e.target.value;
+      if (val) {
+        document.getElementById("editType").value = "3";
+        document.getElementById("editMacro").value = val;
+        const opt = e.target.selectedOptions[0];
+        document.getElementById("editLabel").value = opt.text.substring(0, 11);
+        updateModalFields();
+      }
+    };
+
+    document.getElementById("editType").onchange = updateModalFields;
+    document.getElementById("modalCancel").onclick = () => {
+      document.getElementById("editModal").style.display = "none";
+    };
+
+    document.getElementById("modalSave").onclick = async () => {
+      if (editingKeyIndex < 0) return;
+      const k = profiles[currentProfile].keys[editingKeyIndex];
+
+      k.label = document.getElementById("editLabel").value.trim() || `Key ${editingKeyIndex + 1}`;
+      k.type = parseInt(document.getElementById("editType").value);
+
+      if (k.type === 5) {
+        k.macro = document.getElementById("editScript").value.trim();
+        k.code = 0;
+        k.mod = 0;
+      } else if (k.type === 4) {
+        k.code = parseInt(document.getElementById("editAction").value);
+        k.mod = 0;
+        k.macro = "";
+      } else if (k.type === 2) {
+        k.code = parseInt(document.getElementById("editCode").value) || 0;
+        let mod = 0;
+        if (document.getElementById("modCtrl").checked) mod |= 1;
+        if (document.getElementById("modShift").checked) mod |= 2;
+        if (document.getElementById("modAlt").checked) mod |= 4;
+        if (document.getElementById("modWin").checked) mod |= 8;
+        k.mod = mod;
+        k.macro = "";
+      } else if (k.type === 3) {
+        k.macro = document.getElementById("editMacro").value;
+        k.code = 0;
+        k.mod = 0;
+      } else {
+        k.code = parseInt(document.getElementById("editCode").value) || 0;
+        k.mod = 0;
+        k.macro = "";
+      }
+
+      renderGrid();
+      document.getElementById("editModal").style.display = "none";
+
+      if (port && writer) {
+        await sendCommand(`SET_KEY:${currentProfile},${editingKeyIndex},${k.type},${k.mod},${k.code},${k.label},${k.macro}`);
+        await sendCommand("SAVE_FLASH");
+        playSwitchSound();
+        showToast(`✅ Key #${editingKeyIndex + 1} updated & synced to Flash!`);
+      }
+    };
+
+    // AI Copilot Prompt Preview and Generator
+    function getAiPromptTemplate() {
+      const appSelect = document.getElementById("aiAppSelect");
+      const customInput = document.getElementById("aiCustomAppInput");
+      const isCustom = appSelect.value === "custom";
+      const appName = isCustom ? (customInput.value.trim() || "My Custom App") : appSelect.options[appSelect.selectedIndex].text;
+      const appDetails = isCustom ? (customInput.value.trim() || "Custom shortcuts and workflow") : appSelect.value;
+      const colorHex = document.getElementById("aiColorPicker").value;
+      const rgb = hexToRgb(colorHex);
+
+      return `You are a specialist mechanical keyboard engineer designing a custom profile for a 4x4 MacroPad (Waveshare RP2040-Zero).
+
+Target Application / Workflow:
+"${appName}" (${appDetails})
+
+Physical Matrix Specification:
+- 16 Keys in a 4x4 Matrix (Row 0: Keys #1..#4, Row 1: Keys #5..#8, Row 2: Keys #9..#12, Row 3: Keys #13..#16).
+- Natural top-to-bottom layout.
+
+Key Definition Schema:
+- label: String (Max 11 chars, e.g. "git status", "Cut (C)", "Render")
+- type: Integer
+    0 = Single Character (code: ASCII number, e.g. 'c'=99, '7'=55)
+    1 = Special Key (Enter=176, Esc=177, Bksp=178, Tab=179, Space=32, Del=212, Up=218, Down=217, Left=216, Right=215, Mute=226, Play=205, VolUp=233, VolDown=234)
+    2 = Modifier Shortcut (mod bitmask: 1=Ctrl, 2=Shift, 4=Alt, 8=Win; code: ASCII key)
+    3 = Text Macro (typed sequentially, e.g. "npm run dev\\n")
+    4 = Hardware Action (1=Next Layer, 2=Jiggler, 3=Terminal, 4=VS Code)
+    5 = Script / App Launcher (Win+R command, e.g. "wt", "calc", "explorer .", "start https://...")
+- mod: Integer bitmask (1=Ctrl, 2=Shift, 4=Alt, 8=Win; 0 if none)
+- code: Integer keycode
+- macro: String (script command if type=5, text macro if type=3, empty string otherwise)
+
+Instructions:
+1. Provide the optimal 16 keys for ${appName}.
+2. Ensure Key #16 is dedicated to layer navigation: {"label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": ""}
+3. Return ONLY a single valid JSON block formatted as:
+\`\`\`json
+{
+  "name": "${appName.substring(0, 15)}",
+  "category": "Custom",
+  "desc": "Custom ${appName} macropad profile",
+  "color": "${colorHex}",
+  "r": ${rgb.r},
+  "g": ${rgb.g},
+  "b": ${rgb.b},
+  "keys": [
+    { "label": "Key 1", "type": 0, "code": 99, "mod": 0, "macro": "" },
+    ... exactly 16 keys
+  ]
+}
+\`\`\``;
+    }
+
+    function updateAiPromptPreview() {
+      const preview = document.getElementById("aiPromptPreview");
+      if (preview) {
+        preview.value = getAiPromptTemplate();
+      }
+    }
+
+    document.getElementById("aiAppSelect").onchange = (e) => {
+      document.getElementById("aiCustomAppGroup").style.display = (e.target.value === "custom") ? "block" : "none";
+      updateAiPromptPreview();
+    };
+    document.getElementById("aiCustomAppInput").oninput = updateAiPromptPreview;
+    document.getElementById("aiColorPicker").oninput = (e) => {
+      document.getElementById("aiColorHex").value = e.target.value;
+      updateAiPromptPreview();
+    };
+
+    document.getElementById("copyAiPromptBtn").onclick = () => {
+      const promptText = getAiPromptTemplate();
+      navigator.clipboard.writeText(promptText).then(() => {
+        playSwitchSound();
+        showToast("📋 Copied AI Prompt! Paste into ChatGPT, Gemini, or Claude.");
+      }).catch(() => {
+        alert("Clipboard write failed. Copy the text directly from the prompt preview box.");
+      });
+    };
+
+    document.getElementById("applyAiJsonBtn").onclick = async () => {
+      const rawText = document.getElementById("aiResponseInput").value.trim();
+      if (!rawText) {
+        showToast("⚠️ Paste the AI JSON response first");
+        return;
+      }
+
+      try {
+        let jsonStr = rawText;
+        const match = rawText.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+        if (match) jsonStr = match[1];
+
+        const data = JSON.parse(jsonStr);
+        if (!data.keys || !Array.isArray(data.keys) || data.keys.length !== 16) {
+          throw new Error("JSON must include a 'keys' array with exactly 16 key objects");
+        }
+
+        const targetIdx = parseInt(document.getElementById("aiTargetProfile").value);
+        profiles[targetIdx].name = (data.name || `AI Profile ${targetIdx + 1}`).substring(0, 15);
+        if (data.r !== undefined && data.g !== undefined && data.b !== undefined) {
+          profiles[targetIdx].r = Math.min(255, Math.max(0, parseInt(data.r) || 0));
+          profiles[targetIdx].g = Math.min(255, Math.max(0, parseInt(data.g) || 0));
+          profiles[targetIdx].b = Math.min(255, Math.max(0, parseInt(data.b) || 0));
+        }
+
+        for (let i = 0; i < 16; i++) {
+          const k = data.keys[i];
+          profiles[targetIdx].keys[i] = {
+            label: (k.label || `Key ${i + 1}`).substring(0, 11),
+            type: parseInt(k.type) || 0,
+            mod: parseInt(k.mod) || 0,
+            code: parseInt(k.code) || 0,
+            macro: (k.macro || "").substring(0, 63)
+          };
+        }
+
+        if (currentProfile !== targetIdx) {
+          switchProfile(targetIdx, true);
+        } else {
+          updateHud();
+          renderTabs();
+          renderGrid();
+        }
+        playSwitchSound();
+        showToast(`✅ Successfully applied AI layout to Profile ${targetIdx + 1}!`);
+
+        if (port && writer) {
+          await sendCommand(`SET_PROFILE_NAME:${targetIdx},${profiles[targetIdx].name}`);
+          await sendCommand(`SET_PROFILE_COLOR:${targetIdx},${profiles[targetIdx].r},${profiles[targetIdx].g},${profiles[targetIdx].b}`);
+          for (let k = 0; k < 16; k++) {
+            const key = profiles[targetIdx].keys[k];
+            await sendCommand(`SET_KEY:${targetIdx},${k},${key.type},${key.mod},${key.code},${key.label},${key.macro}`);
+          }
+          await sendCommand("SAVE_FLASH");
+          showToast(`💾 Synced Profile ${targetIdx + 1} layout & LED color to RP2040 Flash!`);
+        }
+      } catch (err) {
+        alert("JSON Parse Error: " + err.message + "\n\nMake sure the AI response has valid JSON with 16 keys.");
+      }
+    };
+
+    // Jiggler Toggle
+    document.getElementById("jigglerToggle").onchange = (e) => {
+      const val = e.target.checked;
+      sendCommand(`SET_JIGGLER:${val ? "1" : "0"}`);
+      sendCommand("SAVE_FLASH");
+    };
+
+    // Sync to Flash Handler
+    async function syncToFlash() {
+      if (!port || !writer) {
+        showToast("⚠️ Connect keyboard first");
+        return;
+      }
+      try {
+        await sendCommand("SAVE_FLASH");
+        playSwitchSound();
+        showToast("✅ Synced! All profiles & active layer saved to RP2040 Flash!");
+        
+        const btns = [
+          document.getElementById("saveFlashBtn"),
+          document.getElementById("hudSyncBtn"),
+          document.getElementById("footerSyncBtn")
+        ];
+        btns.forEach(b => {
+          if (b) {
+            b.style.boxShadow = "0 0 15px #10b981";
+            setTimeout(() => b.style.boxShadow = "", 800);
+          }
+        });
+
+        const statusEl = document.getElementById("hudSyncStatus");
+        if (statusEl) {
+          statusEl.innerText = "💾 Flash Synced (" + new Date().toLocaleTimeString() + ")";
+          statusEl.style.color = "#10b981";
+        }
+      } catch (err) {
+        console.error("Sync error:", err);
+        showToast("❌ Error saving to flash: " + err.message);
+      }
+    }
+
+    document.getElementById("saveFlashBtn").onclick = syncToFlash;
+    document.getElementById("hudSyncBtn").onclick = syncToFlash;
+    document.getElementById("footerSyncBtn").onclick = syncToFlash;
+
+    // Reset Defaults
+    document.getElementById("resetBtn").onclick = () => {
+      if (confirm("Reset all profiles to factory defaults?")) {
+        sendCommand("RESET_DEFAULTS");
+      }
+    };
+
+    document.getElementById("connectBtn").onclick = connectSerial;
+
+    // Advanced Hardware Tuning & Sliders
+    document.getElementById("settingsBtn").onclick = () => {
+      document.getElementById("settingsModal").style.display = "flex";
+    };
+    document.getElementById("closeSettingsBtn").onclick = () => {
+      document.getElementById("settingsModal").style.display = "none";
+    };
+
+    document.getElementById("holdTimeRange").oninput = (e) => {
+      const v = e.target.value;
+      document.getElementById("holdTimeVal").innerText = v;
+      sendCommand(`SET_HOLD_TIME:${v}`);
+    };
+    document.getElementById("jigglerIntervalRange").oninput = (e) => {
+      const v = e.target.value;
+      document.getElementById("jigglerIntervalVal").innerText = v;
+      sendCommand(`SET_JIGGLER_INTERVAL:${v}`);
+    };
+    document.getElementById("brightnessRange").oninput = (e) => {
+      const v = e.target.value;
+      document.getElementById("brightnessVal").innerText = v;
+      sendCommand(`SET_RGB_BRIGHTNESS:${v}`);
+    };
+
+    // Reboot to Bootloader
+    document.getElementById("rebootBootloaderBtn").onclick = async () => {
+      if (!port || !writer) {
+        alert("Please connect the keyboard first so we can send the reboot command to the RP2040.");
+        return;
+      }
+      if (confirm("Reboot RP2040 into BOOTSEL mode?\n\nThe keyboard will disconnect and appear as a USB drive named 'RPI-RP2' in Windows Explorer.")) {
+        try {
+          await sendCommand("REBOOT_BOOTSEL");
+          showToast("⚡ RP2040 is rebooting into BOOTSEL mode...");
+        } catch (e) {
+          console.warn("Reboot send notice:", e);
+        }
+        setTimeout(() => {
+          handleDisconnectCleanly();
+          document.getElementById("settingsModal").style.display = "none";
+          document.getElementById("bootloaderGuideModal").style.display = "flex";
+        }, 250);
+      }
+    };
+
+    // 1-Click Flash Function
+    async function doWebFlash() {
+      try {
+        if (!window.showDirectoryPicker) {
+          alert("Your browser does not support folder selection.\n\nPlease use the Drag & Drop method:\n1. Click 'Download 4x4keyboard_rp2040_zero_v1.5.1.uf2'\n2. Drag it into the RPI-RP2 drive in Windows Explorer.");
+          return;
+        }
+        alert("👉 In the folder picker that opens next, select the 'RPI-RP2' drive.");
+        const dirHandle = await window.showDirectoryPicker();
+        showToast("Fetching tagged firmware binary...");
+
+        let blob;
+        let filename = "4x4keyboard_rp2040_zero_v1.5.1.uf2";
+        try {
+          const res = await fetch(filename);
+          if (!res.ok) throw new Error("Local tagged fetch failed");
+          blob = await res.blob();
+        } catch {
+          try {
+            const res = await fetch("firmware.uf2");
+            if (!res.ok) throw new Error("Local fallback failed");
+            blob = await res.blob();
+          } catch {
+            const res = await fetch("https://raw.githubusercontent.com/Saikumarmohan/saipad/main/4x4keyboard_rp2040_zero_v1.5.1.uf2");
+            blob = await res.blob();
+          }
+        }
+
+        showToast(`Writing ${filename} to RPI-RP2 drive...`);
+        const fileHandle = await dirHandle.getFileHandle(filename, { create: true });
+        const writable = await fileHandle.createWritable();
+        await writable.write(blob);
+        await writable.close();
+
+        showToast("✅ Flashed successfully! RP2040 is restarting...");
+        playSwitchSound();
+        document.getElementById("settingsModal").style.display = "none";
+        document.getElementById("bootloaderGuideModal").style.display = "none";
+      } catch (err) {
+        console.error(err);
+        if (err.name !== 'AbortError') {
+          alert("Flashing notice: " + err.message + "\n\nTip: You can always drag & drop 4x4keyboard_rp2040_zero_v1.5.1.uf2 directly into the RPI-RP2 drive!");
+        }
+      }
+    }
+    document.getElementById("webFlashBtn").onclick = doWebFlash;
+    document.getElementById("guideWebFlashBtn").onclick = doWebFlash;
+    document.getElementById("closeBootloaderGuideBtn").onclick = () => {
+      document.getElementById("bootloaderGuideModal").style.display = "none";
+    };
+
+    // Release Checker
+    async function checkRelease() {
+      const modal = document.getElementById("releaseModal");
+      const content = document.getElementById("releaseContent");
+      modal.style.display = "flex";
+      content.innerHTML = "Fetching latest release details...";
+
+      try {
+        let res;
+        try {
+          res = await fetch("version.json");
+          if (!res.ok) throw new Error();
+        } catch {
+          res = await fetch("https://raw.githubusercontent.com/Saikumarmohan/saipad/main/version.json");
+        }
+        const data = await res.json();
+        const fwName = data.firmware_file || "4x4keyboard_rp2040_zero_v1.5.1.uf2";
+        const btn = document.getElementById("downloadFirmwareBtn");
+        if (btn) {
+          btn.href = fwName;
+          btn.download = fwName;
+          btn.textContent = `📥 Download ${fwName}`;
+        }
+        content.innerHTML = `
+          <div style="font-weight:700; font-size:15px; margin-bottom:8px;">${data.name} — <span style="color:#10b981;">v${data.version}</span></div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px; font-size:11px;">
+            <span style="background:var(--card-sub); border:1px solid var(--card-border); padding:2px 8px; border-radius:4px;">🎯 MCU: <b>${data.target_mcu || 'RP2040'}</b></span>
+            <span style="background:var(--card-sub); border:1px solid var(--card-border); padding:2px 8px; border-radius:4px;">🏷️ Board: <b>${data.target_board || 'RP2040-Zero'}</b></span>
+            <span style="background:var(--card-sub); border:1px solid var(--card-border); padding:2px 8px; border-radius:4px;">📦 File: <code>${fwName}</code></span>
+          </div>
+          <div style="color:var(--text-muted); margin-bottom:12px;">Released: ${data.release_date}</div>
+          <div style="font-weight:600; margin-bottom:6px;">Changelog:</div>
+          <ul style="padding-left:18px; line-height:1.6; max-height:220px; overflow-y:auto;">
+            ${data.changelog.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        `;
+      } catch (err) {
+        content.innerHTML = `
+          <div style="font-weight:600; color:#ef4444; margin-bottom:8px;">⚠️ Could not fetch version info</div>
+          <div>You can still download the compiled firmware directly below or check the <a href="https://github.com/Saikumarmohan/saipad" target="_blank" style="color:var(--primary);">GitHub Repository</a>.</div>
+        `;
+      }
+    }
+    document.getElementById("releaseCheckBtn").onclick = checkRelease;
+    document.getElementById("closeReleaseModal").onclick = () => {
+      document.getElementById("releaseModal").style.display = "none";
+    };
+
+    // Initial Renders & Auto-Connect
+    setTheme(currentTheme);
+    updateHud();
+    renderTabs();
+    renderGrid();
+    renderPalette();
+    renderPresets();
+    renderTesterGrid();
+    updateAiPromptPreview();
+    checkAutoConnect();
+  </script>
+</body>
+</html>

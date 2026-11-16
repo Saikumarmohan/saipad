@@ -1,0 +1,27 @@
+{
+  "name": "90s Accounting",
+  "category": "Retro",
+  "desc": "Authentic numeric keypad layout with 1-click Windows Calculator app launcher, decimal, Enter, and math operators.",
+  "color": "#ffb000",
+  "r": 255,
+  "g": 176,
+  "b": 0,
+  "keys": [
+    { "label": "7", "type": 0, "code": 55, "mod": 0, "macro": "" },
+    { "label": "8", "type": 0, "code": 56, "mod": 0, "macro": "" },
+    { "label": "9", "type": 0, "code": 57, "mod": 0, "macro": "" },
+    { "label": "/", "type": 0, "code": 47, "mod": 0, "macro": "" },
+    { "label": "4", "type": 0, "code": 52, "mod": 0, "macro": "" },
+    { "label": "5", "type": 0, "code": 53, "mod": 0, "macro": "" },
+    { "label": "6", "type": 0, "code": 54, "mod": 0, "macro": "" },
+    { "label": "*", "type": 0, "code": 42, "mod": 0, "macro": "" },
+    { "label": "1", "type": 0, "code": 49, "mod": 0, "macro": "" },
+    { "label": "2", "type": 0, "code": 50, "mod": 0, "macro": "" },
+    { "label": "3", "type": 0, "code": 51, "mod": 0, "macro": "" },
+    { "label": "-", "type": 0, "code": 45, "mod": 0, "macro": "" },
+    { "label": "Calc", "type": 5, "code": 0, "mod": 0, "macro": "calc" },
+    { "label": "0", "type": 0, "code": 48, "mod": 0, "macro": "" },
+    { "label": "Enter", "type": 1, "code": 176, "mod": 0, "macro": "" },
+    { "label": "+", "type": 0, "code": 43, "mod": 0, "macro": "" }
+  ]
+}

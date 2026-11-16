@@ -1,0 +1,27 @@
+{
+  "name": "Gamer Voice Deck",
+  "category": "Gaming",
+  "desc": "Voice chat muting, deafen, clipping highlights, screenshotting, Discord overlay, volume controls, and Windows key lock.",
+  "color": "#84cc16",
+  "r": 132,
+  "g": 204,
+  "b": 22,
+  "keys": [
+    { "label": "Overlay", "type": 2, "code": 96, "mod": 2, "macro": "" },
+    { "label": "ScreenShot", "type": 2, "code": 206, "mod": 12, "macro": "" },
+    { "label": "ShadowClip", "type": 2, "code": 203, "mod": 4, "macro": "" },
+    { "label": "Mute Mic", "type": 2, "code": 109, "mod": 3, "macro": "" },
+    { "label": "Deafen", "type": 2, "code": 100, "mod": 3, "macro": "" },
+    { "label": "Vol Up", "type": 1, code: 233, "mod": 0, "macro": "" },
+    { "label": "Vol Down", "type": 1, code: 234, "mod": 0, "macro": "" },
+    { "label": "Mute Audio", "type": 1, code: 226, "mod": 0, "macro": "" },
+    { "label": "Play/Pause", "type": 1, code: 205, "mod": 0, "macro": "" },
+    { "label": "Next Track", "type": 1, code: 181, "mod": 0, "macro": "" },
+    { "label": "Prev Track", "type": 1, code: 182, "mod": 0, "macro": "" },
+    { "label": "Wiki", "type": 5, "code": 0, "mod": 0, "macro": "start https://google.com" },
+    { "label": "Presence", "type": 4, "code": 2, "mod": 0, "macro": "" },
+    { "label": "TaskMgr", "type": 2, "code": 177, "mod": 3, "macro": "" },
+    { "label": "Lock PC", "type": 2, "code": 108, "mod": 8, "macro": "" },
+    { "label": "Next Layer", "type": 4, "code": 1, "mod": 0, "macro": "" }
+  ]
+}
