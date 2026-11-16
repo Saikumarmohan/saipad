@@ -34,6 +34,8 @@
     "flash_persistence_auto_sync": true
   },
   "changelog": [
+    "v1.5.1 - ⚡ Dual-Corner Hold (Key 13 + 16 for 2000ms): Hold both bottom corners together for deliberate profile cycle without accidental switching",
+    "v1.5.1 - 🎯 Directional Profile Switch (Key 13 + 4 / Key 13 + 1): Hold Key 13 and tap Key 4 to cycle forward, or tap Key 1 to cycle backward",
     "v1.5.1 - Tagged Firmware Binary: Added explicit version tag in binary filename (4x4keyboard_rp2040_zero_v1.5.1.uf2) for instant identification",
     "v1.5.1 - Deliberate Profile Switch Hold Time (2000ms): Increased default hold threshold from 1.2s to 2.0s (range 800ms-5000ms) to eliminate accidental switching during fast typing",
     "v1.5.1 - USB Keystroke Script & Command Injection (KT_SCRIPT = 5): Injects Windows Run (Win+R) commands to launch terminals (wt), VS Code (code .), Calculator (calc), Explorer, or custom PowerShell/CMD scripts in 1 tap without native software",

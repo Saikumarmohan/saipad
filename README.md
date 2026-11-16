@@ -67,9 +67,11 @@ An advanced, corporate-safe programmable 4x4 mechanical macropad powered by the 
 
 ## ⚡ Profile Switching & Shortcuts
 
-* **🎯 Direct Profile Jump:** Hold Key #16 and tap Key #1, #2, #3, or #4 to jump directly to Profile 1, 2, 3, or 4!
-* **⚡ 2-Key Combo Switch:** Press Key #13 + Key #16 together to cycle to the next profile instantly.
-* **⏱️ Deliberate Hold-to-Switch (2.0s):** Hold Key #16 for 2.0s to cycle profiles. Short tap performs the key's normal function (avoids accidental switching during fast typing).
+* **⏱️ Dual-Corner Hold (Key #13 + Key #16 for 2.0s):** Hold both bottom corner keys (#13 and #16) together for 2.0s to cycle profiles. Short taps fire normal key functions (avoids accidental switching during fast typing).
+* **⚡ Directional Profile Switching (13 + 4 and 13 + 1):**
+  * Hold **Key #13** (bottom-left) and tap **Key #4** (top-right) ➔ **Next Profile (Step Forward)**!
+  * Hold **Key #13** (bottom-left) and tap **Key #1** (top-left) ➔ **Previous Profile (Step Backward)**!
+* **🎯 Direct Profile Jump:** Hold Key #13 (or #16) and tap **Key #2** or **Key #3** to jump directly to that profile!
 * **🎨 Onboard WS2812 RGB LED (GP16):**
   * **Profile 1 (Numpad):** Electric Blue (`#0082ff`)
   * **Profile 2 (Git & Dev):** Emerald Green (`#00ff3c`)
