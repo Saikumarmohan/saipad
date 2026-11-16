@@ -34,6 +34,8 @@
     "flash_persistence_auto_sync": true
   },
   "changelog": [
+    "v1.5.1 - 💾 Hardware Flash Persistence Engine: Replaced 4KB emulated EEPROM with direct RP2040 Flash Range API (16KB dedicated flash sector at 0x1FC000), permanently fixing reset-on-unplug and supporting up to 128-char macros per key across all 4 profiles",
+    "v1.5.1 - 🔍 Selected Key Quick Inspector & Editor: Instant inline key mapping inspector directly below the 4x4 matrix with live amber/green Flash Sync indicator and double-click modal editor",
     "v1.5.1 - ⚡ Dual-Corner Hold (Key 13 + 16 for 2000ms): Hold both bottom corners together for deliberate profile cycle without accidental switching",
     "v1.5.1 - 🎯 Directional Profile Switch (Key 13 + 4 / Key 13 + 1): Hold Key 13 and tap Key 4 to cycle forward, or tap Key 1 to cycle backward",
     "v1.5.1 - Tagged Firmware Binary: Added explicit version tag in binary filename (4x4keyboard_rp2040_zero_v1.5.1.uf2) for instant identification",

@@ -333,6 +333,16 @@
       color: var(--primary);
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
+    @keyframes unsavedGlow {
+      0%, 100% { box-shadow: 0 0 6px rgba(245, 158, 11, 0.4); border-color: #f59e0b; }
+      50% { box-shadow: 0 0 16px rgba(245, 158, 11, 0.9); border-color: #fbbf24; }
+    }
+    .unsaved-pulse {
+      animation: unsavedGlow 1.2s infinite ease-in-out !important;
+      background: #f59e0b !important;
+      color: #000 !important;
+      font-weight: 800 !important;
+    }
 
     /* Main Grid Layout */
     .main-grid {
@@ -1005,9 +1015,9 @@
     </div>
     
     <div class="hud-shortcuts">
-      <div>🎯 <b>Direct Jump:</b> Hold #16 + Tap #1..#4 to jump directly!</div>
-      <div>⚡ <b>2-Key Combo:</b> Press #13 + #16 together to cycle profile</div>
-      <div>⏱️ <b>Hold Key #16 (2.0s):</b> Deliberate hold to cycle profiles (avoids accidental switching)</div>
+      <div>⏱️ <b>Dual Corner Hold:</b> Hold #13 + #16 for 2.0s to cycle profile</div>
+      <div>⚡ <b>Directional Switch:</b> Hold #13 + Tap #4 (Next Profile) or Tap #1 (Prev Profile)</div>
+      <div>🎯 <b>Direct Jump:</b> Hold #13 (or #16) + Tap #2 or #3 to jump directly!</div>
     </div>
 
     <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
@@ -1045,6 +1055,49 @@
 
       <!-- 4x4 Grid -->
       <div class="keyboard-grid" id="keyboardGrid"></div>
+
+      <!-- Interactive Selected Key Quick Inspector & Editor -->
+      <div id="keyInspectorPanel" style="background:var(--card-sub); border:1px solid var(--card-border); border-radius:10px; padding:12px 14px; margin-bottom:14px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span id="inspectorKeyNumBadge" style="background:var(--primary); color:#000; font-weight:800; font-size:11px; padding:2px 8px; border-radius:4px;">KEY #1</span>
+            <span id="inspectorKeyTitle" style="font-weight:700; font-size:13px; color:var(--text);">Selected Key: 7</span>
+            <span style="font-size:11px; color:var(--text-muted);">(Click any key above to edit • Double-click for full dialog)</span>
+          </div>
+          <button id="inspectorAdvancedModalBtn" class="btn btn-secondary" style="font-size:11px; padding:3px 10px;">✏️ Advanced Macro Dialog...</button>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) auto; gap:10px; align-items:flex-end;" id="inspectorFormGrid">
+          <div>
+            <label style="font-size:10px; font-weight:700; color:var(--text-muted); display:block; margin-bottom:3px;">Display Label</label>
+            <input type="text" id="inspectorLabelInput" class="form-control" maxlength="15" value="7" style="font-size:12px; padding:5px 8px;">
+          </div>
+          <div>
+            <label style="font-size:10px; font-weight:700; color:var(--text-muted); display:block; margin-bottom:3px;">Action Type</label>
+            <select id="inspectorTypeSelect" class="form-control" style="font-size:12px; padding:5px 8px;">
+              <option value="0">Char (Single Key)</option>
+              <option value="1">Special (Enter/Esc/Media)</option>
+              <option value="2">Modifier Shortcut</option>
+              <option value="3">Macro String</option>
+              <option value="4">Action (Layer/Jiggler)</option>
+              <option value="5">Script (Win+R / URL)</option>
+            </select>
+          </div>
+          <div style="flex:2; min-width:180px;">
+            <label id="inspectorValueLabel" style="font-size:10px; font-weight:700; color:var(--text-muted); display:block; margin-bottom:3px;">Key Character / Code</label>
+            <input type="text" id="inspectorValueInput" class="form-control" maxlength="127" placeholder="e.g. c, wt, git status" style="font-size:12px; padding:5px 8px; font-family:monospace;">
+            <div id="inspectorModChecks" style="display:none; gap:10px; margin-top:6px;">
+              <label style="font-size:11px; display:inline-flex; align-items:center; gap:3px; cursor:pointer;"><input type="checkbox" id="inspModCtrl"> Ctrl</label>
+              <label style="font-size:11px; display:inline-flex; align-items:center; gap:3px; cursor:pointer;"><input type="checkbox" id="inspModShift"> Shift</label>
+              <label style="font-size:11px; display:inline-flex; align-items:center; gap:3px; cursor:pointer;"><input type="checkbox" id="inspModAlt"> Alt</label>
+              <label style="font-size:11px; display:inline-flex; align-items:center; gap:3px; cursor:pointer;"><input type="checkbox" id="inspModWin"> Win</label>
+            </div>
+          </div>
+          <div>
+            <button id="inspectorSaveKeyBtn" class="btn btn-primary" style="font-size:12px; padding:7px 16px; font-weight:700; white-space:nowrap;">⚡ Update Key</button>
+          </div>
+        </div>
+      </div>
 
       <!-- Visual Keycode Palette (VIA / VIAL Style) -->
       <div class="palette-box">
@@ -1538,7 +1591,7 @@
 
       <div class="form-group" id="macroGroup">
         <label>Macro Content (Use \n for Enter)</label>
-        <input type="text" id="editMacro" class="form-control" placeholder="e.g. git status\n">
+        <input type="text" id="editMacro" class="form-control" maxlength="127" placeholder="e.g. git status\n">
       </div>
 
       <div class="form-group" id="actionGroup" style="display: none;">
@@ -1558,9 +1611,9 @@
       <div class="form-group" id="scriptGroup" style="display: none;">
         <label style="display:flex; justify-content:space-between;">
           <span>⚡ Script / Windows Command (Win+R)</span>
-          <span id="scriptCharCount" style="font-size:11px; color:var(--text-muted);">0 / 63 chars</span>
+          <span id="scriptCharCount" style="font-size:11px; color:var(--text-muted);">0 / 127 chars</span>
         </label>
-        <input type="text" id="editScript" class="form-control" maxlength="63" placeholder="e.g. wt, calc, explorer ., start https://chatgpt.com" style="font-family: monospace;">
+        <input type="text" id="editScript" class="form-control" maxlength="127" placeholder="e.g. wt, calc, explorer ., start https://chatgpt.com" style="font-family: monospace;">
         <div style="margin-top:6px;">
           <select id="scriptPresetSelect" class="form-control" style="font-size:11px;">
             <option value="">-- Or choose a 1-click script template --</option>
@@ -2381,8 +2434,13 @@
         cap.onclick = () => {
           selectedKeyIndex = idx;
           renderGrid();
-          document.getElementById("selectedKeyHint").innerText = `Selected Key #${idx + 1} (${k.label}) • Pick a keycode below`;
+          updateKeyInspector();
+          document.getElementById("selectedKeyHint").innerText = `Selected Key #${idx + 1} (${k.label}) • Pick a keycode below or customize in inspector`;
           playSwitchSound();
+        };
+
+        cap.ondblclick = () => {
+          openKeyEditor(idx);
         };
 
         const typeLabels = ["Char", "Special", "Shortcut", "Macro", "Action", "Script"];
@@ -2400,6 +2458,170 @@
         `;
         grid.appendChild(cap);
       });
+    }
+
+    // Unsaved Changes Tracker & Flash Indicator
+    function markUnsavedChanges(isDirty) {
+      const statusEl = document.getElementById("hudSyncStatus");
+      const btns = [
+        document.getElementById("saveFlashBtn"),
+        document.getElementById("hudSyncBtn"),
+        document.getElementById("footerSyncBtn")
+      ];
+
+      if (isDirty) {
+        if (statusEl) {
+          statusEl.innerText = "⚠️ Unsaved Changes (Click Save to Flash)";
+          statusEl.style.background = "rgba(245, 158, 11, 0.25)";
+          statusEl.style.color = "#f59e0b";
+        }
+        btns.forEach(b => {
+          if (b) {
+            b.classList.add("unsaved-pulse");
+            b.disabled = !port;
+          }
+        });
+      } else {
+        if (statusEl) {
+          statusEl.innerText = "💾 Flash Synced (" + new Date().toLocaleTimeString() + ")";
+          statusEl.style.background = "rgba(16, 185, 129, 0.2)";
+          statusEl.style.color = "#10b981";
+        }
+        btns.forEach(b => {
+          if (b) {
+            b.classList.remove("unsaved-pulse");
+          }
+        });
+      }
+    }
+
+    // Selected Key Quick Inspector
+    function updateKeyInspector() {
+      const p = profiles[currentProfile];
+      if (!p || !p.keys) return;
+      const k = p.keys[selectedKeyIndex] || { label: "Key", type: 0, code: 0, mod: 0, macro: "" };
+
+      const numBadge = document.getElementById("inspectorKeyNumBadge");
+      if (numBadge) numBadge.innerText = `KEY #${selectedKeyIndex + 1}`;
+
+      const titleEl = document.getElementById("inspectorKeyTitle");
+      if (titleEl) titleEl.innerText = `Selected Key #${selectedKeyIndex + 1}: ${k.label || '—'}`;
+
+      const labelInput = document.getElementById("inspectorLabelInput");
+      if (labelInput) labelInput.value = k.label || "";
+
+      const typeSelect = document.getElementById("inspectorTypeSelect");
+      if (typeSelect) typeSelect.value = String(k.type);
+
+      const valLabel = document.getElementById("inspectorValueLabel");
+      const valInput = document.getElementById("inspectorValueInput");
+      const modChecks = document.getElementById("inspectorModChecks");
+
+      if (modChecks) modChecks.style.display = (k.type === 2) ? "flex" : "none";
+
+      if (k.type === 0) {
+        if (valLabel) valLabel.innerText = "Single Character (e.g. 7, a, c)";
+        if (valInput) valInput.value = k.code ? String.fromCharCode(k.code) : "";
+      } else if (k.type === 1) {
+        if (valLabel) valLabel.innerText = "Special Keycode (176=Enter, 177=Esc, 32=Space, 226=Mute)";
+        if (valInput) valInput.value = k.code || "";
+      } else if (k.type === 2) {
+        if (valLabel) valLabel.innerText = "Shortcut Key (e.g. c for Ctrl+C, v, s, z)";
+        if (valInput) valInput.value = k.code ? String.fromCharCode(k.code) : "";
+        document.getElementById("inspModCtrl").checked = !!(k.mod & 1);
+        document.getElementById("inspModShift").checked = !!(k.mod & 2);
+        document.getElementById("inspModAlt").checked = !!(k.mod & 4);
+        document.getElementById("inspModWin").checked = !!(k.mod & 8);
+      } else if (k.type === 3) {
+        if (valLabel) valLabel.innerText = "Text String Macro (typed sequentially)";
+        if (valInput) valInput.value = k.macro || "";
+      } else if (k.type === 4) {
+        if (valLabel) valLabel.innerText = "Hardware Action (1=Next Profile, 2=Stay-Awake / Jiggler)";
+        if (valInput) valInput.value = k.code || 1;
+      } else if (k.type === 5) {
+        if (valLabel) valLabel.innerText = "Script Launcher (Win+R command, e.g. wt, calc, code .)";
+        if (valInput) valInput.value = k.macro || "";
+      }
+    }
+
+    const inspTypeSelect = document.getElementById("inspectorTypeSelect");
+    if (inspTypeSelect) {
+      inspTypeSelect.onchange = (e) => {
+        const type = parseInt(e.target.value);
+        const valLabel = document.getElementById("inspectorValueLabel");
+        const modChecks = document.getElementById("inspectorModChecks");
+        if (modChecks) modChecks.style.display = (type === 2) ? "flex" : "none";
+        if (type === 0) {
+          if (valLabel) valLabel.innerText = "Single Character";
+        } else if (type === 1) {
+          if (valLabel) valLabel.innerText = "Special Keycode (176=Enter, 177=Esc, 32=Space)";
+        } else if (type === 2) {
+          if (valLabel) valLabel.innerText = "Shortcut Key (e.g. c for Ctrl+C)";
+        } else if (type === 3) {
+          if (valLabel) valLabel.innerText = "Text String Macro";
+        } else if (type === 4) {
+          if (valLabel) valLabel.innerText = "Hardware Action (1=Next Profile, 2=Jiggler)";
+        } else if (type === 5) {
+          if (valLabel) valLabel.innerText = "Script Launcher (Win+R command, e.g. wt)";
+        }
+      };
+    }
+
+    const inspSaveKeyBtn = document.getElementById("inspectorSaveKeyBtn");
+    if (inspSaveKeyBtn) {
+      inspSaveKeyBtn.onclick = async () => {
+        const label = document.getElementById("inspectorLabelInput").value.trim() || `Key ${selectedKeyIndex + 1}`;
+        const type = parseInt(document.getElementById("inspectorTypeSelect").value) || 0;
+        const valStr = document.getElementById("inspectorValueInput").value.trim();
+
+        let mod = 0;
+        let code = 0;
+        let macro = "";
+
+        if (type === 0) {
+          code = valStr.length > 0 ? valStr.charCodeAt(0) : 0;
+        } else if (type === 1) {
+          code = parseInt(valStr) || 0;
+        } else if (type === 2) {
+          code = valStr.length > 0 ? valStr.charCodeAt(0) : 0;
+          if (document.getElementById("inspModCtrl").checked) mod |= 1;
+          if (document.getElementById("inspModShift").checked) mod |= 2;
+          if (document.getElementById("inspModAlt").checked) mod |= 4;
+          if (document.getElementById("inspModWin").checked) mod |= 8;
+        } else if (type === 3) {
+          macro = valStr;
+        } else if (type === 4) {
+          code = parseInt(valStr) || 1;
+        } else if (type === 5) {
+          macro = valStr;
+        }
+
+        const targetKey = profiles[currentProfile].keys[selectedKeyIndex];
+        targetKey.label = label.substring(0, 15);
+        targetKey.type = type;
+        targetKey.mod = mod;
+        targetKey.code = code;
+        targetKey.macro = macro.substring(0, 127);
+
+        renderGrid();
+        updateKeyInspector();
+        playSwitchSound();
+        showToast(`⚡ Updated Key #${selectedKeyIndex + 1} (${targetKey.label})!`);
+
+        if (port && writer) {
+          await sendCommand(`SET_KEY:${currentProfile},${selectedKeyIndex},${targetKey.type},${targetKey.mod},${targetKey.code},${targetKey.label},${targetKey.macro}`);
+          await sendCommand("SAVE_FLASH");
+          markUnsavedChanges(false);
+          showToast(`💾 Synced Key #${selectedKeyIndex + 1} to Hardware Flash!`);
+        } else {
+          markUnsavedChanges(true);
+        }
+      };
+    }
+
+    const inspAdvModalBtn = document.getElementById("inspectorAdvancedModalBtn");
+    if (inspAdvModalBtn) {
+      inspAdvModalBtn.onclick = () => openKeyEditor(selectedKeyIndex);
     }
 
     // Render Keycode Palette Grid
@@ -2424,14 +2646,18 @@
           targetKey.type = item.type;
           targetKey.code = item.code || 0;
           targetKey.mod = item.mod || 0;
-          targetKey.macro = item.macro || "";
+          targetKey.macro = (item.macro || "").substring(0, 127);
 
           renderGrid();
+          updateKeyInspector();
           showToast(`Assigned '${item.label}' to Key #${selectedKeyIndex + 1}!`);
 
           if (port && writer) {
             await sendCommand(`SET_KEY:${currentProfile},${selectedKeyIndex},${targetKey.type},${targetKey.mod},${targetKey.code},${targetKey.label},${targetKey.macro}`);
             await sendCommand("SAVE_FLASH");
+            markUnsavedChanges(false);
+          } else {
+            markUnsavedChanges(true);
           }
         };
 
@@ -2631,7 +2857,7 @@
               </select>
             </div>
             <div style="display: flex; gap: 6px;">
-              <button class="btn btn-primary" style="flex:1; font-size:11px;" onclick="applyPresetToTarget('${preset.id}')">⚡ Apply Layout</button>
+              <button class="btn btn-primary" style="flex:1; font-size:11px;" onclick="applyPresetToTarget('${preset.id}')">⚡ Apply & Save to Flash</button>
               <button class="btn btn-secondary" style="font-size:11px;" title="Download JSON" onclick="exportPresetJson('${preset.id}')">💾</button>
               <button class="btn btn-secondary" style="font-size:11px;" title="Copy JSON" onclick="copyPresetJson('${preset.id}')">📋</button>
             </div>
@@ -2669,19 +2895,28 @@
         updateHud();
         renderTabs();
         renderGrid();
+        updateKeyInspector();
       }
       playSwitchSound();
-      showToast(`Applied preset '${preset.name}' & LED color to Profile ${targetProfileIdx + 1}!`);
 
       if (port && writer) {
+        showToast(`⚡ Syncing '${preset.name}' to Profile ${targetProfileIdx + 1}...`);
         await sendCommand(`SET_PROFILE_NAME:${targetProfileIdx},${profiles[targetProfileIdx].name}`);
+        await new Promise(r => setTimeout(r, 12));
         await sendCommand(`SET_PROFILE_COLOR:${targetProfileIdx},${preset.r},${preset.g},${preset.b}`);
+        await new Promise(r => setTimeout(r, 12));
         for (let k = 0; k < 16; k++) {
           const key = profiles[targetProfileIdx].keys[k];
           await sendCommand(`SET_KEY:${targetProfileIdx},${k},${key.type},${key.mod},${key.code},${key.label},${key.macro}`);
+          await new Promise(r => setTimeout(r, 8));
         }
+        await new Promise(r => setTimeout(r, 20));
         await sendCommand("SAVE_FLASH");
-        showToast(`💾 Synced Profile ${targetProfileIdx + 1} layout & LED color to RP2040 Flash!`);
+        markUnsavedChanges(false);
+        showToast(`💾 Synced & saved Profile ${targetProfileIdx + 1} (${preset.name}) to Hardware Flash!`);
+      } else {
+        markUnsavedChanges(true);
+        showToast(`Applied '${preset.name}' to Profile ${targetProfileIdx + 1}! Connect keyboard & click 'Save to Flash' to persist.`);
       }
     }
 
@@ -3064,14 +3299,22 @@
         showToast(`⚡ Applied '${presetObj.name}' to Profile ${currentProfile + 1}!`);
 
         if (port && writer) {
+          showToast(`⚡ Syncing '${presetObj.name}' to Profile ${currentProfile + 1}...`);
           await sendCommand(`SET_PROFILE_NAME:${currentProfile},${profiles[currentProfile].name}`);
+          await new Promise(r => setTimeout(r, 12));
           await sendCommand(`SET_PROFILE_COLOR:${currentProfile},${presetObj.r},${presetObj.g},${presetObj.b}`);
+          await new Promise(r => setTimeout(r, 12));
           for (let k = 0; k < 16; k++) {
             const key = profiles[currentProfile].keys[k];
             await sendCommand(`SET_KEY:${currentProfile},${k},${key.type},${key.mod},${key.code},${key.label},${key.macro}`);
+            await new Promise(r => setTimeout(r, 8));
           }
+          await new Promise(r => setTimeout(r, 20));
           await sendCommand("SAVE_FLASH");
+          markUnsavedChanges(false);
           showToast(`💾 Synced Profile ${currentProfile + 1} to RP2040 Flash!`);
+        } else {
+          markUnsavedChanges(true);
         }
       };
     }
@@ -3232,12 +3475,18 @@
 
       if (port && writer) {
         await sendCommand(`SET_PROFILE_NAME:${currentProfile},${newName}`);
+        await new Promise(r => setTimeout(r, 12));
         if (activeSwatch) {
           await sendCommand(`SET_PROFILE_COLOR:${currentProfile},${activeSwatch.dataset.r},${activeSwatch.dataset.g},${activeSwatch.dataset.b}`);
+          await new Promise(r => setTimeout(r, 12));
         }
         await sendCommand("SAVE_FLASH");
+        markUnsavedChanges(false);
+        showToast("Profile name & color updated and saved to Flash!");
+      } else {
+        markUnsavedChanges(true);
+        showToast("Profile name & color updated! Connect keyboard & click 'Save to Flash' to persist.");
       }
-      showToast("Profile name & color updated and saved to Flash!");
     };
 
     // JSON Studio Functionality
@@ -3339,16 +3588,23 @@
         showToast("Syncing imported JSON to RP2040 flash...");
         for (let p = 0; p < profiles.length; p++) {
           await sendCommand(`SET_PROFILE_NAME:${p},${profiles[p].name}`);
+          await new Promise(r => setTimeout(r, 10));
           if (profiles[p].r !== undefined) {
             await sendCommand(`SET_PROFILE_COLOR:${p},${profiles[p].r},${profiles[p].g},${profiles[p].b}`);
+            await new Promise(r => setTimeout(r, 10));
           }
           for (let k = 0; k < 16; k++) {
             const key = profiles[p].keys[k];
             await sendCommand(`SET_KEY:${p},${k},${key.type},${key.mod},${key.code},${key.label},${key.macro}`);
+            await new Promise(r => setTimeout(r, 8));
           }
         }
+        await new Promise(r => setTimeout(r, 20));
         await sendCommand("SAVE_FLASH");
+        markUnsavedChanges(false);
         showToast("✅ Full JSON configuration saved to hardware Flash!");
+      } else {
+        markUnsavedChanges(true);
       }
     }
 
@@ -3373,6 +3629,7 @@
       updateHud();
       renderTabs();
       renderGrid();
+      if (typeof updateKeyInspector === "function") updateKeyInspector();
 
       const p = profiles[currentProfile];
       playSwitchSound();
@@ -3626,10 +3883,10 @@
 
       if (k.type === 5) {
         document.getElementById("editScript").value = k.macro || "";
-        document.getElementById("scriptCharCount").innerText = `${(k.macro || "").length} / 63 chars`;
+        document.getElementById("scriptCharCount").innerText = `${(k.macro || "").length} / 127 chars`;
       } else {
         document.getElementById("editScript").value = "";
-        document.getElementById("scriptCharCount").innerText = "0 / 63 chars";
+        document.getElementById("scriptCharCount").innerText = "0 / 127 chars";
       }
 
       document.getElementById("modCtrl").checked = (k.mod & 1) !== 0;
@@ -3651,14 +3908,14 @@
     }
 
     document.getElementById("editScript").oninput = (e) => {
-      document.getElementById("scriptCharCount").innerText = `${e.target.value.length} / 63 chars`;
+      document.getElementById("scriptCharCount").innerText = `${e.target.value.length} / 127 chars`;
     };
 
     document.getElementById("scriptPresetSelect").onchange = (e) => {
       const val = e.target.value;
       if (val) {
         document.getElementById("editScript").value = val;
-        document.getElementById("scriptCharCount").innerText = `${val.length} / 63 chars`;
+        document.getElementById("scriptCharCount").innerText = `${val.length} / 127 chars`;
         document.getElementById("editType").value = "5";
         const opt = e.target.selectedOptions[0];
         const textParts = opt.text.split(" ");
@@ -3718,13 +3975,18 @@
       }
 
       renderGrid();
+      if (typeof updateKeyInspector === "function") updateKeyInspector();
       document.getElementById("editModal").style.display = "none";
 
       if (port && writer) {
         await sendCommand(`SET_KEY:${currentProfile},${editingKeyIndex},${k.type},${k.mod},${k.code},${k.label},${k.macro}`);
+        await new Promise(r => setTimeout(r, 15));
         await sendCommand("SAVE_FLASH");
         playSwitchSound();
         showToast(`✅ Key #${editingKeyIndex + 1} updated & synced to Flash!`);
+        markUnsavedChanges(false);
+      } else {
+        markUnsavedChanges(true);
       }
     };
 
@@ -3836,11 +4098,11 @@ Instructions:
         for (let i = 0; i < 16; i++) {
           const k = data.keys[i];
           profiles[targetIdx].keys[i] = {
-            label: (k.label || `Key ${i + 1}`).substring(0, 11),
+            label: (k.label || `Key ${i + 1}`).substring(0, 15),
             type: parseInt(k.type) || 0,
             mod: parseInt(k.mod) || 0,
             code: parseInt(k.code) || 0,
-            macro: (k.macro || "").substring(0, 63)
+            macro: (k.macro || "").substring(0, 127)
           };
         }
 
@@ -3850,19 +4112,28 @@ Instructions:
           updateHud();
           renderTabs();
           renderGrid();
+          if (typeof updateKeyInspector === "function") updateKeyInspector();
         }
         playSwitchSound();
         showToast(`✅ Successfully applied AI layout to Profile ${targetIdx + 1}!`);
 
         if (port && writer) {
+          showToast(`⚡ Syncing AI layout to Profile ${targetIdx + 1}...`);
           await sendCommand(`SET_PROFILE_NAME:${targetIdx},${profiles[targetIdx].name}`);
+          await new Promise(r => setTimeout(r, 12));
           await sendCommand(`SET_PROFILE_COLOR:${targetIdx},${profiles[targetIdx].r},${profiles[targetIdx].g},${profiles[targetIdx].b}`);
+          await new Promise(r => setTimeout(r, 12));
           for (let k = 0; k < 16; k++) {
             const key = profiles[targetIdx].keys[k];
             await sendCommand(`SET_KEY:${targetIdx},${k},${key.type},${key.mod},${key.code},${key.label},${key.macro}`);
+            await new Promise(r => setTimeout(r, 8));
           }
+          await new Promise(r => setTimeout(r, 20));
           await sendCommand("SAVE_FLASH");
+          markUnsavedChanges(false);
           showToast(`💾 Synced Profile ${targetIdx + 1} layout & LED color to RP2040 Flash!`);
+        } else {
+          markUnsavedChanges(true);
         }
       } catch (err) {
         alert("JSON Parse Error: " + err.message + "\n\nMake sure the AI response has valid JSON with 16 keys.");
@@ -3885,6 +4156,7 @@ Instructions:
       try {
         await sendCommand("SAVE_FLASH");
         playSwitchSound();
+        markUnsavedChanges(false);
         showToast("✅ Synced! All profiles & active layer saved to RP2040 Flash!");
         
         const btns = [
@@ -4072,6 +4344,7 @@ Instructions:
     updateHud();
     renderTabs();
     renderGrid();
+    updateKeyInspector();
     renderPalette();
     loadPresetsFromGitHub();
     renderTesterGrid();
