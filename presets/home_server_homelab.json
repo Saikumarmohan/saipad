@@ -1,0 +1,131 @@
+{
+  "id": "home_server_homelab",
+  "name": "Homelab & Home Server Deck",
+  "category": "System & Scripts",
+  "desc": "Homelab management: Proxmox, TrueNAS, Pi-hole, Plex, Portainer, SSH shortcuts.",
+  "color": "#ff6f00",
+  "r": 255,
+  "g": 111,
+  "b": 0,
+  "tags": [
+    "homelab",
+    "proxmox",
+    "truenas",
+    "pihole",
+    "server"
+  ],
+  "keys": [
+    {
+      "label": "Proxmox VE",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://192.168.1.100:8006"
+    },
+    {
+      "label": "TrueNAS",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://192.168.1.105"
+    },
+    {
+      "label": "Pi-hole DNS",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://192.168.1.2/admin"
+    },
+    {
+      "label": "Portainer",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://192.168.1.110:9443"
+    },
+    {
+      "label": "Plex Media",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://192.168.1.120:32400/web"
+    },
+    {
+      "label": "Home Assistant",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://homeassistant.local:8123"
+    },
+    {
+      "label": "ssh proxmox",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ssh root@192.168.1.100\n"
+    },
+    {
+      "label": "ssh nas",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ssh root@192.168.1.105\n"
+    },
+    {
+      "label": "ssh pi",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ssh pi@192.168.1.2\n"
+    },
+    {
+      "label": "docker ps",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "docker ps --format 'table {{.Names}}\\t{{.Status}}'\n"
+    },
+    {
+      "label": "zpool status",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "zpool status\n"
+    },
+    {
+      "label": "uptime",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "uptime\n"
+    },
+    {
+      "label": "Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

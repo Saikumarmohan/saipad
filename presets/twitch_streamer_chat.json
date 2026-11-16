@@ -1,0 +1,131 @@
+{
+  "id": "twitch_streamer_chat",
+  "name": "Twitch Streamer & Chat Deck",
+  "category": "Streaming & Comms",
+  "desc": "Live stream interaction: Clip that, Mod shoutout, Hydrate reminder, Commercial.",
+  "color": "#9146ff",
+  "r": 145,
+  "g": 70,
+  "b": 255,
+  "tags": [
+    "twitch",
+    "streamer",
+    "chat",
+    "clips",
+    "broadcast"
+  ],
+  "keys": [
+    {
+      "label": "!shoutout",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "!so "
+    },
+    {
+      "label": "!discord",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "!discord - Join our community: https://discord.gg/\n"
+    },
+    {
+      "label": "!socials",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "!socials - Follow all my channels!\n"
+    },
+    {
+      "label": "!clip",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "!clip\n"
+    },
+    {
+      "label": "/commercial 30",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/commercial 30\n"
+    },
+    {
+      "label": "/slow 10",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/slow 10\n"
+    },
+    {
+      "label": "/slowoff",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/slowoff\n"
+    },
+    {
+      "label": "/clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/clear\n"
+    },
+    {
+      "label": "Clip Hotkey",
+      "type": 2,
+      "code": 120,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Marker Hotkey",
+      "type": 2,
+      "code": 109,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Dashboard",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://dashboard.twitch.tv"
+    },
+    {
+      "label": "Twitter / X",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://twitter.com"
+    },
+    {
+      "label": "Volume Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Volume Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Mic",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

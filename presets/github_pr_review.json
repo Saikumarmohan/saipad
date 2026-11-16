@@ -1,0 +1,131 @@
+{
+  "id": "github_pr_review",
+  "name": "GitHub PR & Code Review",
+  "category": "Developer & Git",
+  "desc": "Code review phrases: LGTM, nitpick, suggestions, approve, checkout PR.",
+  "color": "#2dba4e",
+  "r": 45,
+  "g": 186,
+  "b": 78,
+  "tags": [
+    "github",
+    "code review",
+    "pr",
+    "collaboration",
+    "git"
+  ],
+  "keys": [
+    {
+      "label": "LGTM! \ud83d\ude80",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Looks good to me! \ud83d\ude80\n"
+    },
+    {
+      "label": "Nitpick: ",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "**Nitpick:** "
+    },
+    {
+      "label": "Question: ",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "**Question:** "
+    },
+    {
+      "label": "Suggestion:",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "```suggestion\n\n```"
+    },
+    {
+      "label": "PR Checkout",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "gh pr checkout "
+    },
+    {
+      "label": "PR View",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "gh pr view --web\n"
+    },
+    {
+      "label": "PR Create",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "gh pr create --web\n"
+    },
+    {
+      "label": "PR Status",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "gh pr status\n"
+    },
+    {
+      "label": "GitHub Notifications",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://github.com/notifications"
+    },
+    {
+      "label": "GitHub PRs",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://github.com/pulls"
+    },
+    {
+      "label": "Bold",
+      "type": 2,
+      "code": 98,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Italic",
+      "type": 2,
+      "code": 105,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Insert Link",
+      "type": 2,
+      "code": 107,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Thanks! \ud83d\ude4f",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Thanks for the contribution! \ud83d\ude4f"
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

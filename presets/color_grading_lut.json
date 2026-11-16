@@ -1,0 +1,131 @@
+{
+  "id": "color_grading_lut",
+  "name": "Color Grading & LUT Deck",
+  "category": "Video & Audio",
+  "desc": "Color grading controls: Color Wheels, Curves, Saturation, Temp, LUT Gallery.",
+  "color": "#ff4081",
+  "r": 255,
+  "g": 64,
+  "b": 129,
+  "tags": [
+    "color grading",
+    "lut",
+    "davinci",
+    "lumetri",
+    "video"
+  ],
+  "keys": [
+    {
+      "label": "Lift Shadow",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Gamma Mid",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Gain Highlight",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Offset Master",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Curves Tab",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Hue vs Sat",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Hue vs Hue",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lum vs Sat",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Temp Warm",
+      "type": 0,
+      "code": 119,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Temp Cool",
+      "type": 0,
+      "code": 107,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vibrance",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Bypass Grade",
+      "type": 0,
+      "code": 100,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Scopes Toggle",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Split Screen",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Undo Grade",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

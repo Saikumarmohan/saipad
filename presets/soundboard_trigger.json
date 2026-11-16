@@ -1,0 +1,131 @@
+{
+  "id": "soundboard_trigger",
+  "name": "Meme Soundboard & SFX",
+  "category": "Streaming & Comms",
+  "desc": "Instant soundboard triggers: Airhorn, Laugh, Fail, Ba-Dum-Tss, Applause, Cricket.",
+  "color": "#e91e63",
+  "r": 233,
+  "g": 30,
+  "b": 99,
+  "tags": [
+    "soundboard",
+    "sfx",
+    "memes",
+    "audio",
+    "humor"
+  ],
+  "keys": [
+    {
+      "label": "Airhorn",
+      "type": 2,
+      "code": 49,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Applause",
+      "type": 2,
+      "code": 50,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Sad Trombone",
+      "type": 2,
+      "code": 51,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Laugh Track",
+      "type": 2,
+      "code": 52,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Ba-Dum-Tss",
+      "type": 2,
+      "code": 53,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Cricket Sound",
+      "type": 2,
+      "code": 54,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Dramatic Boom",
+      "type": 2,
+      "code": 55,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Victory Fanfare",
+      "type": 2,
+      "code": 56,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Stop All Sounds",
+      "type": 2,
+      "code": 48,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Audio",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Soundpad App",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start soundpad:"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "windows_powertoys",
+  "name": "Windows 11 PowerToys Deck",
+  "category": "System & Scripts",
+  "desc": "PowerToys shortcuts: FancyZones, ColorPicker, Text Extractor, Mouse Finder, Awake.",
+  "color": "#5c2d91",
+  "r": 92,
+  "g": 45,
+  "b": 145,
+  "tags": [
+    "powertoys",
+    "windows 11",
+    "productivity",
+    "utilities",
+    "microsoft"
+  ],
+  "keys": [
+    {
+      "label": "Color Picker",
+      "type": 2,
+      "code": 99,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Text OCR Extract",
+      "type": 2,
+      "code": 116,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "FancyZones Edit",
+      "type": 2,
+      "code": 96,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Run Launcher",
+      "type": 2,
+      "code": 32,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Screen Ruler",
+      "type": 2,
+      "code": 109,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Always On Top",
+      "type": 2,
+      "code": 116,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "Mute Video/Mic",
+      "type": 2,
+      "code": 113,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Find My Mouse",
+      "type": 2,
+      "code": 32,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Emoji Picker",
+      "type": 2,
+      "code": 46,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Clipboard Hist",
+      "type": 2,
+      "code": 118,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Snipping Tool",
+      "type": 2,
+      "code": 115,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "PowerToys Settings",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start powertoys:"
+    },
+    {
+      "label": "Presence Keep-Alive",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Audio",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

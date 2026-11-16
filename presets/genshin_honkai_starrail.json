@@ -1,0 +1,131 @@
+{
+  "id": "genshin_honkai_starrail",
+  "name": "Genshin Impact & Star Rail",
+  "category": "Gaming & Esports",
+  "desc": "Action RPG party control: Character 1-4, Elemental Skill, Burst, Map, Inventory.",
+  "color": "#00acc1",
+  "r": 0,
+  "g": 172,
+  "b": 193,
+  "tags": [
+    "genshin",
+    "starrail",
+    "anime",
+    "rpg",
+    "gacha"
+  ],
+  "keys": [
+    {
+      "label": "Char 1 (1)",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Char 2 (2)",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Char 3 (3)",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Char 4 (4)",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Skill (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Burst (Q)",
+      "type": 0,
+      "code": 113,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Elemental Sight",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Inventory (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Character (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Map (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Quest (J)",
+      "type": 0,
+      "code": 106,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Wish Menu (F3)",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pause Esc",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Discord",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Screenshot",
+      "type": 2,
+      "code": 115,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

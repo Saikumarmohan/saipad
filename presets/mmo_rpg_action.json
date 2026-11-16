@@ -1,0 +1,131 @@
+{
+  "id": "mmo_rpg_action",
+  "name": "MMORPG (WoW & FFXIV)",
+  "category": "Gaming & Esports",
+  "desc": "MMORPG macro bar: Mount up, Potion, Buff, Target nearest, Assist target, Auto-run.",
+  "color": "#9c27b0",
+  "r": 156,
+  "g": 39,
+  "b": 176,
+  "tags": [
+    "wow",
+    "ffxiv",
+    "mmorpg",
+    "rpg",
+    "gaming"
+  ],
+  "keys": [
+    {
+      "label": "Target Enemy (Tab)",
+      "type": 0,
+      "code": 179,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Target Self (F1)",
+      "type": 0,
+      "code": 192,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Assist Target (F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Auto Run (NumLock)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mount Up",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Health Potion",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mana Potion",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Heroism / Bloodlust",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Defensive Cooldown",
+      "type": 0,
+      "code": 103,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Interrupted Kick",
+      "type": 0,
+      "code": 107,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Character (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Spellbook (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Map (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Quest Log (L)",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Voice",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

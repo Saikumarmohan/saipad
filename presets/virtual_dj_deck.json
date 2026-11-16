@@ -1,0 +1,131 @@
+{
+  "id": "virtual_dj_deck",
+  "name": "DJ & Live Performance Deck",
+  "category": "Audio & Music",
+  "desc": "Live DJ mixing: Cue 1-4, Play/Pause, Sync, Loop In/Out, Beatjump, Crossfader.",
+  "color": "#d32f2f",
+  "r": 211,
+  "g": 47,
+  "b": 47,
+  "tags": [
+    "dj",
+    "virtualdj",
+    "rekordbox",
+    "traktor",
+    "mixing"
+  ],
+  "keys": [
+    {
+      "label": "Cue 1",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Cue 2",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Cue 3",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Cue 4",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Sync Deck A",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play Deck A",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Loop 4 Beats",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Loop 8 Beats",
+      "type": 0,
+      "code": 56,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pitch Bend +",
+      "type": 0,
+      "code": 43,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pitch Bend -",
+      "type": 0,
+      "code": 45,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Filter High",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Filter Low",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Out",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

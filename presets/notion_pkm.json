@@ -1,0 +1,131 @@
+{
+  "id": "notion_pkm",
+  "name": "Notion & Knowledge Base",
+  "category": "Office & Finance",
+  "desc": "Notion shortcuts: Heading 1-3, Checklist, Bullet, Quote, Search, New Page.",
+  "color": "#000000",
+  "r": 0,
+  "g": 0,
+  "b": 0,
+  "tags": [
+    "notion",
+    "notes",
+    "wiki",
+    "productivity",
+    "pkm"
+  ],
+  "keys": [
+    {
+      "label": "Heading 1",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "# "
+    },
+    {
+      "label": "Heading 2",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "## "
+    },
+    {
+      "label": "Heading 3",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "### "
+    },
+    {
+      "label": "Checklist",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[] "
+    },
+    {
+      "label": "Bullet List",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "- "
+    },
+    {
+      "label": "Quote Block",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "> "
+    },
+    {
+      "label": "Callout",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/callout\n"
+    },
+    {
+      "label": "Code Block",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "```\n"
+    },
+    {
+      "label": "Divider",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "---\n"
+    },
+    {
+      "label": "Search Notion",
+      "type": 2,
+      "code": 112,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "New Page",
+      "type": 2,
+      "code": 110,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Duplicate",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Notion Desktop",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start notion:"
+    },
+    {
+      "label": "Bold",
+      "type": 2,
+      "code": 98,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Italic",
+      "type": 2,
+      "code": 105,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

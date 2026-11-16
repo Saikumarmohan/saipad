@@ -1,0 +1,131 @@
+{
+  "id": "jira_trello_kanban",
+  "name": "Jira & Trello Project Board",
+  "category": "Office & Finance",
+  "desc": "Agile Kanban board shortcuts: Create issue, search, sprint backlog, assign to me.",
+  "color": "#0052cc",
+  "r": 0,
+  "g": 82,
+  "b": 204,
+  "tags": [
+    "jira",
+    "trello",
+    "scrum",
+    "agile",
+    "kanban"
+  ],
+  "keys": [
+    {
+      "label": "Create Issue (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Quick Search (/)",
+      "type": 0,
+      "code": 47,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Assign to Me (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Edit Issue (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Comment (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Status",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": ".transition\n"
+    },
+    {
+      "label": "Status: Done",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": ".done\n"
+    },
+    {
+      "label": "Status: In Progress",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": ".in progress\n"
+    },
+    {
+      "label": "Open Jira",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://jira.atlassian.com"
+    },
+    {
+      "label": "Open Trello",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://trello.com"
+    },
+    {
+      "label": "Bug: High Priority",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[BUG - HIGH PRIORITY] "
+    },
+    {
+      "label": "Feature Request",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[FEATURE] "
+    },
+    {
+      "label": "Refresh Board",
+      "type": 2,
+      "code": 114,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

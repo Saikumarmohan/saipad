@@ -1,0 +1,131 @@
+{
+  "id": "midjourney_prompter",
+  "name": "Midjourney & Generative Art",
+  "category": "AI & Data Science",
+  "desc": "AI art generation flags: Aspect ratios, Stylize, Chaos, Weird, V6, Photorealism.",
+  "color": "#ff007f",
+  "r": 255,
+  "g": 0,
+  "b": 127,
+  "tags": [
+    "midjourney",
+    "ai art",
+    "stable diffusion",
+    "comfyui",
+    "image"
+  ],
+  "keys": [
+    {
+      "label": "/imagine",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/imagine prompt: "
+    },
+    {
+      "label": "--ar 16:9",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " --ar 16:9 "
+    },
+    {
+      "label": "--ar 9:16",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " --ar 9:16 "
+    },
+    {
+      "label": "--ar 1:1",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " --ar 1:1 "
+    },
+    {
+      "label": "--v 6.1",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " --v 6.1 "
+    },
+    {
+      "label": "--style raw",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " --style raw "
+    },
+    {
+      "label": "--stylize 250",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " --s 250 "
+    },
+    {
+      "label": "--chaos 15",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " --c 15 "
+    },
+    {
+      "label": "--weird 50",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " --weird 50 "
+    },
+    {
+      "label": "Photorealistic",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "photorealistic 8k, cinematic lighting, 35mm lens, highly detailed "
+    },
+    {
+      "label": "Anime Studio",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "studio anime style, vibrant colors, clean lineart, Makoto Shinkai "
+    },
+    {
+      "label": "3D Octane Render",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "3D isometric render, Octane render, cute claymation, ambient occlusion "
+    },
+    {
+      "label": "Discord Midjourney",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start discord:"
+    },
+    {
+      "label": "CivitAI",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://civitai.com"
+    },
+    {
+      "label": "Copy Prompt",
+      "type": 2,
+      "code": 99,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "camera_switcher",
+  "name": "Multi-Camera & Angle Switch",
+  "category": "Streaming & Comms",
+  "desc": "Production studio: Cam 1 Wide, Cam 2 Close, Overhead, Screen, Picture-in-Picture.",
+  "color": "#00bcd4",
+  "r": 0,
+  "g": 188,
+  "b": 212,
+  "tags": [
+    "camera",
+    "production",
+    "switcher",
+    "broadcast",
+    "ptz"
+  ],
+  "keys": [
+    {
+      "label": "Cam 1 Wide",
+      "type": 2,
+      "code": 49,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Cam 2 Close",
+      "type": 2,
+      "code": 50,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Cam 3 Desk",
+      "type": 2,
+      "code": 51,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Cam 4 Angle",
+      "type": 2,
+      "code": 52,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Overhead Cam",
+      "type": 2,
+      "code": 53,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Picture-in-Pic",
+      "type": 2,
+      "code": 112,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Full Screen Cam",
+      "type": 2,
+      "code": 102,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Fade Transition",
+      "type": 2,
+      "code": 116,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Cut Transition",
+      "type": 2,
+      "code": 99,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Stinger Trans",
+      "type": 2,
+      "code": 115,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Mute Mic",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Audio Master",
+      "type": 1,
+      "code": 205,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "PTZ Control",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

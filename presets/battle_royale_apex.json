@@ -1,0 +1,131 @@
+{
+  "id": "battle_royale_apex",
+  "name": "Apex Legends & Warzone",
+  "category": "Gaming & Esports",
+  "desc": "Battle royale tactical speed: Shield battery, Med kit, Phoenix kit, Ultimate, Map.",
+  "color": "#ff5252",
+  "r": 255,
+  "g": 82,
+  "b": 82,
+  "tags": [
+    "apex",
+    "warzone",
+    "battle royale",
+    "fps",
+    "gaming"
+  ],
+  "keys": [
+    {
+      "label": "Shield Cell (4)",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Shield Bat (5)",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Syringe (6)",
+      "type": 0,
+      "code": 54,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Med Kit (7)",
+      "type": 0,
+      "code": 55,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Phoenix Kit (8)",
+      "type": 0,
+      "code": 56,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Tactical Ability (Q)",
+      "type": 0,
+      "code": 113,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ultimate (Z)",
+      "type": 0,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Enemy Ping (F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Inventory (Tab)",
+      "type": 0,
+      "code": 179,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Map (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Melee (V)",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Holster Gun (3)",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Discord",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Record Clip",
+      "type": 2,
+      "code": 203,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "All: GG!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "GG WP!\n"
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

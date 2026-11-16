@@ -1,0 +1,131 @@
+{
+  "id": "subtitle_caption_deck",
+  "name": "Subtitle & Caption Master",
+  "category": "Video & Audio",
+  "desc": "Caption creation: Add subtitle, sync timecodes, split phrase, spellcheck.",
+  "color": "#009688",
+  "r": 0,
+  "g": 150,
+  "b": 136,
+  "tags": [
+    "subtitles",
+    "captions",
+    "transcription",
+    "srt",
+    "video"
+  ],
+  "keys": [
+    {
+      "label": "New Subtitle",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+insert"
+    },
+    {
+      "label": "Set Start",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+i"
+    },
+    {
+      "label": "Set End",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+o"
+    },
+    {
+      "label": "Split Sub",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+k"
+    },
+    {
+      "label": "Merge Next",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+m"
+    },
+    {
+      "label": "Auto Sync",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+shift+s"
+    },
+    {
+      "label": "Bold Text",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+b"
+    },
+    {
+      "label": "Italic Text",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+i"
+    },
+    {
+      "label": "Spellcheck",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "f7"
+    },
+    {
+      "label": "Play Segment",
+      "type": 1,
+      "code": " ",
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Step -1s",
+      "type": 1,
+      "code": 216,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Step +1s",
+      "type": 1,
+      "code": 215,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Export SRT",
+      "type": 2,
+      "code": 115,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "DeepL Translate",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://www.deepl.com"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

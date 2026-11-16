@@ -1,0 +1,131 @@
+{
+  "id": "minecraft_builder",
+  "name": "Minecraft Builder & Explorer",
+  "category": "Gaming & Esports",
+  "desc": "Minecraft hotkeys: F3 Debug, Screenshot F2, Drop stack, Third person F5, Chat, Offhand.",
+  "color": "#4caf50",
+  "r": 76,
+  "g": 175,
+  "b": 80,
+  "tags": [
+    "minecraft",
+    "gaming",
+    "crafting",
+    "sandbox",
+    "survival"
+  ],
+  "keys": [
+    {
+      "label": "Inventory (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Drop (Q)",
+      "type": 0,
+      "code": 113,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Drop Stack",
+      "type": 2,
+      "code": 113,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Offhand (F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "F3 Debug",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "F5 Perspective",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "F2 Screenshot",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Chat (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Command (/)",
+      "type": 0,
+      "code": 47,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "/gamemode c",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/gamemode creative\n"
+    },
+    {
+      "label": "/gamemode s",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/gamemode survival\n"
+    },
+    {
+      "label": "/time set day",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/time set day\n"
+    },
+    {
+      "label": "/weather clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/weather clear\n"
+    },
+    {
+      "label": "/tp ~ ~10 ~",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/tp ~ ~10 ~\n"
+    },
+    {
+      "label": "Esc Menu",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

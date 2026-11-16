@@ -1,0 +1,131 @@
+{
+  "id": "premiere_pro",
+  "name": "Adobe Premiere Pro Studio",
+  "category": "Video & Audio",
+  "desc": "Premiere video editing: Cut, Ripple Delete, Selection, Playhead, Render, Speed.",
+  "color": "#ea1b22",
+  "r": 234,
+  "g": 27,
+  "b": 34,
+  "tags": [
+    "premiere",
+    "video",
+    "editing",
+    "youtube",
+    "adobe"
+  ],
+  "keys": [
+    {
+      "label": "Razor (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Select (V)",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ripple Del",
+      "type": 0,
+      "code": 113,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ripple Fwd",
+      "type": 0,
+      "code": 119,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark In (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark Out (O)",
+      "type": 0,
+      "code": 111,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Stop",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Speed (Ctrl+R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Add Edit",
+      "type": 2,
+      "code": 107,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Extract",
+      "type": 2,
+      "code": 39,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lift",
+      "type": 2,
+      "code": 59,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Render In/Out",
+      "type": 2,
+      "code": 176,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Export Media",
+      "type": 2,
+      "code": 109,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Zoom In",
+      "type": 2,
+      "code": 61,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Zoom Out",
+      "type": 2,
+      "code": 45,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

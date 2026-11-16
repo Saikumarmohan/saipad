@@ -1,0 +1,131 @@
+{
+  "id": "regex_text_wrangler",
+  "name": "Regex & Text Wrangler",
+  "category": "Developer & Git",
+  "desc": "Regex builder tokens: word boundaries, digit, capture group, whitespace, anchor.",
+  "color": "#e91e63",
+  "r": 233,
+  "g": 30,
+  "b": 99,
+  "tags": [
+    "regex",
+    "text",
+    "search",
+    "grep",
+    "utilities"
+  ],
+  "keys": [
+    {
+      "label": "^ (Start)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "^"
+    },
+    {
+      "label": "$ (End)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "$"
+    },
+    {
+      "label": "\\d+ (Digits)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "\\d+"
+    },
+    {
+      "label": "\\w+ (Words)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "\\w+"
+    },
+    {
+      "label": "\\s+ (Space)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "\\s+"
+    },
+    {
+      "label": "[a-zA-Z]",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[a-zA-Z0-9_]"
+    },
+    {
+      "label": "(.*?) Lazy",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "(.*?)"
+    },
+    {
+      "label": "(?:) NonCap",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "(?:)"
+    },
+    {
+      "label": "(?=) Ahead",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "(?=)"
+    },
+    {
+      "label": "(?<=) Behind",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "(?<=)"
+    },
+    {
+      "label": "\\b Boundary",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "\\b"
+    },
+    {
+      "label": "| (OR)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "|"
+    },
+    {
+      "label": "Regex101",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://regex101.com"
+    },
+    {
+      "label": "Replace",
+      "type": 2,
+      "code": 104,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Find",
+      "type": 2,
+      "code": 102,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

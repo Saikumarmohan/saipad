@@ -1,0 +1,131 @@
+{
+  "id": "clipboard_macro_buffer",
+  "name": "Multi-Clipboard Buffer",
+  "category": "Office & Finance",
+  "desc": "Quick clipboard snippets: Full name, Email, Work phone, Address, Date, UUID.",
+  "color": "#9c27b0",
+  "r": 156,
+  "g": 39,
+  "b": 176,
+  "tags": [
+    "clipboard",
+    "snippets",
+    "copy paste",
+    "text",
+    "buffer"
+  ],
+  "keys": [
+    {
+      "label": "Copy",
+      "type": 2,
+      "code": 99,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Paste",
+      "type": 2,
+      "code": 118,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Cut",
+      "type": 2,
+      "code": 120,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Win+V Clip",
+      "type": 2,
+      "code": 118,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "My Email",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "saikumar.mohan@outlook.com"
+    },
+    {
+      "label": "My GitHub",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "https://github.com/Saikumarmohan"
+    },
+    {
+      "label": "Timestamp",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "2026-11-16"
+    },
+    {
+      "label": "Lorem Ipsum",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "label": "Phone Placeholder",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "+1 (555) 019-2834"
+    },
+    {
+      "label": "Corporate Sign",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Kind regards,\nSaikumar Mohan\nSoftware Engineer\n"
+    },
+    {
+      "label": "Select All",
+      "type": 2,
+      "code": 97,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Snipping Tool",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "snippingtool"
+    },
+    {
+      "label": "Notepad",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "notepad"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

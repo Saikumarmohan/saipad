@@ -1,0 +1,131 @@
+{
+  "id": "nextjs_typescript",
+  "name": "Next.js & TypeScript",
+  "category": "Developer & Git",
+  "desc": "Next.js App Router: server actions, type definitions, async components.",
+  "color": "#ffffff",
+  "r": 255,
+  "g": 255,
+  "b": 255,
+  "tags": [
+    "nextjs",
+    "typescript",
+    "react",
+    "fullstack",
+    "vercel"
+  ],
+  "keys": [
+    {
+      "label": "'use client'",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "'use client';\n"
+    },
+    {
+      "label": "'use server'",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "'use server';\n"
+    },
+    {
+      "label": "type Props",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "type Props = {\n\n};\n"
+    },
+    {
+      "label": "interface",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "interface  {\n\n}\n"
+    },
+    {
+      "label": "export async",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "export async function "
+    },
+    {
+      "label": "Promise<>",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Promise<"
+    },
+    {
+      "label": "npm dev",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "npm run dev\n"
+    },
+    {
+      "label": "npm build",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "npm run build\n"
+    },
+    {
+      "label": "typecheck",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "npx tsc --noEmit\n"
+    },
+    {
+      "label": "eslint",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "npm run lint\n"
+    },
+    {
+      "label": "Localhost",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://localhost:3000"
+    },
+    {
+      "label": "VS Code",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "code ."
+    },
+    {
+      "label": "Format",
+      "type": 2,
+      "code": 102,
+      "mod": 6,
+      "macro": ""
+    },
+    {
+      "label": "Save All",
+      "type": 2,
+      "code": 115,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

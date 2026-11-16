@@ -1,0 +1,131 @@
+{
+  "id": "youtube_live_dashboard",
+  "name": "YouTube Live Broadcaster",
+  "category": "Streaming & Comms",
+  "desc": "YouTube streaming: Start event, Live chat toggle, Analytics, Moderation.",
+  "color": "#ff0000",
+  "r": 255,
+  "g": 0,
+  "b": 0,
+  "tags": [
+    "youtube",
+    "live",
+    "creator",
+    "streaming",
+    "video"
+  ],
+  "keys": [
+    {
+      "label": "YT Studio Live",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://studio.youtube.com/channel/live"
+    },
+    {
+      "label": "Live Analytics",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://studio.youtube.com/channel/analytics"
+    },
+    {
+      "label": "Welcome Stream!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Welcome everyone to today's livestream! Don't forget to like and subscribe! \ud83d\udc4d\n"
+    },
+    {
+      "label": "Superchat Thanks",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Huge thank you for the Super Chat! \ud83d\udc96\n"
+    },
+    {
+      "label": "Poll Question",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Let me know your thoughts in the live poll!\n"
+    },
+    {
+      "label": "Start Stream",
+      "type": 2,
+      "code": 194,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Stop Stream",
+      "type": 2,
+      "code": 195,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Mute Mic",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play Music",
+      "type": 1,
+      "code": 205,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Screenshot",
+      "type": 2,
+      "code": 115,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Calculator",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "calc"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock Screen",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

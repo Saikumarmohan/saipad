@@ -1,0 +1,131 @@
+{
+  "id": "rust_cargo",
+  "name": "Rust & Cargo Studio",
+  "category": "Developer & Git",
+  "desc": "Speed up Rust builds: cargo check, build, run, test, clippy, fmt, docs.",
+  "color": "#dea584",
+  "r": 222,
+  "g": 165,
+  "b": 132,
+  "tags": [
+    "rust",
+    "cargo",
+    "clippy",
+    "systems",
+    "wasm"
+  ],
+  "keys": [
+    {
+      "label": "cargo check",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cargo check\n"
+    },
+    {
+      "label": "cargo run",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cargo run\n"
+    },
+    {
+      "label": "cargo build",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cargo build --release\n"
+    },
+    {
+      "label": "cargo test",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cargo test\n"
+    },
+    {
+      "label": "clippy",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cargo clippy\n"
+    },
+    {
+      "label": "cargo fmt",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cargo fmt\n"
+    },
+    {
+      "label": "cargo doc",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cargo doc --open\n"
+    },
+    {
+      "label": "println!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "println!(\"{:?}\", "
+    },
+    {
+      "label": "Ok(())",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Ok(())\n"
+    },
+    {
+      "label": "Result<T,E>",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Result<"
+    },
+    {
+      "label": "pub fn",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "pub fn "
+    },
+    {
+      "label": "impl",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "impl "
+    },
+    {
+      "label": "Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "Save All",
+      "type": 2,
+      "code": 115,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

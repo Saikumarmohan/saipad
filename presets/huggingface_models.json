@@ -1,0 +1,131 @@
+{
+  "id": "huggingface_models",
+  "name": "Hugging Face & Transformers",
+  "category": "AI & Data Science",
+  "desc": "Transformers pipelines: AutoModel, AutoTokenizer, pipeline('sentiment'), dataset.",
+  "color": "#ffd21e",
+  "r": 255,
+  "g": 210,
+  "b": 30,
+  "tags": [
+    "huggingface",
+    "transformers",
+    "nlp",
+    "llm",
+    "datasets"
+  ],
+  "keys": [
+    {
+      "label": "AutoTokenizer",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "from transformers import AutoTokenizer, AutoModelForCausalLM\n"
+    },
+    {
+      "label": "load model",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "tokenizer = AutoTokenizer.from_pretrained(model_id)\nmodel = AutoModelForCausalLM.from_pretrained(model_id, device_map='auto')\n"
+    },
+    {
+      "label": "pipeline()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "from transformers import pipeline\npipe = pipeline(\"text-generation\", model=model_id)\n"
+    },
+    {
+      "label": "load_dataset",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "from datasets import load_dataset\nds = load_dataset(\""
+    },
+    {
+      "label": "bitsandbytes",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16"
+    },
+    {
+      "label": "generate()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "outputs = model.generate(**inputs, max_new_tokens=100)\n"
+    },
+    {
+      "label": "Hugging Face Hub",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://huggingface.co/models"
+    },
+    {
+      "label": "Kaggle",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://kaggle.com"
+    },
+    {
+      "label": "Arxiv AI",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://arxiv.org/list/cs.AI/recent"
+    },
+    {
+      "label": "Run Code",
+      "type": 2,
+      "code": 176,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

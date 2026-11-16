@@ -1,0 +1,131 @@
+{
+  "id": "python_data_notebook",
+  "name": "Python & Jupyter Notebook",
+  "category": "Developer & Git",
+  "desc": "Execute cells, restart kernel, add markdown, inspect data, and debug Python.",
+  "color": "#3776ab",
+  "r": 55,
+  "g": 118,
+  "b": 171,
+  "tags": [
+    "python",
+    "jupyter",
+    "pandas",
+    "data science",
+    "numpy"
+  ],
+  "keys": [
+    {
+      "label": "Run Cell",
+      "type": 2,
+      "code": 176,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "Run & Insert",
+      "type": 2,
+      "code": 176,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "df.head()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "df.head()\n"
+    },
+    {
+      "label": "df.info()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "df.info()\n"
+    },
+    {
+      "label": "import np,pd",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "import numpy as np\nimport pandas as pd\n"
+    },
+    {
+      "label": "plt.show()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "plt.show()\n"
+    },
+    {
+      "label": "Interrupt",
+      "type": 2,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Restart",
+      "type": 2,
+      "code": 48,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "print()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "print()"
+    },
+    {
+      "label": "len()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "len()"
+    },
+    {
+      "label": "lambda x: ",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "lambda x: "
+    },
+    {
+      "label": "PyTerminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt -p \"Command Prompt\""
+    },
+    {
+      "label": "pip install",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "pip install "
+    },
+    {
+      "label": "python main",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "python main.py\n"
+    },
+    {
+      "label": "Comment",
+      "type": 2,
+      "code": 47,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "casual_cozy_gaming",
+  "name": "Cozy Gaming (Stardew / Animal Crossing)",
+  "category": "Gaming & Esports",
+  "desc": "Cozy farming & fishing: Inventory, Journal, Map, Tool switch, Quick eat, Sleep.",
+  "color": "#8bc34a",
+  "r": 139,
+  "g": 195,
+  "b": 74,
+  "tags": [
+    "stardew valley",
+    "cozy",
+    "farming",
+    "casual",
+    "relax"
+  ],
+  "keys": [
+    {
+      "label": "Inventory (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Journal (F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Map (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Crafting (Tab)",
+      "type": 0,
+      "code": 179,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Tool 1",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Tool 2",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Tool 3",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Tool 4",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Tool 5",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Eat Food",
+      "type": 0,
+      "code": 121,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Action Check",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Use Tool",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pause Esc",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

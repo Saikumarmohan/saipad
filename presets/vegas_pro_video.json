@@ -1,0 +1,131 @@
+{
+  "id": "vegas_pro_video",
+  "name": "Sony / MAGIX Vegas Pro",
+  "category": "Video & Audio",
+  "desc": "Vegas editing: Split S, Delete, Crossfade, Render As, Group, Track FX.",
+  "color": "#0288d1",
+  "r": 2,
+  "g": 136,
+  "b": 209,
+  "tags": [
+    "vegas",
+    "sony vegas",
+    "magix",
+    "video",
+    "youtube"
+  ],
+  "keys": [
+    {
+      "label": "Split (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Delete",
+      "type": 1,
+      "code": 212,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Auto Ripple",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Normal Edit (D)",
+      "type": 0,
+      "code": 100,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Shuffle (D)",
+      "type": 0,
+      "code": 100,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play (Space)",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Track",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Solo Track",
+      "type": 0,
+      "code": 33,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Group (G)",
+      "type": 0,
+      "code": 103,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ungroup (U)",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Render As",
+      "type": 2,
+      "code": 109,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Insert Audio",
+      "type": 2,
+      "code": 117,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Insert Video",
+      "type": 2,
+      "code": 113,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

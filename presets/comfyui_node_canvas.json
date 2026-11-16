@@ -1,0 +1,131 @@
+{
+  "id": "comfyui_node_canvas",
+  "name": "ComfyUI Node Graph Deck",
+  "category": "AI & Data Science",
+  "desc": "ComfyUI workflow shortcuts: Queue Prompt, Add Node, Mute, Bypass, Clear.",
+  "color": "#607d8b",
+  "r": 96,
+  "g": 125,
+  "b": 139,
+  "tags": [
+    "comfyui",
+    "stable diffusion",
+    "nodes",
+    "ai image",
+    "workflows"
+  ],
+  "keys": [
+    {
+      "label": "Queue Prompt",
+      "type": 2,
+      "code": 176,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Mute Node (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Bypass Node (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Delete Node",
+      "type": 0,
+      "code": 212,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Search Node",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Fit Canvas (F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Reset Zoom",
+      "type": 0,
+      "code": 48,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Group Nodes",
+      "type": 2,
+      "code": 103,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Save Workflow",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Load Workflow",
+      "type": 2,
+      "code": 111,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "ComfyUI Web",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://127.0.0.1:8188"
+    },
+    {
+      "label": "Image Folder",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "explorer D:\\ComfyUI\\output"
+    },
+    {
+      "label": "Seed -1 (Random)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "-1"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "flight_simulator_msfs",
+  "name": "Flight Simulator (MSFS 2024)",
+  "category": "Gaming & Esports",
+  "desc": "Aviation cockpit controls: Flaps, Landing gear, Spoilers, Parking brake, Autopilot.",
+  "color": "#2196f3",
+  "r": 33,
+  "g": 150,
+  "b": 243,
+  "tags": [
+    "flight sim",
+    "msfs",
+    "aviation",
+    "cockpit",
+    "airplane"
+  ],
+  "keys": [
+    {
+      "label": "Gear (G)",
+      "type": 0,
+      "code": 103,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Flaps Ext (F7)",
+      "type": 0,
+      "code": 55,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Flaps Ret (F6)",
+      "type": 0,
+      "code": 54,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Full Flaps (F8)",
+      "type": 0,
+      "code": 56,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Spoilers (/)",
+      "type": 0,
+      "code": 47,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Parking Brake",
+      "type": 2,
+      "code": 46,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Autopilot (Z)",
+      "type": 0,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Nav Mode (N)",
+      "type": 0,
+      "code": 110,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Altitude (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Heading (H)",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Throttle Max",
+      "type": 0,
+      "code": 201,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Throttle Idle",
+      "type": 0,
+      "code": 192,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "ATC Window",
+      "type": 0,
+      "code": 96,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Cockpit Reset",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pause (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

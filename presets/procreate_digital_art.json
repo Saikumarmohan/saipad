@@ -1,0 +1,131 @@
+{
+  "id": "procreate_digital_art",
+  "name": "Digital Art & Painting",
+  "category": "Creative & Design",
+  "desc": "Digital illustration: Brush size, Color Picker, Flip Canvas, Layer Lock, Clear.",
+  "color": "#ff3366",
+  "r": 255,
+  "g": 51,
+  "b": 102,
+  "tags": [
+    "art",
+    "painting",
+    "illustration",
+    "photoshop",
+    "clipstudio"
+  ],
+  "keys": [
+    {
+      "label": "Brush (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Eraser (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Color Picker",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Smudge Tool",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lasso Select",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Fill Bucket",
+      "type": 0,
+      "code": 103,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Zoom In (+)",
+      "type": 0,
+      "code": 61,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Zoom Out (-)",
+      "type": 0,
+      "code": 45,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Flip Canvas",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Rotate Canvas",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "New Layer",
+      "type": 2,
+      "code": 110,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Merge Down",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Clear Layer",
+      "type": 2,
+      "code": 212,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Redo",
+      "type": 2,
+      "code": 122,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

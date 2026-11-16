@@ -1,0 +1,131 @@
+{
+  "id": "autocad_drafting",
+  "name": "AutoCAD 2D Drafting",
+  "category": "Creative & Design",
+  "desc": "Architectural and mechanical drafting: Line, Polyline, Trim, Offset, Dimension.",
+  "color": "#e51c24",
+  "r": 229,
+  "g": 28,
+  "b": 36,
+  "tags": [
+    "autocad",
+    "cad",
+    "drafting",
+    "architecture",
+    "engineering"
+  ],
+  "keys": [
+    {
+      "label": "LINE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "L\n"
+    },
+    {
+      "label": "PLINE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "PL\n"
+    },
+    {
+      "label": "TRIM",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "TR\n\n"
+    },
+    {
+      "label": "OFFSET",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "O\n"
+    },
+    {
+      "label": "CIRCLE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "C\n"
+    },
+    {
+      "label": "RECTANG",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "REC\n"
+    },
+    {
+      "label": "FILLET",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "F\n"
+    },
+    {
+      "label": "DIMENSION",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DIM\n"
+    },
+    {
+      "label": "EXTEND",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "EX\n\n"
+    },
+    {
+      "label": "MIRROR",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "MI\n"
+    },
+    {
+      "label": "MOVE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "M\n"
+    },
+    {
+      "label": "COPY",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "CO\n"
+    },
+    {
+      "label": "MATCHPROP",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "MA\n"
+    },
+    {
+      "label": "EXPLODE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "X\n"
+    },
+    {
+      "label": "ESC",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

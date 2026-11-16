@@ -1,0 +1,131 @@
+{
+  "id": "powerpoint_remote",
+  "name": "Presentation & Slide Remote",
+  "category": "Office & Finance",
+  "desc": "Presentation clicker: Next slide, Previous, Black screen, White screen, Laser.",
+  "color": "#d24726",
+  "r": 210,
+  "g": 71,
+  "b": 38,
+  "tags": [
+    "powerpoint",
+    "slides",
+    "presentation",
+    "keynote",
+    "remote"
+  ],
+  "keys": [
+    {
+      "label": "Next Slide",
+      "type": 1,
+      "code": 215,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Prev Slide",
+      "type": 1,
+      "code": 216,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Black Screen (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "White Screen (W)",
+      "type": 0,
+      "code": 119,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Start F5",
+      "type": 1,
+      "code": 195,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Start Current",
+      "type": 2,
+      "code": 195,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "End Slide Esc",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Laser Pointer",
+      "type": 2,
+      "code": 108,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Pen Tool",
+      "type": 2,
+      "code": 112,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Eraser Tool",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Hide Pointer",
+      "type": 2,
+      "code": 117,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Presence Stay-Awake",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

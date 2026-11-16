@@ -1,0 +1,131 @@
+{
+  "id": "avid_media_composer",
+  "name": "Avid Media Composer Pro",
+  "category": "Video & Audio",
+  "desc": "Hollywood broadcast film editing: Splice, Overwrite, Mark In/Out, Trim, Lift.",
+  "color": "#673ab7",
+  "r": 103,
+  "g": 58,
+  "b": 183,
+  "tags": [
+    "avid",
+    "broadcast",
+    "film",
+    "hollywood",
+    "composer"
+  ],
+  "keys": [
+    {
+      "label": "Splice-in (V)",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Overwrite (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lift (Z)",
+      "type": 0,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Extract (X)",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark In (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark Out (O)",
+      "type": 0,
+      "code": 111,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Trim Mode (U)",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play (5)",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Step Fwd (2)",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Step Back (1)",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Match Frame",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Find Bin",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Render",
+      "type": 2,
+      "code": 114,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Save Bin",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 1,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "backup_disk_maintenance",
+  "name": "Disk Cleanup & Maintenance",
+  "category": "System & Scripts",
+  "desc": "Storage optimization: Disk Cleanup, Defrag, CheckDisk, Empty Recycle, Storage Sense.",
+  "color": "#455a64",
+  "r": 69,
+  "g": 90,
+  "b": 100,
+  "tags": [
+    "disk",
+    "cleanup",
+    "storage",
+    "maintenance",
+    "backup"
+  ],
+  "keys": [
+    {
+      "label": "Disk Cleanup",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "cleanmgr"
+    },
+    {
+      "label": "Defrag Drives",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "dfrgui"
+    },
+    {
+      "label": "Disk Management",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "diskmgmt.msc"
+    },
+    {
+      "label": "chkdsk /f",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "chkdsk C: /f /r\n"
+    },
+    {
+      "label": "sfc /scannow",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "sfc /scannow\n"
+    },
+    {
+      "label": "dism restore",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DISM /Online /Cleanup-Image /RestoreHealth\n"
+    },
+    {
+      "label": "Empty Recycle Bin",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "powershell -Command \"Clear-RecycleBin -Force\"\n"
+    },
+    {
+      "label": "Temp Clean",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "del /q/f/s %TEMP%\\*\n"
+    },
+    {
+      "label": "Storage Settings",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start ms-settings:storagesense"
+    },
+    {
+      "label": "Windows Update",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start ms-settings:windowsupdate"
+    },
+    {
+      "label": "File Explorer",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "explorer ."
+    },
+    {
+      "label": "Terminal Admin",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "cls",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cls\n"
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

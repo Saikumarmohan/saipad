@@ -1,0 +1,131 @@
+{
+  "id": "arxiv_researcher",
+  "name": "Academic & Arxiv Researcher",
+  "category": "AI & Data Science",
+  "desc": "Research paper reading: BibTeX, Download PDF, Highlight, Cite, Scholar search.",
+  "color": "#b31b1b",
+  "r": 179,
+  "g": 27,
+  "b": 27,
+  "tags": [
+    "arxiv",
+    "research",
+    "paper",
+    "scholar",
+    "phd"
+  ],
+  "keys": [
+    {
+      "label": "Arxiv CS",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://arxiv.org/list/cs.AI/recent"
+    },
+    {
+      "label": "Google Scholar",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://scholar.google.com"
+    },
+    {
+      "label": "Semantic Scholar",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://www.semanticscholar.org"
+    },
+    {
+      "label": "Connected Papers",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://www.connectedpapers.com"
+    },
+    {
+      "label": "BibTeX Cite",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "@article{,\n  author = {},\n  title = {},\n  year = {2026}\n}\n"
+    },
+    {
+      "label": "Paper TL;DR",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Summarize the core methodology, novelty, benchmark results and limitations of this paper:\n"
+    },
+    {
+      "label": "Abstract TLDR",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Extract the abstract and summarize into 3 core bullets:\n"
+    },
+    {
+      "label": "Equation Note",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "$$\\mathcal{L} = \\mathbb{E}[\\log p(x)]$$"
+    },
+    {
+      "label": "Highlight PDF",
+      "type": 2,
+      "code": 104,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Bookmark",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Full Screen",
+      "type": 2,
+      "code": 200,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Notion Notes",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start notion:"
+    },
+    {
+      "label": "Save PDF",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Presence Stay-Awake",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -29,16 +29,17 @@ An advanced, corporate-safe programmable 4x4 mechanical macropad powered by the 
 * **⚡ Zero-Click Auto-Reconnect:** Remembers paired devices and automatically connects when the page loads or when the USB cable is plugged in.
 * **📱 PWA Desktop App:** Install directly as a standalone desktop app from Chrome/Edge (no browser URL bar, pins to Windows taskbar).
 * **⌨️ VIA-Style Keycode Palette:** Click any key on the visual 4x4 matrix, then 1-click assign from a categorized palette (Basic, Media, Git/Dev, Windows, Scripts, Actions).
-* **📚 Curated Preset Library:** 1-Click apply production-grade profiles with custom RGB light colors:
-  * ⚡ **Everyday Power User & Multitasking** (`#00bfff` Electric Blue)
-  * 👨‍💻 **Full-Stack Developer & Terminal Power** (`#00ff7f` Emerald Green)
-  * 📟 **90s Retro Accounting & Calculator** (`#ffb000` Warm Amber)
-  * 🎨 **UI/UX & Graphic Designer (Figma/Adobe)** (`#a855f7` Vibrant Purple)
-  * 🎬 **Video Editor Pro (Premiere/DaVinci)** (`#ef4444` Ruby Red)
-  * 🎙️ **Stream Deck & Voice Comms (OBS/Discord)** (`#f43f5e` Cyber Pink)
-  * 🤖 **AI Prompt Engineer & Research Deck** (`#06b6d4` Bright Cyan)
-  * 🎮 **Gamer & Tactical Voice Deck** (`#84cc16` Toxic Lime)
-* **🤖 AI Keymap Copilot:** Interactive prompt generator and 1-click JSON importer for ChatGPT, Claude, and Gemini!
+* **📚 Curated 110+ Preset Library:** Real-time search and filter across 110+ production-grade profiles dynamically loaded from GitHub:
+  * 👨‍💻 **Developer & Git:** Git Master, VS Code Supercharged, Docker, Kubernetes, Linux Bash, Python Data Notebook, C++, Rust Cargo, Go, Next.js.
+  * 🎨 **Creative & Design:** Figma UI/UX, Blender 3D, Blender Sculpt, Photoshop Essentials, Illustrator Vector, After Effects, Cinema 4D, Canva.
+  * 🎬 **Video & Audio:** Premiere Pro, DaVinci Resolve Studio, Ableton Live 12, FL Studio 21, Logic Pro, Pro Tools, Reaper, Audacity, Virtual DJ.
+  * 🎙️ **Streaming & Comms:** OBS Studio, Streamlabs, Discord Stream, Camera Switcher, Soundboard Trigger, Zoom & Teams Meetings, YouTube Live.
+  * 📊 **Office & Finance:** Excel Financial Pro, Google Sheets, Notion PKM, Obsidian Markdown, PowerPoint Remote, QuickBooks Invoicing.
+  * 🎮 **Gaming & Esports:** CS2 / Valorant Tactical, Flight Sim MSFS, Racing Rig, MMO Action, MOBA LoL/Dota, Minecraft Builder.
+  * 🤖 **AI & Data Science:** AI Prompt Engineer, Midjourney Prompter, Ollama Local LLM, ComfyUI Nodes, PyTorch Deep Learning, Pandas Wrangling.
+  * ⚡ **System & Scripts:** Windows PowerToys, Windows SysAdmin Pro, Network IT Diagnostic, CRT Terminal, Backup Disk Maintenance.
+* **🛠️ Interactive Preset Generator & Layout Builder:** Visually build custom 16-key profiles for any software, customize individual key action types (Char, Special Keycode, Modifier Shortcut, String Macro, Action, Win+R Script Launcher), test in real-time, clone from your active profile, use quick starter templates (Dev, Numpad, Gaming, Media), and export `.json` or flash directly to the keyboard.
+* **🤖 Supercharged AI Copilot:** 1-Click app selectors for popular tools (Blender, Photoshop, Premiere, Resolve, VS Code, Ableton, FL Studio, Figma, Excel, Discord, CS2, AutoCAD, Midjourney, Docker, TradingView), auto-prompt generation, `.json` file upload / open, live syntax validation, and instant hardware flashing.
 * **🔊 Procedural Switch Sound Synthesizer:** Realistic Web Audio API mechanical acoustics:
   * 💾 **IBM Model M (Buckling Spring)** with authentic metallic spring resonance ping!
   * 🔵 **Cherry MX Blue** (Crisp click)

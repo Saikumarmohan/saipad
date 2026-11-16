@@ -1,0 +1,131 @@
+{
+  "id": "pro_tools_standard",
+  "name": "Avid Pro Tools Standard",
+  "category": "Audio & Music",
+  "desc": "Industry recording & mixing: Smart tool, Trim, Selector, Grabber, Record, Mix/Edit.",
+  "color": "#7b1fa2",
+  "r": 123,
+  "g": 31,
+  "b": 162,
+  "tags": [
+    "pro tools",
+    "avid",
+    "recording",
+    "mixing",
+    "studio"
+  ],
+  "keys": [
+    {
+      "label": "Record",
+      "type": 2,
+      "code": 32,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Play / Stop",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mix / Edit",
+      "type": 2,
+      "code": 61,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Smart Tool",
+      "type": 0,
+      "code": 55,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Trim (F6)",
+      "type": 0,
+      "code": 54,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Selector (F7)",
+      "type": 0,
+      "code": 55,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Grabber (F8)",
+      "type": 0,
+      "code": 56,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Scrubber (F9)",
+      "type": 0,
+      "code": 57,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Separate Clip",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Fade to Start",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Fade to End",
+      "type": 2,
+      "code": 103,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Mute Clip",
+      "type": 2,
+      "code": 109,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "New Track",
+      "type": 2,
+      "code": 110,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

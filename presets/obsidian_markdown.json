@@ -1,0 +1,131 @@
+{
+  "id": "obsidian_markdown",
+  "name": "Obsidian Markdown PKM",
+  "category": "Office & Finance",
+  "desc": "Zettelkasten & markdown notes: WikiLink [[]], Daily Note, Graph View, Command.",
+  "color": "#7c3aed",
+  "r": 124,
+  "g": 58,
+  "b": 237,
+  "tags": [
+    "obsidian",
+    "markdown",
+    "zettelkasten",
+    "notes",
+    "second brain"
+  ],
+  "keys": [
+    {
+      "label": "[[WikiLink]]",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[[]]"
+    },
+    {
+      "label": "#tag",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "#"
+    },
+    {
+      "label": "## Section",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "## "
+    },
+    {
+      "label": "- [ ] Todo",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "- [ ] "
+    },
+    {
+      "label": "Command Palette",
+      "type": 2,
+      "code": 112,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Quick Switcher",
+      "type": 2,
+      "code": 111,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Graph View",
+      "type": 2,
+      "code": 103,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Daily Note",
+      "type": 2,
+      "code": 100,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "```code```",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "```\n\n```"
+    },
+    {
+      "label": "> Callout",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "> [!NOTE]\n> "
+    },
+    {
+      "label": "Bold",
+      "type": 2,
+      "code": 98,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Italic",
+      "type": 2,
+      "code": 105,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Obsidian App",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start obsidian:"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Split Right",
+      "type": 2,
+      "code": 92,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

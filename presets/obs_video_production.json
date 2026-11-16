@@ -1,0 +1,131 @@
+{
+  "id": "obs_video_production",
+  "name": "VOD Review & Video Logging",
+  "category": "Video & Audio",
+  "desc": "Live recording control: Start/Stop record, Pause, Marker timestamp, Audio check.",
+  "color": "#2c3e50",
+  "r": 44,
+  "g": 62,
+  "b": 80,
+  "tags": [
+    "obs",
+    "vod",
+    "logging",
+    "record",
+    "review"
+  ],
+  "keys": [
+    {
+      "label": "Start Rec",
+      "type": 2,
+      "code": 114,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Stop Rec",
+      "type": 2,
+      "code": 115,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Pause Rec",
+      "type": 2,
+      "code": 112,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Bookmark",
+      "type": 2,
+      "code": 109,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "LOG: Good Take",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[GOOD TAKE] "
+    },
+    {
+      "label": "LOG: Cut Here",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[CUT HERE] "
+    },
+    {
+      "label": "Mute Mic",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play/Pause",
+      "type": 1,
+      "code": 205,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Open VODs",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "explorer D:\\Videos"
+    },
+    {
+      "label": "Calculator",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "calc"
+    },
+    {
+      "label": "Screenshot",
+      "type": 2,
+      "code": 115,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

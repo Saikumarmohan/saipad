@@ -1,0 +1,131 @@
+{
+  "id": "after_effects",
+  "name": "Adobe After Effects VFX",
+  "category": "Video & Audio",
+  "desc": "After Effects motion graphics: RAM Preview, Keyframes, Split Layer, Solo, Pre-compose.",
+  "color": "#9999ff",
+  "r": 153,
+  "g": 153,
+  "b": 255,
+  "tags": [
+    "after effects",
+    "vfx",
+    "motion",
+    "adobe",
+    "compositing"
+  ],
+  "keys": [
+    {
+      "label": "RAM Preview",
+      "type": 1,
+      "code": "0",
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Keyframe U",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pre-compose",
+      "type": 2,
+      "code": 99,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Split Layer",
+      "type": 2,
+      "code": 100,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Position (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Scale (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Rotation (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Opacity (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Easy Ease F9",
+      "type": 0,
+      "code": 57,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Graph Editor",
+      "type": 0,
+      "code": 103,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Fit Comp",
+      "type": 2,
+      "code": 102,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "New Solid",
+      "type": 2,
+      "code": 121,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "New Null",
+      "type": 2,
+      "code": 121,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Add Render",
+      "type": 2,
+      "code": 47,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

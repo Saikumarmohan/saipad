@@ -1,0 +1,131 @@
+{
+  "id": "cplusplus_embedded",
+  "name": "C/C++ & Embedded Systems",
+  "category": "Developer & Git",
+  "desc": "C++ templates: CMake build, flash, serial monitor, pointer, namespace.",
+  "color": "#00599c",
+  "r": 0,
+  "g": 89,
+  "b": 156,
+  "tags": [
+    "c++",
+    "embedded",
+    "cmake",
+    "arduino",
+    "firmware"
+  ],
+  "keys": [
+    {
+      "label": "cmake ..",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cmake -B build && cmake --build build\n"
+    },
+    {
+      "label": "ctest",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctest --output-on-failure\n"
+    },
+    {
+      "label": "Serial.print",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Serial.print();"
+    },
+    {
+      "label": "Serial.pln",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Serial.println();"
+    },
+    {
+      "label": "uint8_t",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "uint8_t "
+    },
+    {
+      "label": "uint32_t",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "uint32_t "
+    },
+    {
+      "label": "nullptr",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "nullptr"
+    },
+    {
+      "label": "std::vector",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "std::vector<"
+    },
+    {
+      "label": "std::string",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "std::string"
+    },
+    {
+      "label": "auto &&",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "auto&& "
+    },
+    {
+      "label": "printf()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "printf(\"\\n\");"
+    },
+    {
+      "label": "delay(10)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "delay(10);"
+    },
+    {
+      "label": "Serial Mon",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "Build",
+      "type": 2,
+      "code": 98,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

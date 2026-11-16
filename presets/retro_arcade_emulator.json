@@ -1,0 +1,131 @@
+{
+  "id": "retro_arcade_emulator",
+  "name": "Retro Arcade & Emulator",
+  "category": "Gaming & Esports",
+  "desc": "Retro gaming / RetroArch: Save State, Load State, Fast Forward, Rewind, Pause.",
+  "color": "#6d4c41",
+  "r": 109,
+  "g": 76,
+  "b": 65,
+  "tags": [
+    "retroarch",
+    "emulator",
+    "arcade",
+    "mame",
+    "nintendo"
+  ],
+  "keys": [
+    {
+      "label": "Save State (F2)",
+      "type": 1,
+      "code": 193,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Load State (F4)",
+      "type": 1,
+      "code": 195,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Slot Next (F7)",
+      "type": 0,
+      "code": 55,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Slot Prev (F6)",
+      "type": 0,
+      "code": 54,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Fast Forward (Space)",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Rewind (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pause (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Reset Game (H)",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Audio",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Full Screen",
+      "type": 1,
+      "code": 176,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Menu Esc",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Coin / Select",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Start P1",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Start P2",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Screenshot",
+      "type": 2,
+      "code": 115,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

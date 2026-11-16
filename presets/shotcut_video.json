@@ -1,0 +1,131 @@
+{
+  "id": "shotcut_video",
+  "name": "Shotcut Open Source Video",
+  "category": "Video & Audio",
+  "desc": "Shotcut timeline actions: Split at Playhead, Ripple Delete, Append, Keyframe.",
+  "color": "#1976d2",
+  "r": 25,
+  "g": 118,
+  "b": 210,
+  "tags": [
+    "shotcut",
+    "opensource",
+    "free video",
+    "editor",
+    "timeline"
+  ],
+  "keys": [
+    {
+      "label": "Split (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ripple Del (X)",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lift (Z)",
+      "type": 0,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Append (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Insert (V)",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play (Space)",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark In (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark Out (O)",
+      "type": 0,
+      "code": 111,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Add Video Trk",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Add Audio Trk",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Zoom Fit",
+      "type": 2,
+      "code": 48,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Zoom In",
+      "type": 2,
+      "code": 61,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Zoom Out",
+      "type": 2,
+      "code": 45,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Export",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "bitwig_studio",
+  "name": "Bitwig Studio Modular",
+  "category": "Audio & Music",
+  "desc": "Bitwig modular music creation: Clip launcher, Arranger, Device panel, Automation.",
+  "color": "#ff8f00",
+  "r": 255,
+  "g": 143,
+  "b": 0,
+  "tags": [
+    "bitwig",
+    "modular",
+    "synth",
+    "ableton",
+    "sound design"
+  ],
+  "keys": [
+    {
+      "label": "Tab (View)",
+      "type": 1,
+      "code": 179,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Stop",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Record",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Arranger (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mixer (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Device (D)",
+      "type": 0,
+      "code": 100,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Inspector (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pointer (1)",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Time Sel (2)",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Knife (4)",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Eraser (5)",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Duplicate",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Bounce Place",
+      "type": 2,
+      "code": 98,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

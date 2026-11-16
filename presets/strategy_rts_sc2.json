@@ -1,0 +1,131 @@
+{
+  "id": "strategy_rts_sc2",
+  "name": "StarCraft 2 & Age of Empires",
+  "category": "Gaming & Esports",
+  "desc": "RTS economy & army control: Select Army, Idle Villager, Town Center, Group 1-4.",
+  "color": "#00897b",
+  "r": 0,
+  "g": 137,
+  "b": 123,
+  "tags": [
+    "starcraft",
+    "rts",
+    "age of empires",
+    "strategy",
+    "esports"
+  ],
+  "keys": [
+    {
+      "label": "Select Army (F2)",
+      "type": 0,
+      "code": 193,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Idle Worker",
+      "type": 0,
+      "code": 46,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Town Center",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Attack Move (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Hold Position (H)",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Stop (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Patrol (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Control Grp 1",
+      "type": 2,
+      "code": 49,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Control Grp 2",
+      "type": 2,
+      "code": 50,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Control Grp 3",
+      "type": 2,
+      "code": 51,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Control Grp 4",
+      "type": 2,
+      "code": 52,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Jump Grp 1",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Jump Grp 2",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "gl hf!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "gl hf!\n"
+    },
+    {
+      "label": "gg!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "gg wp!\n"
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

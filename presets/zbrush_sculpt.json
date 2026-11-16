@@ -1,0 +1,131 @@
+{
+  "id": "zbrush_sculpt",
+  "name": "ZBrush Digital Sculpting",
+  "category": "Creative & Design",
+  "desc": "ZBrush brushes: Standard, Move, ClayBuildup, DamStandard, DynaMesh, SubTool.",
+  "color": "#2e2e2e",
+  "r": 46,
+  "g": 46,
+  "b": 46,
+  "tags": [
+    "zbrush",
+    "pixologic",
+    "sculpting",
+    "character",
+    "3d"
+  ],
+  "keys": [
+    {
+      "label": "Std Brush",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b s t"
+    },
+    {
+      "label": "Move Brush",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b m v"
+    },
+    {
+      "label": "ClayBuild",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b c b"
+    },
+    {
+      "label": "DamStandard",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b d s"
+    },
+    {
+      "label": "Inflate",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b i n"
+    },
+    {
+      "label": "SnakeHook",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b s h"
+    },
+    {
+      "label": "Draw Size (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Focal Shift",
+      "type": 0,
+      "code": 111,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Z Intensity",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mask Drag",
+      "type": 2,
+      "code": 32,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Smooth",
+      "type": 2,
+      "code": 32,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "DynaMesh",
+      "type": 2,
+      "code": 119,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "SubTool Vis",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Frame Mesh",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

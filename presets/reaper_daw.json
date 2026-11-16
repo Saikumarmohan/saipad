@@ -1,0 +1,131 @@
+{
+  "id": "reaper_daw",
+  "name": "Reaper DAW Power User",
+  "category": "Audio & Music",
+  "desc": "Reaper shortcuts: Record, Split item, Crossfade, FX Browser, Render, Ripple edit.",
+  "color": "#00acc1",
+  "r": 0,
+  "g": 172,
+  "b": 193,
+  "tags": [
+    "reaper",
+    "daw",
+    "recording",
+    "audio",
+    "cockos"
+  ],
+  "keys": [
+    {
+      "label": "Record",
+      "type": 2,
+      "code": 114,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Play / Stop",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Split Item (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Crossfade (X)",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Track (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Solo Track (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "FX Browser",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mixer Toggle",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ripple Edit",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Snap Toggle",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Insert Track",
+      "type": 2,
+      "code": 116,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Render Project",
+      "type": 2,
+      "code": 114,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Save Project",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 1,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Redo",
+      "type": 1,
+      "code": 121,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

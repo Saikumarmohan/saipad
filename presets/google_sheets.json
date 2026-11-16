@@ -1,0 +1,131 @@
+{
+  "id": "google_sheets",
+  "name": "Google Sheets Fast Deck",
+  "category": "Office & Finance",
+  "desc": "Google Sheets navigation: Insert rows, freeze headers, formula autocomplete, format.",
+  "color": "#0f9d58",
+  "r": 15,
+  "g": 157,
+  "b": 88,
+  "tags": [
+    "sheets",
+    "google",
+    "cloud",
+    "spreadsheet",
+    "finance"
+  ],
+  "keys": [
+    {
+      "label": "=SUM()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "=SUM("
+    },
+    {
+      "label": "=AVERAGE()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "=AVERAGE("
+    },
+    {
+      "label": "=IF()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "=IF("
+    },
+    {
+      "label": "=COUNTIF()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "=COUNTIF("
+    },
+    {
+      "label": "=QUERY()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "=QUERY("
+    },
+    {
+      "label": "=IMPORTRANGE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "=IMPORTRANGE(\""
+    },
+    {
+      "label": "Format Currency",
+      "type": 2,
+      "code": 52,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Format Percent",
+      "type": 2,
+      "code": 53,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Select Row",
+      "type": 2,
+      "code": 32,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "Select Col",
+      "type": 2,
+      "code": 32,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Insert Row",
+      "type": 2,
+      "code": 61,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Delete Row",
+      "type": 2,
+      "code": 45,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Sheets Web",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://sheets.google.com"
+    },
+    {
+      "label": "Calculator",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "calc"
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

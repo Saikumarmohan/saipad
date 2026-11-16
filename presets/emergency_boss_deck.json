@@ -1,0 +1,131 @@
+{
+  "id": "emergency_boss_deck",
+  "name": "Emergency Boss Key & Privacy",
+  "category": "System & Scripts",
+  "desc": "Instant privacy & panic buttons: Minimize all, Switch to Excel, Mute all, Lock PC.",
+  "color": "#d50000",
+  "r": 213,
+  "g": 0,
+  "b": 0,
+  "tags": [
+    "boss key",
+    "privacy",
+    "panic",
+    "emergency",
+    "lock"
+  ],
+  "keys": [
+    {
+      "label": "Minimize All (Boss)",
+      "type": 2,
+      "code": 100,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Open Excel Calc",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "excel"
+    },
+    {
+      "label": "Open Calculator",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "calc"
+    },
+    {
+      "label": "Mute Everything",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pause Video",
+      "type": 1,
+      "code": 205,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Close Tab Fast",
+      "type": 2,
+      "code": 119,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Close Window",
+      "type": 2,
+      "code": 201,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Desktop 2 (Safe)",
+      "type": 2,
+      "code": 215,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "Desktop 1 (Work)",
+      "type": 2,
+      "code": 216,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "Task View",
+      "type": 2,
+      "code": 179,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Lock Immediately",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Notepad Work Log",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "notepad"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Clear History",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+shift+del"
+    },
+    {
+      "label": "Esc",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

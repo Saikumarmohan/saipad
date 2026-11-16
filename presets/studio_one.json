@@ -1,0 +1,131 @@
+{
+  "id": "studio_one",
+  "name": "PreSonus Studio One",
+  "category": "Audio & Music",
+  "desc": "Studio One shortcuts: Record, Split, Eraser, Inspector, Mix Window, Quantize.",
+  "color": "#0070ba",
+  "r": 0,
+  "g": 112,
+  "b": 186,
+  "tags": [
+    "studio one",
+    "presonus",
+    "daw",
+    "mastering",
+    "mixing"
+  ],
+  "keys": [
+    {
+      "label": "Record (*)",
+      "type": 1,
+      "code": "*",
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play (Space)",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Split (3)",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Arrow (1)",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Eraser (5)",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Solo (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mixer (F3)",
+      "type": 1,
+      "code": 193,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Editor (F2)",
+      "type": 1,
+      "code": 192,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Quantize (Q)",
+      "type": 0,
+      "code": 113,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Duplicate",
+      "type": 2,
+      "code": 0,
+      "mod": "d",
+      "macro": ""
+    },
+    {
+      "label": "Export Mix",
+      "type": 2,
+      "code": 101,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Metronome",
+      "type": 2,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

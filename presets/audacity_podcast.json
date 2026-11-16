@@ -1,0 +1,131 @@
+{
+  "id": "audacity_podcast",
+  "name": "Audacity & Voiceover Studio",
+  "category": "Audio & Music",
+  "desc": "Audio recording & cleaning: Record, Noise Reduction, Normalize, Silence, Export.",
+  "color": "#0000eb",
+  "r": 0,
+  "g": 0,
+  "b": 235,
+  "tags": [
+    "audacity",
+    "podcast",
+    "voiceover",
+    "audio",
+    "recording"
+  ],
+  "keys": [
+    {
+      "label": "Record (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Stop (Space)",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pause (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Split Cut",
+      "type": 2,
+      "code": 107,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Split New",
+      "type": 2,
+      "code": 105,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Silence Audio",
+      "type": 2,
+      "code": 108,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Trim Outside",
+      "type": 2,
+      "code": 116,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Select All",
+      "type": 2,
+      "code": 97,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Noise Reduction",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "alt+c n"
+    },
+    {
+      "label": "Compressor",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "alt+c c"
+    },
+    {
+      "label": "Normalize",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "alt+c o"
+    },
+    {
+      "label": "Export MP3",
+      "type": 2,
+      "code": 101,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Audio Folder",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "explorer D:\\Audio"
+    },
+    {
+      "label": "Mute Audio",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

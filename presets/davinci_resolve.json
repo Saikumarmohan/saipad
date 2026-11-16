@@ -1,0 +1,131 @@
+{
+  "id": "davinci_resolve",
+  "name": "DaVinci Resolve Pro Deck",
+  "category": "Video & Audio",
+  "desc": "Resolve video & color: Blade, Ripple Cut, Color Page, Nodes, Scopes, Render.",
+  "color": "#00a4e4",
+  "r": 0,
+  "g": 164,
+  "b": 228,
+  "tags": [
+    "davinci",
+    "resolve",
+    "color grading",
+    "blackmagic",
+    "video"
+  ],
+  "keys": [
+    {
+      "label": "Blade (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Select (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ripple Cut",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Trim Mode (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark In (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark Out (O)",
+      "type": 0,
+      "code": 111,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Pause",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Add Serial Node",
+      "type": 2,
+      "code": 115,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Add Parallel",
+      "type": 2,
+      "code": 112,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Bypass Nodes",
+      "type": 2,
+      "code": 100,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "Cut (Ctrl+\\)",
+      "type": 2,
+      "code": 92,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Join Clips",
+      "type": 2,
+      "code": 106,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Color Page (Shift+6)",
+      "type": 2,
+      "code": 54,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "Edit Page (Shift+4)",
+      "type": 2,
+      "code": 52,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "Quick Export",
+      "type": 2,
+      "code": 176,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

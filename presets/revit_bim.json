@@ -1,0 +1,131 @@
+{
+  "id": "revit_bim",
+  "name": "Revit & Architectural BIM",
+  "category": "Creative & Design",
+  "desc": "Revit architecture hotkeys: Wall, Door, Window, Component, Dimension, Align.",
+  "color": "#0696d7",
+  "r": 6,
+  "g": 150,
+  "b": 215,
+  "tags": [
+    "revit",
+    "bim",
+    "architecture",
+    "construction",
+    "autodesk"
+  ],
+  "keys": [
+    {
+      "label": "Wall",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "WA"
+    },
+    {
+      "label": "Door",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DR"
+    },
+    {
+      "label": "Window",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "WN"
+    },
+    {
+      "label": "Component",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "CM"
+    },
+    {
+      "label": "Aligned Dim",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DI"
+    },
+    {
+      "label": "Align Tool",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "AL"
+    },
+    {
+      "label": "Split Element",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "SL"
+    },
+    {
+      "label": "Trim / Ext",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "TR"
+    },
+    {
+      "label": "Offset",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "OF"
+    },
+    {
+      "label": "Mirror Pick",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "MM"
+    },
+    {
+      "label": "Mirror Draw",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DM"
+    },
+    {
+      "label": "Copy",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "CO"
+    },
+    {
+      "label": "Rotate",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "RO"
+    },
+    {
+      "label": "Pin Element",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "PN"
+    },
+    {
+      "label": "ESC",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "blender_sculpting",
+  "name": "Blender Sculpt & Detail",
+  "category": "Creative & Design",
+  "desc": "Sculpting workflow: DynTopo, Remesh, Smooth, Draw, Clay Strips, Mask, Invert.",
+  "color": "#f57c00",
+  "r": 245,
+  "g": 124,
+  "b": 0,
+  "tags": [
+    "blender",
+    "sculpt",
+    "organic",
+    "character",
+    "3d"
+  ],
+  "keys": [
+    {
+      "label": "Draw",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Clay Strips",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Grab Brush",
+      "type": 0,
+      "code": 103,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Crease",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Smooth",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Flatten",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mask Tool",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Invert Mask",
+      "type": 2,
+      "code": 105,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Clear Mask",
+      "type": 2,
+      "code": 109,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Remesh",
+      "type": 2,
+      "code": 114,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "DynTopo",
+      "type": 0,
+      "code": 100,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Symmetry",
+      "type": 0,
+      "code": 121,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "F Size",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Shift+F Str",
+      "type": 2,
+      "code": 102,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 1,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

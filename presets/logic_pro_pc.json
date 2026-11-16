@@ -1,0 +1,131 @@
+{
+  "id": "logic_pro_pc",
+  "name": "Music Producer & Beat Deck",
+  "category": "Audio & Music",
+  "desc": "General MIDI & synth controls: Tap Tempo, Metronome, Loop, Pitch Up/Down, Quantize.",
+  "color": "#a569bd",
+  "r": 165,
+  "g": 105,
+  "b": 189,
+  "tags": [
+    "music",
+    "midi",
+    "synth",
+    "beats",
+    "keys"
+  ],
+  "keys": [
+    {
+      "label": "Tap Tempo",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "t t t"
+    },
+    {
+      "label": "Metronome",
+      "type": 0,
+      "code": 107,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Cycle Loop",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Record (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Pause",
+      "type": 1,
+      "code": 205,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Octave +1",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "shift+up"
+    },
+    {
+      "label": "Octave -1",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "shift+down"
+    },
+    {
+      "label": "Quantize 1/16",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+q"
+    },
+    {
+      "label": "Humanize",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "alt+h"
+    },
+    {
+      "label": "Velocity +10",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "alt+up"
+    },
+    {
+      "label": "Velocity -10",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "alt+down"
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Master",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

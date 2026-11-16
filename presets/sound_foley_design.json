@@ -1,0 +1,131 @@
+{
+  "id": "sound_foley_design",
+  "name": "Sound Design & Foley Studio",
+  "category": "Video & Audio",
+  "desc": "Audio asset editor: Trim silence, Pitch shift, Reverse, Normalize, Crossfade.",
+  "color": "#795548",
+  "r": 121,
+  "g": 85,
+  "b": 72,
+  "tags": [
+    "foley",
+    "sound design",
+    "sfx",
+    "audio",
+    "games"
+  ],
+  "keys": [
+    {
+      "label": "Normalize 0dB",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+n"
+    },
+    {
+      "label": "Reverse Audio",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+r"
+    },
+    {
+      "label": "Pitch Shift",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "shift+p"
+    },
+    {
+      "label": "Fade In",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "f"
+    },
+    {
+      "label": "Fade Out",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "g"
+    },
+    {
+      "label": "Crossfade",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "x"
+    },
+    {
+      "label": "Trim Silence",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "t"
+    },
+    {
+      "label": "Equalizer",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "e"
+    },
+    {
+      "label": "Compressor",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "c"
+    },
+    {
+      "label": "Reverb Send",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "r"
+    },
+    {
+      "label": "Delay Send",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "d"
+    },
+    {
+      "label": "Solo Track",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "s"
+    },
+    {
+      "label": "Mute Track",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "m"
+    },
+    {
+      "label": "Play / Stop",
+      "type": 1,
+      "code": " ",
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Export WAV",
+      "type": 2,
+      "code": 119,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

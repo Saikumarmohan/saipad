@@ -1,0 +1,131 @@
+{
+  "id": "k8s_kubernetes",
+  "name": "Kubernetes Cluster Deck",
+  "category": "Developer & Git",
+  "desc": "Cluster management: get pods, describe, logs, apply, k9s, context switch.",
+  "color": "#326ce5",
+  "r": 50,
+  "g": 108,
+  "b": 229,
+  "tags": [
+    "kubernetes",
+    "k8s",
+    "kubectl",
+    "cloud",
+    "devops"
+  ],
+  "keys": [
+    {
+      "label": "get pods",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl get pods\n"
+    },
+    {
+      "label": "get svc",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl get svc\n"
+    },
+    {
+      "label": "describe",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl describe pod "
+    },
+    {
+      "label": "k logs",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl logs -f "
+    },
+    {
+      "label": "apply -f",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl apply -f "
+    },
+    {
+      "label": "delete -f",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl delete -f "
+    },
+    {
+      "label": "k9s",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "k9s\n"
+    },
+    {
+      "label": "ctx",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectx "
+    },
+    {
+      "label": "ns",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubens "
+    },
+    {
+      "label": "top pods",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl top pods\n"
+    },
+    {
+      "label": "top nodes",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl top nodes\n"
+    },
+    {
+      "label": "port-fwd",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kubectl port-forward "
+    },
+    {
+      "label": "Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "vscode_supercharged",
+  "name": "VS Code Supercharged",
+  "category": "Developer & Git",
+  "desc": "Fast navigation: Command Palette, Go to File, Split Editor, Toggle Terminal, Format.",
+  "color": "#007acc",
+  "r": 0,
+  "g": 122,
+  "b": 204,
+  "tags": [
+    "vscode",
+    "code",
+    "ide",
+    "editor",
+    "microsoft"
+  ],
+  "keys": [
+    {
+      "label": "Palette",
+      "type": 2,
+      "code": 112,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Quick Open",
+      "type": 2,
+      "code": 112,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Terminal",
+      "type": 2,
+      "code": 96,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Explorer",
+      "type": 2,
+      "code": 101,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Split Right",
+      "type": 2,
+      "code": 92,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Format Doc",
+      "type": 2,
+      "code": 102,
+      "mod": 6,
+      "macro": ""
+    },
+    {
+      "label": "Comment",
+      "type": 2,
+      "code": 47,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Find",
+      "type": 2,
+      "code": 102,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Replace",
+      "type": 2,
+      "code": 104,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Multi Cursor",
+      "type": 2,
+      "code": 218,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Fold Code",
+      "type": 2,
+      "code": 91,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Unfold",
+      "type": 2,
+      "code": 93,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Definition",
+      "type": 2,
+      "code": 201,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Close Tab",
+      "type": 2,
+      "code": 119,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Reopen Tab",
+      "type": 2,
+      "code": 116,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

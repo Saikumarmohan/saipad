@@ -1,0 +1,131 @@
+{
+  "id": "stealth_stay_awake",
+  "name": "Corporate Stay-Awake & Jiggler",
+  "category": "Office & Finance",
+  "desc": "IT-safe presentation keep-alive: Toggle mouse jiggler, timer switch, clean lock.",
+  "color": "#10b981",
+  "r": 16,
+  "g": 185,
+  "b": 129,
+  "tags": [
+    "jiggler",
+    "anti-away",
+    "stay awake",
+    "stealth",
+    "corporate"
+  ],
+  "keys": [
+    {
+      "label": "Toggle Jiggler",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Task Manager",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "taskmgr"
+    },
+    {
+      "label": "Calculator",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "calc"
+    },
+    {
+      "label": "System Info",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "msinfo32"
+    },
+    {
+      "label": "Desktop 1",
+      "type": 2,
+      "code": 216,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "Desktop 2",
+      "type": 2,
+      "code": 215,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "Minimize All",
+      "type": 2,
+      "code": 100,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Task View",
+      "type": 2,
+      "code": 179,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Mute Audio",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC Immediately",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "File Explorer",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "explorer ."
+    },
+    {
+      "label": "Windows Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "Save All",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

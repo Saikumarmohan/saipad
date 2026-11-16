@@ -1,0 +1,131 @@
+{
+  "id": "racing_sim_rig",
+  "name": "Sim Racing (iRacing / Assetto Corsa)",
+  "category": "Gaming & Esports",
+  "desc": "Racing sim pitstop: Pit limiter, Headlights, Wipers, Look Left/Right, TC, ABS.",
+  "color": "#c62828",
+  "r": 198,
+  "g": 40,
+  "b": 40,
+  "tags": [
+    "racing",
+    "sim racing",
+    "iracing",
+    "assetto corsa",
+    "cars"
+  ],
+  "keys": [
+    {
+      "label": "Pit Limiter (L)",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ignition (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Starter (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Headlights (H)",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Wipers (W)",
+      "type": 0,
+      "code": 119,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "TC Plus (+)",
+      "type": 0,
+      "code": 43,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "TC Minus (-)",
+      "type": 0,
+      "code": 45,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "ABS Plus",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "ABS Minus",
+      "type": 0,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Brake Bias Fwd",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Brake Bias Rear",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Look Left",
+      "type": 0,
+      "code": 216,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Look Right",
+      "type": 0,
+      "code": 215,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Look Back",
+      "type": 0,
+      "code": 217,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Reset Car (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

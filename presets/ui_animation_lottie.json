@@ -1,0 +1,131 @@
+{
+  "id": "ui_animation_lottie",
+  "name": "UI Motion & Lottie Studio",
+  "category": "Creative & Design",
+  "desc": "Micro-interaction and UI animation: Keyframing, easing, timeline, preview.",
+  "color": "#4bf5c6",
+  "r": 75,
+  "g": 245,
+  "b": 198,
+  "tags": [
+    "animation",
+    "lottie",
+    "framer",
+    "rive",
+    "motion"
+  ],
+  "keys": [
+    {
+      "label": "Keyframe",
+      "type": 0,
+      "code": 107,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Pause",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Easy Ease",
+      "type": 0,
+      "code": 57,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Graph Editor",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Trim Start",
+      "type": 0,
+      "code": 91,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Trim End",
+      "type": 0,
+      "code": 93,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Split Layer",
+      "type": 2,
+      "code": 100,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Scale (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Position (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Opacity (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Rotation (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Duplicate",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Export JSON",
+      "type": 2,
+      "code": 101,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "LottieFiles",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://lottiefiles.com"
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

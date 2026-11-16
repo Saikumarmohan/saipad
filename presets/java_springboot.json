@@ -1,0 +1,131 @@
+{
+  "id": "java_springboot",
+  "name": "Java & Spring Boot",
+  "category": "Developer & Git",
+  "desc": "Spring Boot microservice development: bootRun, endpoints, annotations, build.",
+  "color": "#f89820",
+  "r": 248,
+  "g": 152,
+  "b": 32,
+  "tags": [
+    "java",
+    "springboot",
+    "backend",
+    "maven",
+    "gradle"
+  ],
+  "keys": [
+    {
+      "label": "bootRun",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "./gradlew bootRun\n"
+    },
+    {
+      "label": "test",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "./gradlew test\n"
+    },
+    {
+      "label": "@RestController",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "@RestController\n"
+    },
+    {
+      "label": "@GetMapping",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "@GetMapping(\"\")\n"
+    },
+    {
+      "label": "@PostMapping",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "@PostMapping(\"\")\n"
+    },
+    {
+      "label": "@Autowired",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "@Autowired\n"
+    },
+    {
+      "label": "@Service",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "@Service\n"
+    },
+    {
+      "label": "System.out",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "System.out.println();"
+    },
+    {
+      "label": "public void",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "public void "
+    },
+    {
+      "label": "clean build",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "./gradlew clean build\n"
+    },
+    {
+      "label": "Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "VS Code",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "code ."
+    },
+    {
+      "label": "Format",
+      "type": 2,
+      "code": 102,
+      "mod": 6,
+      "macro": ""
+    },
+    {
+      "label": "Save All",
+      "type": 2,
+      "code": 115,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

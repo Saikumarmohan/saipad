@@ -1,0 +1,131 @@
+{
+  "id": "capcut_pc_shorts",
+  "name": "CapCut PC Shorts & TikTok",
+  "category": "Video & Audio",
+  "desc": "Vertical video & TikTok editing: Split, Delete, Speed, Auto Captions, Audio, Export.",
+  "color": "#000000",
+  "r": 0,
+  "g": 0,
+  "b": 0,
+  "tags": [
+    "capcut",
+    "tiktok",
+    "reels",
+    "shorts",
+    "quick video"
+  ],
+  "keys": [
+    {
+      "label": "Split (Ctrl+B)",
+      "type": 2,
+      "code": 98,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Delete",
+      "type": 1,
+      "code": 212,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ripple Del",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Stop",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Speed Menu",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Audio Menu",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Text Menu",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Effects",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Transitions",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Filters",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Keyframe",
+      "type": 0,
+      "code": 107,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Full Screen",
+      "type": 2,
+      "code": 102,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Export Video",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Redo",
+      "type": 2,
+      "code": 122,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

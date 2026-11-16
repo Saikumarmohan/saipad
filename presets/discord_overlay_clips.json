@@ -1,0 +1,131 @@
+{
+  "id": "discord_overlay_clips",
+  "name": "Discord & ShadowPlay Clips",
+  "category": "Streaming & Comms",
+  "desc": "In-game clipping & clips management: Save last 30s, toggle overlay, mic mute.",
+  "color": "#673ab7",
+  "r": 103,
+  "g": 58,
+  "b": 183,
+  "tags": [
+    "shadowplay",
+    "geforce",
+    "clips",
+    "highlights",
+    "discord"
+  ],
+  "keys": [
+    {
+      "label": "Clip Last 30s",
+      "type": 2,
+      "code": 203,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Record Toggle",
+      "type": 2,
+      "code": 202,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Screenshot",
+      "type": 2,
+      "code": 194,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "GeForce Overlay",
+      "type": 2,
+      "code": 122,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Discord Overlay",
+      "type": 2,
+      "code": 96,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "Discord Mute",
+      "type": 2,
+      "code": 109,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Discord Deafen",
+      "type": 2,
+      "code": 100,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Open Clips",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "explorer D:\\Videos\\Clips"
+    },
+    {
+      "label": "CLIP THAT!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "CLIP THAT CHAT!! \ud83c\udfac\ud83d\udd25\n"
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Master",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Discord",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start discord:"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

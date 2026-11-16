@@ -1,0 +1,131 @@
+{
+  "id": "fps_tactical_cs2",
+  "name": "Counter-Strike 2 & Valorant",
+  "category": "Gaming & Esports",
+  "desc": "Tactical FPS communication: Drop weapon, Bomb drop, Quick buy, Ping, Voice, GG.",
+  "color": "#e67e22",
+  "r": 230,
+  "g": 126,
+  "b": 34,
+  "tags": [
+    "cs2",
+    "valorant",
+    "fps",
+    "esports",
+    "gaming"
+  ],
+  "keys": [
+    {
+      "label": "Drop (G)",
+      "type": 0,
+      "code": 103,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Inspect (F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Bomb (5)",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ping Area",
+      "type": 0,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Push-to-Talk",
+      "type": 0,
+      "code": 107,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Radio Report",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Buy Menu (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Buy Armor/Rifle",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b 4 2 b 5 2\n"
+    },
+    {
+      "label": "Buy Defuser",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b 5 4\n"
+    },
+    {
+      "label": "Buy Smokes/Flash",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "b 6 3 b 6 4\n"
+    },
+    {
+      "label": "Team: Eco Round",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "u ECO THIS ROUND SAVE MONEY\n"
+    },
+    {
+      "label": "Team: Rush B!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "u RUSH B DONT STOP CYKA\n"
+    },
+    {
+      "label": "All: GG WP!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "y GG WP everyone! Good game!\n"
+    },
+    {
+      "label": "Mute Discord",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "ShadowPlay Clip",
+      "type": 2,
+      "code": 203,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

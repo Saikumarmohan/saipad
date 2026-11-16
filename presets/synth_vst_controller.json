@@ -1,0 +1,131 @@
+{
+  "id": "synth_vst_controller",
+  "name": "Synthesizer & VST Deck",
+  "category": "Audio & Music",
+  "desc": "Hardware synth & VST tweaker: Preset next/prev, Filter cutoff, Resonance, Arp.",
+  "color": "#3f51b5",
+  "r": 63,
+  "g": 81,
+  "b": 181,
+  "tags": [
+    "synth",
+    "vst",
+    "serum",
+    "vital",
+    "massive"
+  ],
+  "keys": [
+    {
+      "label": "Preset Next",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "right"
+    },
+    {
+      "label": "Preset Prev",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "left"
+    },
+    {
+      "label": "Init Patch",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+i"
+    },
+    {
+      "label": "Save Patch",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+s"
+    },
+    {
+      "label": "Arp On/Off",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Unison +1",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Octave Up",
+      "type": 0,
+      "code": 93,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Octave Down",
+      "type": 0,
+      "code": 91,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Filter Cutoff",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "c"
+    },
+    {
+      "label": "Resonance",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "r"
+    },
+    {
+      "label": "LFO Rate",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "l"
+    },
+    {
+      "label": "Envelope Rel",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "e"
+    },
+    {
+      "label": "Play Note C",
+      "type": 1,
+      "code": " ",
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

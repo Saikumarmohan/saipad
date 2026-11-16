@@ -1,0 +1,131 @@
+{
+  "id": "blender_general",
+  "name": "Blender 3D Modeling",
+  "category": "Creative & Design",
+  "desc": "Blender essentials: Edit/Object mode, Extrude, Inset, Bevel, Loop Cut, Render F12.",
+  "color": "#ea7600",
+  "r": 234,
+  "g": 118,
+  "b": 0,
+  "tags": [
+    "blender",
+    "3d",
+    "modeling",
+    "cgi",
+    "animation"
+  ],
+  "keys": [
+    {
+      "label": "Tab (Mode)",
+      "type": 1,
+      "code": 179,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Extrude (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Inset (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Bevel",
+      "type": 2,
+      "code": 98,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Loop Cut",
+      "type": 2,
+      "code": 114,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Grab (G)",
+      "type": 0,
+      "code": 103,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Rotate (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Scale (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Delete (X)",
+      "type": 0,
+      "code": 120,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Separate (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Join",
+      "type": 2,
+      "code": 106,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Shade Smooth",
+      "type": 0,
+      "code": 119,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Render F12",
+      "type": 1,
+      "code": 201,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Num 1 (Front)",
+      "type": 1,
+      "code": "1",
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Num 7 (Top)",
+      "type": 1,
+      "code": "7",
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

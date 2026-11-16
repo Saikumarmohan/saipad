@@ -1,0 +1,131 @@
+{
+  "id": "sketch_ui_ux",
+  "name": "Sketch & Mac UI Design",
+  "category": "Creative & Design",
+  "desc": "Sketch interface design: Artboard, Symbol, Layer Style, Export, Inspector.",
+  "color": "#fdad00",
+  "r": 253,
+  "g": 173,
+  "b": 0,
+  "tags": [
+    "sketch",
+    "ui",
+    "ux",
+    "mac",
+    "design"
+  ],
+  "keys": [
+    {
+      "label": "Artboard (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Rect (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Oval (O)",
+      "type": 0,
+      "code": 111,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Text (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vector (V)",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Create Symbol",
+      "type": 2,
+      "code": 115,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Detach Symbol",
+      "type": 2,
+      "code": 100,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Group",
+      "type": 2,
+      "code": 103,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Ungroup",
+      "type": 2,
+      "code": 103,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Mask",
+      "type": 2,
+      "code": 109,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Scale",
+      "type": 2,
+      "code": 107,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Zoom All",
+      "type": 2,
+      "code": 49,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Zoom Sel",
+      "type": 2,
+      "code": 50,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Export Assets",
+      "type": 2,
+      "code": 101,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Duplicate",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

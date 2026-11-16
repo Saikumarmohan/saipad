@@ -1,0 +1,131 @@
+{
+  "id": "react_frontend",
+  "name": "React & Frontend Pro",
+  "category": "Developer & Git",
+  "desc": "React snippet launcher: useState, useEffect, JSX fragments, console, Tailwind.",
+  "color": "#61dafb",
+  "r": 97,
+  "g": 218,
+  "b": 251,
+  "tags": [
+    "react",
+    "frontend",
+    "javascript",
+    "tailwind",
+    "web"
+  ],
+  "keys": [
+    {
+      "label": "useState",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "const [state, setState] = useState();"
+    },
+    {
+      "label": "useEffect",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "useEffect(() => {\n\n}, []);\n"
+    },
+    {
+      "label": "useMemo",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "useMemo(() => {\n\n}, []);\n"
+    },
+    {
+      "label": "useCallback",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "useCallback(() => {\n\n}, []);\n"
+    },
+    {
+      "label": "console.log",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "console.log();"
+    },
+    {
+      "label": "className",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "className=\"\""
+    },
+    {
+      "label": "Fragment",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "<>\n\n</>"
+    },
+    {
+      "label": "export def",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "export default function () {\n\n}\n"
+    },
+    {
+      "label": "npm dev",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "npm run dev\n"
+    },
+    {
+      "label": "npm build",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "npm run build\n"
+    },
+    {
+      "label": "pnpm i",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "pnpm install\n"
+    },
+    {
+      "label": "Dev Server",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://localhost:3000"
+    },
+    {
+      "label": "Format",
+      "type": 2,
+      "code": 102,
+      "mod": 6,
+      "macro": ""
+    },
+    {
+      "label": "Save All",
+      "type": 2,
+      "code": 115,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

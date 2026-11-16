@@ -1,0 +1,131 @@
+{
+  "id": "quickbooks_invoicing",
+  "name": "QuickBooks & Billing Fast Deck",
+  "category": "Office & Finance",
+  "desc": "Bookkeeping & invoice speed keys: New invoice, expense, reconcile, report.",
+  "color": "#2ca01c",
+  "r": 44,
+  "g": 160,
+  "b": 28,
+  "tags": [
+    "quickbooks",
+    "invoicing",
+    "accounting",
+    "billing",
+    "taxes"
+  ],
+  "keys": [
+    {
+      "label": "New Invoice",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+alt+i"
+    },
+    {
+      "label": "New Expense",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+alt+x"
+    },
+    {
+      "label": "New Check",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+alt+w"
+    },
+    {
+      "label": "Customer List",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+alt+c"
+    },
+    {
+      "label": "Vendor List",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+alt+v"
+    },
+    {
+      "label": "Chart of Accounts",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+alt+a"
+    },
+    {
+      "label": "Reconcile Bank",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+alt+r"
+    },
+    {
+      "label": "Profit & Loss",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+alt+p"
+    },
+    {
+      "label": "Calculator",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "calc"
+    },
+    {
+      "label": "Excel",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "excel"
+    },
+    {
+      "label": "7",
+      "type": 0,
+      "code": 55,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "8",
+      "type": 0,
+      "code": 56,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "9",
+      "type": 0,
+      "code": 57,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Enter",
+      "type": 1,
+      "code": 176,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

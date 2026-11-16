@@ -1,0 +1,131 @@
+{
+  "id": "network_it_diagnostic",
+  "name": "Network Diagnostics & IT",
+  "category": "System & Scripts",
+  "desc": "Network troubleshooting: Ping 8.8.8.8, ipconfig /all, flushdns, tracert, nslookup.",
+  "color": "#0288d1",
+  "r": 2,
+  "g": 136,
+  "b": 209,
+  "tags": [
+    "network",
+    "ping",
+    "dns",
+    "it support",
+    "diagnostics"
+  ],
+  "keys": [
+    {
+      "label": "ping 8.8.8.8",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ping 8.8.8.8 -t\n"
+    },
+    {
+      "label": "ping gateway",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ping 192.168.1.1\n"
+    },
+    {
+      "label": "ipconfig /all",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ipconfig /all\n"
+    },
+    {
+      "label": "flushdns",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ipconfig /flushdns\n"
+    },
+    {
+      "label": "renew ip",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ipconfig /release && ipconfig /renew\n"
+    },
+    {
+      "label": "tracert 1.1.1.1",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "tracert 1.1.1.1\n"
+    },
+    {
+      "label": "nslookup",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "nslookup google.com\n"
+    },
+    {
+      "label": "netstat -ano",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "netstat -ano | findstr LISTENING\n"
+    },
+    {
+      "label": "arp -a",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "arp -a\n"
+    },
+    {
+      "label": "curl ifconfig",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "curl ifconfig.me\n"
+    },
+    {
+      "label": "ssh root@",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ssh -p 22 root@"
+    },
+    {
+      "label": "Network Adapters",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "ncpa.cpl"
+    },
+    {
+      "label": "Terminal Admin",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "cls\n"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

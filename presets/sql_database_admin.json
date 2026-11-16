@@ -1,0 +1,131 @@
+{
+  "id": "sql_database_admin",
+  "name": "SQL & Database Master",
+  "category": "Developer & Git",
+  "desc": "SQL query construction: SELECT, JOIN, GROUP BY, EXPLAIN, COMMIT, ROLLBACK.",
+  "color": "#f29111",
+  "r": 242,
+  "g": 145,
+  "b": 17,
+  "tags": [
+    "sql",
+    "database",
+    "postgres",
+    "mysql",
+    "data"
+  ],
+  "keys": [
+    {
+      "label": "SELECT *",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "SELECT * FROM "
+    },
+    {
+      "label": "WHERE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " WHERE "
+    },
+    {
+      "label": "INNER JOIN",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " INNER JOIN  ON "
+    },
+    {
+      "label": "LEFT JOIN",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " LEFT JOIN  ON "
+    },
+    {
+      "label": "GROUP BY",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " GROUP BY "
+    },
+    {
+      "label": "ORDER BY",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " ORDER BY  DESC"
+    },
+    {
+      "label": "LIMIT 100",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": " LIMIT 100;\n"
+    },
+    {
+      "label": "COUNT(*)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "COUNT(*)"
+    },
+    {
+      "label": "EXPLAIN",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "EXPLAIN ANALYZE "
+    },
+    {
+      "label": "INSERT INTO",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "INSERT INTO  VALUES ();"
+    },
+    {
+      "label": "UPDATE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "UPDATE  SET  WHERE ;"
+    },
+    {
+      "label": "BEGIN;",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "BEGIN;\n"
+    },
+    {
+      "label": "COMMIT;",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "COMMIT;\n"
+    },
+    {
+      "label": "ROLLBACK;",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ROLLBACK;\n"
+    },
+    {
+      "label": "Run Query",
+      "type": 2,
+      "code": 176,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

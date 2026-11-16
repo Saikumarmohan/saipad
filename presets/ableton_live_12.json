@@ -1,0 +1,131 @@
+{
+  "id": "ableton_live_12",
+  "name": "Ableton Live 12 Master",
+  "category": "Audio & Music",
+  "desc": "Ableton Live performance: Session/Arrange, Record, Quantize, Metronome, Duplicate.",
+  "color": "#00e676",
+  "r": 0,
+  "g": 230,
+  "b": 118,
+  "tags": [
+    "ableton",
+    "daw",
+    "music",
+    "beats",
+    "producer"
+  ],
+  "keys": [
+    {
+      "label": "Tab (View)",
+      "type": 1,
+      "code": 179,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Record (F9)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Stop",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Quantize",
+      "type": 2,
+      "code": 117,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Duplicate",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Group Tracks",
+      "type": 2,
+      "code": 103,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Insert Audio",
+      "type": 2,
+      "code": 116,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Insert MIDI",
+      "type": 2,
+      "code": 116,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Metronome",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Draw Tool (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Automation (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Split Clip",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Consolidate",
+      "type": 2,
+      "code": 106,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Export Audio",
+      "type": 2,
+      "code": 114,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "fl_studio_21",
+  "name": "FL Studio 21 Beatmaker",
+  "category": "Audio & Music",
+  "desc": "FL Studio production: Piano Roll, Playlist, Mixer, Channel Rack, Pattern, Edison.",
+  "color": "#ff5722",
+  "r": 255,
+  "g": 87,
+  "b": 34,
+  "tags": [
+    "fl studio",
+    "fruity loops",
+    "beats",
+    "trap",
+    "hiphop"
+  ],
+  "keys": [
+    {
+      "label": "Piano Roll (F7)",
+      "type": 1,
+      "code": 197,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Playlist (F5)",
+      "type": 1,
+      "code": 195,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Channel (F6)",
+      "type": 1,
+      "code": 196,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mixer (F9)",
+      "type": 1,
+      "code": 199,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pattern/Song",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Pause",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Record (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Draw Tool (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Paint Tool (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Tool (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Slice Tool (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Quantize",
+      "type": 2,
+      "code": 113,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Export MP3",
+      "type": 2,
+      "code": 114,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

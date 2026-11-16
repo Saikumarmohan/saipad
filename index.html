@@ -597,6 +597,65 @@
       font-weight: 600;
     }
 
+    /* Preset Category Pills & Interactive Generator */
+    .preset-cat-pill {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--card-sub);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .preset-cat-pill:hover {
+      color: var(--text);
+      border-color: var(--primary);
+    }
+    .preset-cat-pill.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+    }
+    .app-quick-btn {
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .app-quick-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .gen-key {
+      background: var(--key-bg);
+      border: 1px solid var(--key-border);
+      border-radius: 8px;
+      padding: 8px 4px;
+      min-height: 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.15s;
+      user-select: none;
+    }
+    .gen-key:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .gen-key.selected {
+      border-color: #38bdf8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+      background: #1e293b;
+    }
+
     /* Matrix Tester */
     .tester-stats {
       display: flex;
@@ -972,8 +1031,9 @@
   <!-- Studio View Switcher Tabs (VIA / Keychron Style) -->
   <div class="view-nav">
     <button class="nav-tab active" data-view="keymapStudio">⌨️ Keymap Studio & Palette</button>
-    <button class="nav-tab" data-view="presetLibrary">📚 Preset Library (JSON Packs)</button>
-    <button class="nav-tab" data-view="aiCopilot">🤖 AI Keymap Copilot</button>
+    <button class="nav-tab" data-view="presetLibrary">📚 Preset Library (110+ Packs)</button>
+    <button class="nav-tab" data-view="presetGenerator">🛠️ Preset Generator</button>
+    <button class="nav-tab" data-view="aiCopilot">🤖 AI Copilot</button>
     <button class="nav-tab" data-view="matrixTester">🧪 Matrix Tester & Latency</button>
     <button class="nav-tab" data-view="jsonStudio">📜 JSON Backup & Raw Config</button>
   </div>
@@ -1059,13 +1119,34 @@
     </div>
   </div>
 
-  <!-- VIEW 2: PRESET LIBRARY (Curated JSON Packs) -->
+  <!-- VIEW 2: PRESET LIBRARY (Curated JSON Packs from GitHub) -->
   <div id="viewPresetLibrary" style="display: none;">
     <div class="card" style="margin-bottom: 18px;">
-      <h3 style="font-size: 16px; margin-bottom: 4px;">📚 1-Click Curated Layout Library</h3>
-      <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;">
-        Pre-built professional configurations crafted for power users, developers, designers, video editors, and gamers. Customize LED color and apply any preset directly into your active profile or export as JSON.
-      </p>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom: 14px;">
+        <div>
+          <h3 style="font-size: 16px; margin-bottom: 4px;">📚 110+ Production-Grade Preset Library</h3>
+          <p style="font-size: 12px; color: var(--text-muted);">
+            Pre-built configurations for developers, creators, video editors, streamers, gamers, and finance analysts. Loaded dynamically from GitHub!
+          </p>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span id="githubSyncBadge" style="font-size:11px; padding:4px 10px; border-radius:12px; background:rgba(16,185,129,0.15); color:#10b981; font-weight:700;">🟢 Loading Presets...</span>
+          <button id="syncGithubPresetsBtn" class="btn btn-secondary" style="font-size:12px; padding:6px 12px;">🔄 Sync from GitHub</button>
+        </div>
+      </div>
+
+      <!-- Search & Filters -->
+      <div style="display:flex; gap:12px; margin-bottom:14px; flex-wrap:wrap;">
+        <input type="text" id="presetSearchInput" class="form-control" placeholder="🔍 Search 110+ presets by app name, tool, shortcut, or tag (e.g. blender, figma, git, premiere, excel, cs2)..." style="flex:1; min-width:260px; font-size:13px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span id="presetCountBadge" style="font-size:12px; color:var(--text-muted); font-weight:700;">Showing 110 presets</span>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div id="presetCategoryPills" style="display:flex; gap:6px; overflow-x:auto; padding-bottom:8px; margin-bottom:16px;">
+        <!-- Generated dynamically via JS -->
+      </div>
 
       <div class="preset-grid" id="presetGrid">
         <!-- Generated dynamically via JS -->
@@ -1073,7 +1154,137 @@
     </div>
   </div>
 
-  <!-- VIEW 3: AI KEYMAP COPILOT -->
+  <!-- VIEW 3: INTERACTIVE PRESET GENERATOR -->
+  <div id="viewPresetGenerator" style="display: none;">
+    <div class="card" style="margin-bottom: 18px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
+        <div>
+          <h3 style="font-size: 16px; margin-bottom: 4px;">🛠️ Interactive Preset Generator & Layout Builder</h3>
+          <p style="font-size: 12px; color: var(--text-muted);">
+            Create custom 16-key presets for any software, customize individual keys, test in real-time, and download or apply directly.
+          </p>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn btn-secondary" id="genCloneCurrentBtn" style="font-size:12px;">📥 Clone from Active Profile</button>
+          <button class="btn btn-secondary" id="genClearBtn" style="font-size:12px;">🧹 Clear Keys</button>
+          <button class="btn btn-success" id="genApplyToKeyboardBtn" style="font-size:12px;">⚡ Apply to Keyboard</button>
+          <button class="btn btn-primary" id="genDownloadJsonBtn" style="font-size:12px;">💾 Download .json</button>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:20px;">
+        <!-- Left: Metadata & 4x4 Keypad Editor -->
+        <div style="background:var(--card-sub); padding:16px; border-radius:12px; border:1px solid var(--card-border);">
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-bottom:12px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label>Preset Name</label>
+              <input type="text" id="genNameInput" class="form-control" value="My Custom Deck">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label>Category</label>
+              <select id="genCatSelect" class="form-control">
+                <option value="Developer & Git">Developer & Git</option>
+                <option value="Creative & Design">Creative & Design</option>
+                <option value="Video & Audio">Video & Audio</option>
+                <option value="Streaming & Comms">Streaming & Comms</option>
+                <option value="Office & Finance">Office & Finance</option>
+                <option value="Gaming & Esports">Gaming & Esports</option>
+                <option value="AI & Data Science">AI & Data Science</option>
+                <option value="System & Scripts">System & Scripts</option>
+                <option value="Custom">Custom Category</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <label>Preset LED Status Color</label>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <input type="color" id="genColorPicker" value="#00ffcc" style="width:28px; height:28px; border:none; border-radius:50%; cursor:pointer; background:none;">
+                <span id="genColorHex" style="font-family:monospace; font-size:12px; font-weight:700;">#00ffcc</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:14px;">
+            <label>Description</label>
+            <input type="text" id="genDescInput" class="form-control" value="Custom 16-key macro workflow configuration">
+          </div>
+
+          <!-- Quick Starter Templates -->
+          <div style="margin-bottom:14px;">
+            <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Quick Starter Templates:</div>
+            <div style="display:flex; gap:6px; flex-wrap:wrap;">
+              <button class="btn btn-secondary" style="font-size:11px; padding:3px 8px;" id="tmplDevBtn">👨‍💻 Dev Starter</button>
+              <button class="btn btn-secondary" style="font-size:11px; padding:3px 8px;" id="tmplNumpadBtn">📟 Classic Numpad</button>
+              <button class="btn btn-secondary" style="font-size:11px; padding:3px 8px;" id="tmplGamingBtn">🎮 Gaming WASD</button>
+              <button class="btn btn-secondary" style="font-size:11px; padding:3px 8px;" id="tmplMediaBtn">🎵 Media & Vol</button>
+            </div>
+          </div>
+
+          <!-- 4x4 Interactive Grid for Generator -->
+          <div style="font-size:12px; font-weight:700; margin-bottom:8px;">Click any key to edit its binding:</div>
+          <div class="keyboard-grid" id="genGrid" style="grid-template-columns: repeat(4, 1fr); max-width: 100%;">
+            <!-- 16 keys generated via JS -->
+          </div>
+        </div>
+
+        <!-- Right: Selected Key Editor & Live JSON Preview -->
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <!-- Key Edit Sub-panel -->
+          <div id="genKeyEditPanel" style="background:var(--card-sub); padding:16px; border-radius:12px; border:1px solid var(--card-border);">
+            <h4 id="genSelectedKeyTitle" style="font-size:13px; margin-bottom:10px; color:var(--primary);">Editing Key #1</h4>
+            
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-bottom:10px;">
+              <div class="form-group" style="margin-bottom:0;">
+                <label>Key Display Label</label>
+                <input type="text" id="genKeyLabelInput" class="form-control" maxlength="11" value="Key 1">
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label>Key Action Type</label>
+                <select id="genKeyTypeSelect" class="form-control">
+                  <option value="0">Char (Single Character)</option>
+                  <option value="1">Special (Enter, Esc, Arrows, Media)</option>
+                  <option value="2">Shortcut (Ctrl / Shift / Alt / Win)</option>
+                  <option value="3">Macro (Text String)</option>
+                  <option value="4">Action (Next Layer, Jiggler)</option>
+                  <option value="5">Script Launcher (Win+R command)</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="genKeyFieldGroup" class="form-group" style="margin-bottom:10px;">
+              <label id="genKeyFieldLabel">Key Character / Code</label>
+              <input type="text" id="genKeyFieldValue" class="form-control" placeholder="e.g. c, wt, git status">
+            </div>
+
+            <div id="genKeyModGroup" class="form-group" style="display:none; margin-bottom:10px;">
+              <label>Modifiers</label>
+              <div style="display:flex; gap:10px;">
+                <label style="display:flex; align-items:center; gap:4px; font-size:12px;"><input type="checkbox" id="genModCtrl"> Ctrl</label>
+                <label style="display:flex; align-items:center; gap:4px; font-size:12px;"><input type="checkbox" id="genModShift"> Shift</label>
+                <label style="display:flex; align-items:center; gap:4px; font-size:12px;"><input type="checkbox" id="genModAlt"> Alt</label>
+                <label style="display:flex; align-items:center; gap:4px; font-size:12px;"><input type="checkbox" id="genModWin"> Win</label>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" id="genSaveKeyBtn" style="font-size:12px; width:100%;">Save Key Binding</button>
+          </div>
+
+          <!-- Live JSON Output Preview -->
+          <div style="background:var(--card-sub); padding:16px; border-radius:12px; border:1px solid var(--card-border); flex:1; display:flex; flex-direction:column;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:12px; font-weight:700;">Live Generated JSON:</span>
+              <button class="btn btn-secondary" id="genCopyJsonBtn" style="font-size:11px; padding:3px 8px;">📋 Copy JSON</button>
+            </div>
+            <textarea id="genJsonPreview" readonly style="width:100%; flex:1; min-height:160px; font-family:monospace; font-size:11px; background:#0b0f17; color:#38bdf8; border:1px solid var(--card-border); border-radius:8px; padding:10px; resize:vertical;"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW 4: AI KEYMAP COPILOT & PROMPT GENERATOR -->
   <div id="viewAiCopilot" style="display: none;">
     <div class="card" style="margin-bottom: 18px;">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom: 12px;">
@@ -1088,7 +1299,29 @@
         </div>
       </div>
 
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-top: 14px;">
+      <!-- Quick App Clicker Pills -->
+      <div style="background:var(--card-sub); padding:12px 14px; border-radius:10px; border:1px solid var(--card-border); margin-bottom:14px;">
+        <div style="font-size:11px; font-weight:700; color:var(--primary); margin-bottom:8px;">🚀 Quick Pick Popular App (Auto-fills Prompt):</div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap;" id="aiQuickAppsContainer">
+          <button class="btn btn-secondary app-quick-btn" data-app="Blender 3D Modeling (Extrude, Inset, Bevel, Edit Mode, Render F12, Shading)">🎨 Blender 3D</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Adobe Photoshop (Brush, Eraser, Layers, Mask, Transform, Zoom, Crop)">🖼️ Photoshop</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Adobe Premiere Pro (Razor cut, Ripple delete, Timeline playback, Mark in/out, Render)">🎬 Premiere Pro</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="DaVinci Resolve Studio (Blade, Ripple cut, Color page, Fusion, Quick export)">💎 DaVinci Resolve</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Visual Studio Code (Command palette, Terminal, Format, Split editor, Git)">👨‍💻 VS Code</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Ableton Live 12 (Session/Arrangement, Record, Quantize, Metronome, Loop)">🎹 Ableton Live</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="FL Studio 21 (Piano roll, Playlist, Mixer, Channel rack, Pattern, Render)">🎵 FL Studio</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Figma & UI/UX Design (Frames, Auto-Layout, Components, Zoom selection, Color picker)">🖌️ Figma</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Microsoft Excel Financial Modeling (AutoSum, VLookup, Pivot, Format Currency, Filter)">📊 Excel Financial</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Discord & Voice Comms (Mute mic, Deafen, Screen share, Quick switch, Clips)">🎙️ Discord Stream</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Counter-Strike 2 & Valorant (Drop weapon, Bomb, Quick buy rifles, Ping, Voice)">🎯 CS2 / Valorant</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="AutoCAD 2D Drafting (Line, Trim, Offset, Circle, Fillet, Dimension)">📐 AutoCAD</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Midjourney & Generative Art (--ar 16:9, --v 6, Stylize, Photorealism, Upscale)">🤖 Midjourney</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="Docker & Container DevOps (ps, compose up, down, logs, exec, prune)">🐳 Docker DevOps</button>
+          <button class="btn btn-secondary app-quick-btn" data-app="TradingView & Crypto Trading (1m/5m/1h timeframes, Trendline, Horizontal, Long/Short)">📈 TradingView</button>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px;">
         <!-- Left: Prompt Generator Options -->
         <div style="background:var(--card-sub); padding:16px; border-radius:10px; border:1px solid var(--card-border);">
           <h4 style="font-size:13px; margin-bottom:12px; color:var(--primary);">1. Choose Your Target Application</h4>
@@ -1131,11 +1364,17 @@
         <!-- Right: AI Response Importer -->
         <div style="background:var(--card-sub); padding:16px; border-radius:10px; border:1px solid var(--card-border); display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <h4 style="font-size:13px; margin-bottom:12px; color:var(--accent);">2. Paste AI Response JSON</h4>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <h4 style="font-size:13px; color:var(--accent);">2. Paste AI Response JSON</h4>
+              <label class="btn btn-secondary" style="font-size:11px; padding:3px 8px; cursor:pointer;">
+                📁 Open .json File
+                <input type="file" id="aiFileInput" accept=".json" style="display:none;">
+              </label>
+            </div>
             <p style="font-size:11px; color:var(--text-muted); margin-bottom:10px;">
               Copy the JSON block generated by ChatGPT, Gemini, or Claude and paste it below:
             </p>
-            <textarea id="aiResponseInput" class="form-control" rows="10" placeholder='{\n  "name": "Blender 3D",\n  "color": "#ff7700",\n  "r": 255, "g": 119, "b": 0,\n  "keys": [\n    {"label": "Extrude", "type": 0, "code": 101, "mod": 0, "macro": ""}, ...\n  ]\n}' style="font-family:monospace; font-size:11px;"></textarea>
+            <textarea id="aiResponseInput" class="form-control" rows="9" placeholder='{\n  "name": "Blender 3D",\n  "color": "#ff7700",\n  "r": 255, "g": 119, "b": 0,\n  "keys": [\n    {"label": "Extrude", "type": 0, "code": 101, "mod": 0, "macro": ""}, ...\n  ]\n}' style="font-family:monospace; font-size:11px;"></textarea>
           </div>
 
           <div style="margin-top:14px;">
@@ -1148,7 +1387,10 @@
                 <option value="3">Profile 4 (Windows)</option>
               </select>
             </div>
-            <button class="btn btn-success" id="applyAiJsonBtn" style="width:100%;">⚡ Validate & Apply AI Layout to Keyboard</button>
+            <div style="display:flex; gap:8px;">
+              <button class="btn btn-success" id="applyAiJsonBtn" style="flex:1;">⚡ Validate & Apply AI Layout to Keyboard</button>
+              <button class="btn btn-secondary" id="downloadAiJsonBtn" style="font-size:12px;">💾 Save .json</button>
+            </div>
           </div>
         </div>
       </div>
@@ -1589,7 +1831,7 @@
     ];
 
     // Curated Library of High-Utility Presets (JSON Packs)
-    const PRESETS = [
+    let PRESETS = [
       {
         id: "everyday_power",
         name: "Everyday Power User",
@@ -2063,10 +2305,12 @@
         const target = tab.dataset.view;
         document.getElementById("viewKeymapStudio").style.display = (target === "keymapStudio") ? "grid" : "none";
         document.getElementById("viewPresetLibrary").style.display = (target === "presetLibrary") ? "block" : "none";
+        document.getElementById("viewPresetGenerator").style.display = (target === "presetGenerator") ? "block" : "none";
         document.getElementById("viewAiCopilot").style.display = (target === "aiCopilot") ? "block" : "none";
         document.getElementById("viewMatrixTester").style.display = (target === "matrixTester") ? "block" : "none";
         document.getElementById("viewJsonStudio").style.display = (target === "jsonStudio") ? "block" : "none";
 
+        if (target === "presetGenerator") initPresetGenerator();
         if (target === "aiCopilot") updateAiPromptPreview();
         if (target === "jsonStudio") updateJsonViewer();
       };
@@ -2223,24 +2467,145 @@
       }
     }
 
-    // Render Presets Library
-    function renderPresets() {
+    // ==========================================
+    // PRESETS LIBRARY (110+ Packs from GitHub)
+    // ==========================================
+    let presetCategories = ["All"];
+    let activeCategory = "All";
+    let presetSearchQuery = "";
+
+    async function loadPresetsFromGitHub(force = false) {
+      const badge = document.getElementById("githubSyncBadge");
+      if (badge) {
+        badge.innerText = "⏳ Loading Presets...";
+        badge.style.color = "#38bdf8";
+      }
+
+      let data = null;
+      try {
+        const res = await fetch("presets/presets_manifest.json");
+        if (!res.ok) throw new Error("Relative fetch failed");
+        data = await res.json();
+        if (badge) {
+          badge.innerText = `🟢 ${data.total || data.presets.length} Presets (GitHub Pages)`;
+          badge.style.color = "#10b981";
+        }
+      } catch (errLocal) {
+        try {
+          const res = await fetch("https://raw.githubusercontent.com/Saikumarmohan/saipad/main/presets/presets_manifest.json");
+          if (!res.ok) throw new Error("GitHub fetch failed");
+          data = await res.json();
+          if (badge) {
+            badge.innerText = `🟢 ${data.total || data.presets.length} Presets (GitHub Synced)`;
+            badge.style.color = "#10b981";
+          }
+        } catch (errRemote) {
+          console.warn("Using offline fallback presets:", errRemote);
+          if (badge) {
+            badge.innerText = `🟡 ${PRESETS.length} Presets (Offline Fallback)`;
+            badge.style.color = "#f59e0b";
+          }
+          data = { presets: PRESETS };
+        }
+      }
+
+      if (data && data.presets && Array.isArray(data.presets)) {
+        PRESETS = data.presets;
+        if (data.categories && Array.isArray(data.categories)) {
+          presetCategories = data.categories;
+        } else {
+          presetCategories = ["All", ...new Set(PRESETS.map(p => p.category || "General"))];
+        }
+      }
+
+      renderPresetCategories();
+      filterAndRenderPresets();
+
+      if (force) {
+        playSwitchSound();
+        showToast(`✅ Synced ${PRESETS.length} presets from GitHub!`);
+      }
+    }
+
+    function renderPresetCategories() {
+      const container = document.getElementById("presetCategoryPills");
+      if (!container) return;
+      container.innerHTML = "";
+      presetCategories.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.className = `preset-cat-pill ${cat === activeCategory ? 'active' : ''}`;
+        btn.textContent = cat;
+        btn.onclick = () => {
+          activeCategory = cat;
+          renderPresetCategories();
+          filterAndRenderPresets();
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    const searchInputEl = document.getElementById("presetSearchInput");
+    if (searchInputEl) {
+      searchInputEl.oninput = (e) => {
+        presetSearchQuery = e.target.value.toLowerCase().trim();
+        filterAndRenderPresets();
+      };
+    }
+
+    const syncGithubBtnEl = document.getElementById("syncGithubPresetsBtn");
+    if (syncGithubBtnEl) {
+      syncGithubBtnEl.onclick = () => loadPresetsFromGitHub(true);
+    }
+
+    function filterAndRenderPresets() {
       const grid = document.getElementById("presetGrid");
+      if (!grid) return;
       grid.innerHTML = "";
 
-      PRESETS.forEach(preset => {
+      const filtered = PRESETS.filter(p => {
+        const matchCategory = (activeCategory === "All" || p.category === activeCategory);
+        if (!matchCategory) return false;
+        if (!presetSearchQuery) return true;
+
+        const nameMatch = p.name && p.name.toLowerCase().includes(presetSearchQuery);
+        const descMatch = p.desc && p.desc.toLowerCase().includes(presetSearchQuery);
+        const catMatch = p.category && p.category.toLowerCase().includes(presetSearchQuery);
+        const tagMatch = p.tags && Array.isArray(p.tags) && p.tags.some(t => t.toLowerCase().includes(presetSearchQuery));
+        const keyMatch = p.keys && p.keys.some(k => k.label && k.label.toLowerCase().includes(presetSearchQuery));
+        return nameMatch || descMatch || catMatch || tagMatch || keyMatch;
+      });
+
+      const countBadge = document.getElementById("presetCountBadge");
+      if (countBadge) {
+        countBadge.innerText = `Showing ${filtered.length} of ${PRESETS.length} presets`;
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; padding: 40px; text-align: center; color: var(--text-muted); background: var(--card-sub); border-radius: 12px; border: 1px dashed var(--card-border);">
+            <div style="font-size: 28px; margin-bottom: 8px;">🔍</div>
+            <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">No presets matched your query</div>
+            <div style="font-size: 12px;">Try clearing search or switching to "All" categories, or build one in the <a href="#" onclick="document.querySelector('[data-view=\\'presetGenerator\\']').click(); return false;" style="color:var(--primary);">Preset Generator</a>.</div>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(preset => {
         const card = document.createElement("div");
         card.className = "preset-card";
-        
+
         let miniKeysHtml = "";
-        preset.keys.forEach(k => {
-          miniKeysHtml += `<div class="mini-key" title="${k.label}">${k.label}</div>`;
-        });
+        if (preset.keys && Array.isArray(preset.keys)) {
+          preset.keys.forEach(k => {
+            miniKeysHtml += `<div class="mini-key" title="${k.label}">${k.label}</div>`;
+          });
+        }
 
         card.innerHTML = `
           <div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-              <span class="preset-category">${preset.category}</span>
+              <span class="preset-category">${preset.category || 'General'}</span>
               <div style="display:flex; align-items:center; gap:6px;">
                 <input type="color" id="presetColor-${preset.id}" value="${preset.color}" title="Customize LED status color for this preset" 
                   style="width:24px; height:24px; padding:0; border:none; border-radius:50%; cursor:pointer; background:none;"
@@ -2265,14 +2630,19 @@
                 <option value="3" ${currentProfile === 3 ? "selected" : ""}>Profile 4: ${profiles[3].name}</option>
               </select>
             </div>
-            <div style="display: flex; gap: 8px;">
-              <button class="btn btn-primary" style="flex:1; font-size:11px;" onclick="applyPresetToTarget('${preset.id}')">⚡ Apply Layout & LED Color</button>
-              <button class="btn btn-secondary" style="font-size:11px;" onclick="exportPresetJson('${preset.id}')">Export</button>
+            <div style="display: flex; gap: 6px;">
+              <button class="btn btn-primary" style="flex:1; font-size:11px;" onclick="applyPresetToTarget('${preset.id}')">⚡ Apply Layout</button>
+              <button class="btn btn-secondary" style="font-size:11px;" title="Download JSON" onclick="exportPresetJson('${preset.id}')">💾</button>
+              <button class="btn btn-secondary" style="font-size:11px;" title="Copy JSON" onclick="copyPresetJson('${preset.id}')">📋</button>
             </div>
           </div>
         `;
         grid.appendChild(card);
       });
+    }
+
+    function renderPresets() {
+      filterAndRenderPresets();
     }
 
     async function applyPresetToTarget(presetId) {
@@ -2323,6 +2693,479 @@
       a.href = dataStr;
       a.download = `${preset.id}_macropad_profile.json`;
       a.click();
+    }
+
+    function copyPresetJson(presetId) {
+      const preset = PRESETS.find(p => p.id === presetId);
+      if (!preset) return;
+      navigator.clipboard.writeText(JSON.stringify(preset, null, 2)).then(() => {
+        playSwitchSound();
+        showToast(`📋 Copied '${preset.name}' JSON to clipboard!`);
+      }).catch(() => {
+        alert("Failed to copy JSON to clipboard.");
+      });
+    }
+
+    // ==========================================
+    // INTERACTIVE PRESET GENERATOR & BUILDER
+    // ==========================================
+    const GEN_TEMPLATES = {
+      dev: [
+        { label: "git status", type: 3, code: 0, mod: 0, macro: "git status\n" },
+        { label: "git pull", type: 3, code: 0, mod: 0, macro: "git pull --rebase\n" },
+        { label: "git push", type: 3, code: 0, mod: 0, macro: "git push\n" },
+        { label: "code .", type: 5, code: 0, mod: 0, macro: "code ." },
+        { label: "Terminal", type: 5, code: 0, mod: 0, macro: "wt" },
+        { label: "npm test", type: 3, code: 0, mod: 0, macro: "npm test\n" },
+        { label: "npm run dev", type: 3, code: 0, mod: 0, macro: "npm run dev\n" },
+        { label: "TaskMgr", type: 2, code: 177, mod: 3, macro: "" },
+        { label: "Format", type: 2, code: 102, mod: 6, macro: "" },
+        { label: "Palette", type: 2, code: 112, mod: 3, macro: "" },
+        { label: "QuickFix", type: 2, code: 46, mod: 1, macro: "" },
+        { label: "Comment", type: 2, code: 47, mod: 1, macro: "" },
+        { label: "Copy", type: 2, code: 99, mod: 1, macro: "" },
+        { label: "Paste", type: 2, code: 118, mod: 1, macro: "" },
+        { label: "Undo", type: 2, code: 122, mod: 1, macro: "" },
+        { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+      ],
+      numpad: [
+        { label: "7", type: 0, code: 55, mod: 0, macro: "" },
+        { label: "8", type: 0, code: 56, mod: 0, macro: "" },
+        { label: "9", type: 0, code: 57, mod: 0, macro: "" },
+        { label: "/", type: 0, code: 47, mod: 0, macro: "" },
+        { label: "4", type: 0, code: 52, mod: 0, macro: "" },
+        { label: "5", type: 0, code: 53, mod: 0, macro: "" },
+        { label: "6", type: 0, code: 54, mod: 0, macro: "" },
+        { label: "*", type: 0, code: 42, mod: 0, macro: "" },
+        { label: "1", type: 0, code: 49, mod: 0, macro: "" },
+        { label: "2", type: 0, code: 50, mod: 0, macro: "" },
+        { label: "3", type: 0, code: 51, mod: 0, macro: "" },
+        { label: "-", type: 0, code: 45, mod: 0, macro: "" },
+        { label: "0", type: 0, code: 48, mod: 0, macro: "" },
+        { label: ".", type: 0, code: 46, mod: 0, macro: "" },
+        { label: "+", type: 0, code: 43, mod: 0, macro: "" },
+        { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+      ],
+      gaming: [
+        { label: "Esc", type: 1, code: 177, mod: 0, macro: "" },
+        { label: "1 (Rifle)", type: 0, code: 49, mod: 0, macro: "" },
+        { label: "2 (Pistol)", type: 0, code: 50, mod: 0, macro: "" },
+        { label: "3 (Knife)", type: 0, code: 51, mod: 0, macro: "" },
+        { label: "Tab (Score)", type: 1, code: 179, mod: 0, macro: "" },
+        { label: "Q (Swap)", type: 0, code: 113, mod: 0, macro: "" },
+        { label: "W (Fwd)", type: 0, code: 119, mod: 0, macro: "" },
+        { label: "E (Use)", type: 0, code: 101, mod: 0, macro: "" },
+        { label: "Shift (Walk)", type: 1, code: 129, mod: 0, macro: "" },
+        { label: "A (Left)", type: 0, code: 97, mod: 0, macro: "" },
+        { label: "S (Back)", type: 0, code: 115, mod: 0, macro: "" },
+        { label: "D (Right)", type: 0, code: 100, mod: 0, macro: "" },
+        { label: "Ctrl (Crouch)", type: 1, code: 128, mod: 0, macro: "" },
+        { label: "R (Reload)", type: 0, code: 114, mod: 0, macro: "" },
+        { label: "Space (Jump)", type: 1, code: 32, mod: 0, macro: "" },
+        { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+      ],
+      media: [
+        { label: "Mute", type: 1, code: 226, mod: 0, macro: "" },
+        { label: "Vol Down", type: 1, code: 234, mod: 0, macro: "" },
+        { label: "Vol Up", type: 1, code: 233, mod: 0, macro: "" },
+        { label: "Play/Pause", type: 1, code: 205, mod: 0, macro: "" },
+        { label: "Prev Track", type: 1, code: 204, mod: 0, macro: "" },
+        { label: "Next Track", type: 1, code: 203, mod: 0, macro: "" },
+        { label: "Stop", type: 1, code: 206, mod: 0, macro: "" },
+        { label: "Mic Mute", type: 2, code: 109, mod: 3, macro: "" },
+        { label: "Spotify", type: 5, code: 0, mod: 0, macro: "spotify" },
+        { label: "Bright Down", type: 1, code: 240, mod: 0, macro: "" },
+        { label: "Bright Up", type: 1, code: 239, mod: 0, macro: "" },
+        { label: "Calc", type: 5, code: 0, mod: 0, macro: "calc" },
+        { label: "Snip Tool", type: 2, code: 115, mod: 10, macro: "" },
+        { label: "Lock PC", type: 2, code: 108, mod: 8, macro: "" },
+        { label: "Mouse Jiggler", type: 4, code: 2, mod: 0, macro: "" },
+        { label: "Next Layer", type: 4, code: 1, mod: 0, macro: "" }
+      ]
+    };
+
+    let genKeys = [];
+    let genSelectedKey = 0;
+
+    function initPresetGenerator() {
+      if (!genKeys || genKeys.length !== 16) {
+        loadGenTemplate('dev');
+      }
+      renderGenGrid();
+      selectGenKey(genSelectedKey);
+      updateGenJsonPreview();
+    }
+
+    function loadGenTemplate(templateKey) {
+      const tmpl = GEN_TEMPLATES[templateKey] || GEN_TEMPLATES.dev;
+      genKeys = JSON.parse(JSON.stringify(tmpl));
+      renderGenGrid();
+      selectGenKey(genSelectedKey);
+      updateGenJsonPreview();
+    }
+
+    function renderGenGrid() {
+      const grid = document.getElementById("genGrid");
+      if (!grid) return;
+      grid.innerHTML = "";
+
+      for (let i = 0; i < 16; i++) {
+        const k = genKeys[i] || { label: `Key ${i + 1}`, type: 0, code: 0, mod: 0, macro: "" };
+        const cap = document.createElement("div");
+        cap.className = `key-cap ${i === genSelectedKey ? 'selected' : ''}`;
+        cap.id = `gen-key-${i}`;
+        cap.style.cursor = "pointer";
+
+        let typeBadge = "CHAR";
+        if (k.type === 1) typeBadge = "SPEC";
+        else if (k.type === 2) typeBadge = "SHORT";
+        else if (k.type === 3) typeBadge = "MACRO";
+        else if (k.type === 4) typeBadge = "ACT";
+        else if (k.type === 5) typeBadge = "SCRIPT";
+
+        cap.innerHTML = `
+          <div class="key-num">#${i + 1}</div>
+          <div class="key-label">${k.label || '—'}</div>
+          <div class="key-type-badge">${typeBadge}</div>
+        `;
+        cap.onclick = () => selectGenKey(i);
+        grid.appendChild(cap);
+      }
+    }
+
+    function selectGenKey(idx) {
+      genSelectedKey = idx;
+      for (let i = 0; i < 16; i++) {
+        const el = document.getElementById(`gen-key-${i}`);
+        if (el) el.classList.toggle("selected", i === idx);
+      }
+
+      const k = genKeys[idx] || { label: `Key ${idx + 1}`, type: 0, code: 0, mod: 0, macro: "" };
+      const titleEl = document.getElementById("genSelectedKeyTitle");
+      if (titleEl) titleEl.innerText = `Editing Key #${idx + 1}`;
+
+      const labelEl = document.getElementById("genKeyLabelInput");
+      if (labelEl) labelEl.value = k.label || "";
+
+      const typeEl = document.getElementById("genKeyTypeSelect");
+      if (typeEl) typeEl.value = String(k.type);
+
+      updateGenKeyTypeUI();
+
+      const valEl = document.getElementById("genKeyFieldValue");
+      if (valEl) {
+        if (k.type === 0) valEl.value = k.code ? String.fromCharCode(k.code) : "";
+        else if (k.type === 1) valEl.value = k.code || "";
+        else if (k.type === 2) valEl.value = k.code ? String.fromCharCode(k.code) : "";
+        else if (k.type === 3) valEl.value = k.macro || "";
+        else if (k.type === 4) valEl.value = k.code || 1;
+        else if (k.type === 5) valEl.value = k.macro || "";
+      }
+
+      const modGroup = document.getElementById("genKeyModGroup");
+      if (modGroup) {
+        modGroup.style.display = (k.type === 2) ? "block" : "none";
+        document.getElementById("genModCtrl").checked = !!(k.mod & 1);
+        document.getElementById("genModShift").checked = !!(k.mod & 2);
+        document.getElementById("genModAlt").checked = !!(k.mod & 4);
+        document.getElementById("genModWin").checked = !!(k.mod & 8);
+      }
+    }
+
+    function updateGenKeyTypeUI() {
+      const typeSelect = document.getElementById("genKeyTypeSelect");
+      if (!typeSelect) return;
+      const type = parseInt(typeSelect.value) || 0;
+      const lbl = document.getElementById("genKeyFieldLabel");
+      const val = document.getElementById("genKeyFieldValue");
+      const modGroup = document.getElementById("genKeyModGroup");
+
+      if (modGroup) modGroup.style.display = (type === 2) ? "block" : "none";
+
+      if (type === 0) {
+        if (lbl) lbl.innerText = "Single Character (e.g. c, a, 7)";
+        if (val) val.placeholder = "Single character";
+      } else if (type === 1) {
+        if (lbl) lbl.innerText = "Special Keycode (Enter=176, Esc=177, Bksp=178, Space=32)";
+        if (val) val.placeholder = "e.g. 176, 177, 32, 226";
+      } else if (type === 2) {
+        if (lbl) lbl.innerText = "Shortcut Key (e.g. c for Ctrl+C, v, z, s)";
+        if (val) val.placeholder = "e.g. c, v, s, z";
+      } else if (type === 3) {
+        if (lbl) lbl.innerText = "Text String Macro (typed sequentially)";
+        if (val) val.placeholder = "e.g. git status\\n, npm run dev\\n";
+      } else if (type === 4) {
+        if (lbl) lbl.innerText = "Action Code (1=Next Layer, 2=Mouse Jiggler)";
+        if (val) val.placeholder = "1 or 2";
+      } else if (type === 5) {
+        if (lbl) lbl.innerText = "Script Launcher (Win+R command or URL)";
+        if (val) val.placeholder = "e.g. wt, calc, explorer ., https://github.com";
+      }
+    }
+
+    const genTypeSelectEl = document.getElementById("genKeyTypeSelect");
+    if (genTypeSelectEl) {
+      genTypeSelectEl.onchange = updateGenKeyTypeUI;
+    }
+
+    function saveGenKeyBinding() {
+      const label = document.getElementById("genKeyLabelInput").value.trim() || `Key ${genSelectedKey + 1}`;
+      const type = parseInt(document.getElementById("genKeyTypeSelect").value) || 0;
+      const valStr = document.getElementById("genKeyFieldValue").value.trim();
+
+      let mod = 0;
+      let code = 0;
+      let macro = "";
+
+      if (type === 0) {
+        code = valStr.length > 0 ? valStr.charCodeAt(0) : 0;
+      } else if (type === 1) {
+        code = parseInt(valStr) || 0;
+      } else if (type === 2) {
+        code = valStr.length > 0 ? valStr.charCodeAt(0) : 0;
+        if (document.getElementById("genModCtrl").checked) mod |= 1;
+        if (document.getElementById("genModShift").checked) mod |= 2;
+        if (document.getElementById("genModAlt").checked) mod |= 4;
+        if (document.getElementById("genModWin").checked) mod |= 8;
+      } else if (type === 3) {
+        macro = valStr;
+      } else if (type === 4) {
+        code = parseInt(valStr) || 1;
+      } else if (type === 5) {
+        macro = valStr;
+      }
+
+      genKeys[genSelectedKey] = {
+        label: label.substring(0, 11),
+        type: type,
+        mod: mod,
+        code: code,
+        macro: macro.substring(0, 63)
+      };
+
+      renderGenGrid();
+      updateGenJsonPreview();
+      playSwitchSound();
+      showToast(`Key #${genSelectedKey + 1} updated!`);
+    }
+
+    const genSaveKeyBtnEl = document.getElementById("genSaveKeyBtn");
+    if (genSaveKeyBtnEl) {
+      genSaveKeyBtnEl.onclick = saveGenKeyBinding;
+    }
+
+    function getGeneratedPresetObject() {
+      const name = document.getElementById("genNameInput").value.trim() || "Custom Preset";
+      const cat = document.getElementById("genCatSelect").value || "Custom";
+      const desc = document.getElementById("genDescInput").value.trim() || "Custom 16-key macropad profile";
+      const color = document.getElementById("genColorPicker").value || "#00ffcc";
+      const rgb = hexToRgb(color);
+      const safeId = name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '') || "custom_preset";
+
+      return {
+        id: safeId,
+        name: name.substring(0, 15),
+        category: cat,
+        desc: desc,
+        color: color,
+        r: rgb.r,
+        g: rgb.g,
+        b: rgb.b,
+        keys: genKeys
+      };
+    }
+
+    function updateGenJsonPreview() {
+      const preview = document.getElementById("genJsonPreview");
+      if (preview) {
+        const obj = getGeneratedPresetObject();
+        preview.value = JSON.stringify(obj, null, 2);
+      }
+    }
+
+    const genNameInputEl = document.getElementById("genNameInput");
+    if (genNameInputEl) genNameInputEl.oninput = updateGenJsonPreview;
+
+    const genCatSelectEl = document.getElementById("genCatSelect");
+    if (genCatSelectEl) genCatSelectEl.onchange = updateGenJsonPreview;
+
+    const genDescInputEl = document.getElementById("genDescInput");
+    if (genDescInputEl) genDescInputEl.oninput = updateGenJsonPreview;
+
+    const genColorPickerEl = document.getElementById("genColorPicker");
+    if (genColorPickerEl) {
+      genColorPickerEl.oninput = (e) => {
+        const hex = e.target.value;
+        const hexEl = document.getElementById("genColorHex");
+        if (hexEl) hexEl.innerText = hex;
+        updateGenJsonPreview();
+      };
+    }
+
+    const tmplDevBtnEl = document.getElementById("tmplDevBtn");
+    if (tmplDevBtnEl) tmplDevBtnEl.onclick = () => { loadGenTemplate('dev'); showToast('Loaded Dev Starter template'); };
+
+    const tmplNumpadBtnEl = document.getElementById("tmplNumpadBtn");
+    if (tmplNumpadBtnEl) tmplNumpadBtnEl.onclick = () => { loadGenTemplate('numpad'); showToast('Loaded Classic Numpad template'); };
+
+    const tmplGamingBtnEl = document.getElementById("tmplGamingBtn");
+    if (tmplGamingBtnEl) tmplGamingBtnEl.onclick = () => { loadGenTemplate('gaming'); showToast('Loaded Gaming WASD template'); };
+
+    const tmplMediaBtnEl = document.getElementById("tmplMediaBtn");
+    if (tmplMediaBtnEl) tmplMediaBtnEl.onclick = () => { loadGenTemplate('media'); showToast('Loaded Media & Volume template'); };
+
+    const genCloneBtnEl = document.getElementById("genCloneCurrentBtn");
+    if (genCloneBtnEl) {
+      genCloneBtnEl.onclick = () => {
+        const activeP = profiles[currentProfile];
+        genKeys = JSON.parse(JSON.stringify(activeP.keys));
+        document.getElementById("genNameInput").value = `${activeP.name} Preset`;
+        const hex = rgbToHex(activeP.r, activeP.g, activeP.b);
+        document.getElementById("genColorPicker").value = hex;
+        document.getElementById("genColorHex").innerText = hex;
+        renderGenGrid();
+        selectGenKey(genSelectedKey);
+        updateGenJsonPreview();
+        playSwitchSound();
+        showToast(`📥 Cloned active Profile ${currentProfile + 1} (${activeP.name}) into Preset Generator!`);
+      };
+    }
+
+    const genClearBtnEl = document.getElementById("genClearBtn");
+    if (genClearBtnEl) {
+      genClearBtnEl.onclick = () => {
+        if (confirm("Reset all 16 keys in the generator?")) {
+          genKeys = [];
+          for (let i = 0; i < 16; i++) {
+            genKeys.push({ label: `Key ${i + 1}`, type: 0, code: 0, mod: 0, macro: "" });
+          }
+          renderGenGrid();
+          selectGenKey(0);
+          updateGenJsonPreview();
+          showToast("Generator cleared");
+        }
+      };
+    }
+
+    const genApplyBtnEl = document.getElementById("genApplyToKeyboardBtn");
+    if (genApplyBtnEl) {
+      genApplyBtnEl.onclick = async () => {
+        const presetObj = getGeneratedPresetObject();
+        profiles[currentProfile].name = presetObj.name;
+        profiles[currentProfile].r = presetObj.r;
+        profiles[currentProfile].g = presetObj.g;
+        profiles[currentProfile].b = presetObj.b;
+        profiles[currentProfile].keys = JSON.parse(JSON.stringify(presetObj.keys));
+
+        updateHud();
+        renderTabs();
+        renderGrid();
+        playSwitchSound();
+        showToast(`⚡ Applied '${presetObj.name}' to Profile ${currentProfile + 1}!`);
+
+        if (port && writer) {
+          await sendCommand(`SET_PROFILE_NAME:${currentProfile},${profiles[currentProfile].name}`);
+          await sendCommand(`SET_PROFILE_COLOR:${currentProfile},${presetObj.r},${presetObj.g},${presetObj.b}`);
+          for (let k = 0; k < 16; k++) {
+            const key = profiles[currentProfile].keys[k];
+            await sendCommand(`SET_KEY:${currentProfile},${k},${key.type},${key.mod},${key.code},${key.label},${key.macro}`);
+          }
+          await sendCommand("SAVE_FLASH");
+          showToast(`💾 Synced Profile ${currentProfile + 1} to RP2040 Flash!`);
+        }
+      };
+    }
+
+    const genDownloadBtnEl = document.getElementById("genDownloadJsonBtn");
+    if (genDownloadBtnEl) {
+      genDownloadBtnEl.onclick = () => {
+        const presetObj = getGeneratedPresetObject();
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(presetObj, null, 2));
+        const a = document.createElement('a');
+        a.href = dataStr;
+        a.download = `${presetObj.id}_macropad_profile.json`;
+        a.click();
+        showToast(`💾 Downloaded ${presetObj.id}_macropad_profile.json!`);
+      };
+    }
+
+    const genCopyBtnEl = document.getElementById("genCopyJsonBtn");
+    if (genCopyBtnEl) {
+      genCopyBtnEl.onclick = () => {
+        const preview = document.getElementById("genJsonPreview");
+        if (preview) {
+          navigator.clipboard.writeText(preview.value).then(() => {
+            playSwitchSound();
+            showToast("📋 Generated JSON copied to clipboard!");
+          });
+        }
+      };
+    }
+
+    // ==========================================
+    // AI COPILOT QUICK APP SELECTION & IMPORTER
+    // ==========================================
+    document.querySelectorAll(".app-quick-btn").forEach(btn => {
+      btn.onclick = () => {
+        const appDetails = btn.dataset.app;
+        const appName = btn.innerText.trim();
+        const select = document.getElementById("aiAppSelect");
+        if (select) select.value = "custom";
+        const group = document.getElementById("aiCustomAppGroup");
+        if (group) group.style.display = "block";
+        const customInput = document.getElementById("aiCustomAppInput");
+        if (customInput) customInput.value = appDetails;
+        updateAiPromptPreview();
+        playSwitchSound();
+        showToast(`🚀 Copilot template set to ${appName}!`);
+      };
+    });
+
+    const aiFileInputEl = document.getElementById("aiFileInput");
+    if (aiFileInputEl) {
+      aiFileInputEl.onchange = (e) => {
+        if (e.target.files.length > 0) {
+          const file = e.target.files[0];
+          const reader = new FileReader();
+          reader.onload = (evt) => {
+            try {
+              const parsed = JSON.parse(evt.target.result);
+              document.getElementById("aiResponseInput").value = JSON.stringify(parsed, null, 2);
+              playSwitchSound();
+              showToast(`📂 Loaded '${file.name}' into AI Response field!`);
+            } catch (err) {
+              alert("Invalid JSON file: " + err.message);
+            }
+          };
+          reader.readAsText(file);
+        }
+      };
+    }
+
+    const downloadAiJsonBtnEl = document.getElementById("downloadAiJsonBtn");
+    if (downloadAiJsonBtnEl) {
+      downloadAiJsonBtnEl.onclick = () => {
+        const raw = document.getElementById("aiResponseInput").value.trim();
+        if (!raw) {
+          showToast("⚠️ Paste or load JSON first to save.");
+          return;
+        }
+        try {
+          let jsonStr = raw;
+          const match = raw.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+          if (match) jsonStr = match[1];
+          const parsed = JSON.parse(jsonStr);
+          const safeName = (parsed.name || "ai_profile").toLowerCase().replace(/[^a-z0-9]+/g, '_');
+          const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(parsed, null, 2));
+          const a = document.createElement('a');
+          a.href = dataStr;
+          a.download = `${safeName}_macropad_profile.json`;
+          a.click();
+          showToast(`💾 Saved ${safeName}_macropad_profile.json!`);
+        } catch (e) {
+          alert("Cannot save: Invalid JSON in AI response field (" + e.message + ")");
+        }
+      };
     }
 
     // Render Matrix Tester Grid
@@ -3230,7 +4073,7 @@ Instructions:
     renderTabs();
     renderGrid();
     renderPalette();
-    renderPresets();
+    loadPresetsFromGitHub();
     renderTesterGrid();
     updateAiPromptPreview();
     checkAutoConnect();

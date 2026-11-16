@@ -1,0 +1,131 @@
+{
+  "id": "hardware_benchmarking",
+  "name": "PC Benchmark & Hardware Stats",
+  "category": "System & Scripts",
+  "desc": "Hardware metrics: HWMonitor, CPU-Z, GPU-Z, Cinebench, Taskmgr, Core temp.",
+  "color": "#e53935",
+  "r": 229,
+  "g": 57,
+  "b": 53,
+  "tags": [
+    "hardware",
+    "cpu",
+    "gpu",
+    "overclock",
+    "benchmark"
+  ],
+  "keys": [
+    {
+      "label": "Task Manager",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "taskmgr"
+    },
+    {
+      "label": "Performance Mon",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "perfmon /res"
+    },
+    {
+      "label": "Device Manager",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "devmgmt.msc"
+    },
+    {
+      "label": "DirectX Diag",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "dxdiag"
+    },
+    {
+      "label": "System Info",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "msinfo32"
+    },
+    {
+      "label": "Cleanmgr",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "cleanmgr"
+    },
+    {
+      "label": "GPU Status",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "nvidia-smi\n"
+    },
+    {
+      "label": "CPU Load",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "wmic cpu get loadpercentage\n"
+    },
+    {
+      "label": "Battery Status",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "powercfg /batteryreport\n"
+    },
+    {
+      "label": "Uptime Check",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "net statistics workstation\n"
+    },
+    {
+      "label": "HWMonitor",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start hwmonitor"
+    },
+    {
+      "label": "Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

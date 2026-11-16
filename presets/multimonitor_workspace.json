@@ -1,0 +1,131 @@
+{
+  "id": "multimonitor_workspace",
+  "name": "Virtual Desktop & Multi-Monitor",
+  "category": "System & Scripts",
+  "desc": "Multi-monitor workspace switcher: Virtual Desktop left/right, Window snap, Task View.",
+  "color": "#00838f",
+  "r": 0,
+  "g": 131,
+  "b": 143,
+  "tags": [
+    "multimonitor",
+    "workspace",
+    "virtual desktop",
+    "snap",
+    "windows"
+  ],
+  "keys": [
+    {
+      "label": "Desktop Left",
+      "type": 2,
+      "code": 216,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "Desktop Right",
+      "type": 2,
+      "code": 215,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "New Desktop",
+      "type": 2,
+      "code": 100,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "Close Desktop",
+      "type": 2,
+      "code": 201,
+      "mod": 9,
+      "macro": ""
+    },
+    {
+      "label": "Snap Left",
+      "type": 2,
+      "code": 216,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Snap Right",
+      "type": 2,
+      "code": 215,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Maximize",
+      "type": 2,
+      "code": 218,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Minimize",
+      "type": 2,
+      "code": 217,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Move to Next Screen",
+      "type": 2,
+      "code": 215,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Move to Prev Screen",
+      "type": 2,
+      "code": 216,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Task View",
+      "type": 2,
+      "code": 179,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Peek Desktop",
+      "type": 2,
+      "code": 44,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Minimize All",
+      "type": 2,
+      "code": 109,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Restore All",
+      "type": 2,
+      "code": 109,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "guitar_pro_tab",
+  "name": "Guitar Pro & Tablature",
+  "category": "Audio & Music",
+  "desc": "Guitar tab notation: Note duration 1/4, 1/8, 1/16, Bend, Slide, Hammer, Palm Mute.",
+  "color": "#e65100",
+  "r": 230,
+  "g": 81,
+  "b": 0,
+  "tags": [
+    "guitar",
+    "tabs",
+    "notation",
+    "sheet music",
+    "bass"
+  ],
+  "keys": [
+    {
+      "label": "Quarter (4)",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Eighth (5)",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Sixteenth (6)",
+      "type": 0,
+      "code": 54,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Half Note (3)",
+      "type": 0,
+      "code": 51,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Bend (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Slide (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Hammer-on (H)",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Palm Mute",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vibrato (V)",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Tapping (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play / Stop",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Metronome",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Loop Bar",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Delete Note",
+      "type": 1,
+      "code": 212,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "windows_sysadmin_pro",
+  "name": "Windows Sysadmin Pro",
+  "category": "System & Scripts",
+  "desc": "Windows diagnostics: PowerShell, CMD, Regedit, Services, Taskmgr, Eventvwr, Reboot.",
+  "color": "#0078d4",
+  "r": 0,
+  "g": 120,
+  "b": 212,
+  "tags": [
+    "windows",
+    "sysadmin",
+    "powershell",
+    "it",
+    "tools"
+  ],
+  "keys": [
+    {
+      "label": "PowerShell",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "powershell"
+    },
+    {
+      "label": "Command Prompt",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "cmd"
+    },
+    {
+      "label": "Task Manager",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "taskmgr"
+    },
+    {
+      "label": "Services",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "services.msc"
+    },
+    {
+      "label": "Registry Edit",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "regedit"
+    },
+    {
+      "label": "Event Viewer",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "eventvwr.msc"
+    },
+    {
+      "label": "Device Manager",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "devmgmt.msc"
+    },
+    {
+      "label": "Disk Mgmt",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "diskmgmt.msc"
+    },
+    {
+      "label": "System Info",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "msinfo32"
+    },
+    {
+      "label": "Network Cpl",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "ncpa.cpl"
+    },
+    {
+      "label": "Resource Mon",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "resmon"
+    },
+    {
+      "label": "Control Panel",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "control"
+    },
+    {
+      "label": "File Explorer",
+      "type": 2,
+      "code": 101,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Run Dialog",
+      "type": 2,
+      "code": 114,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Lock Workstation",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

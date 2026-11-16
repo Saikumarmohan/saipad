@@ -1,0 +1,131 @@
+{
+  "id": "streamlabs_desktop",
+  "name": "Streamlabs Desktop Suite",
+  "category": "Streaming & Comms",
+  "desc": "Streamlabs widgets: Alert Mute, Wheel spin, Donation sound, Chatbox toggle.",
+  "color": "#31c3a2",
+  "r": 49,
+  "g": 195,
+  "b": 162,
+  "tags": [
+    "streamlabs",
+    "slobs",
+    "alerts",
+    "live",
+    "donations"
+  ],
+  "keys": [
+    {
+      "label": "Mute Alerts",
+      "type": 2,
+      "code": 97,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Test Follow",
+      "type": 2,
+      "code": 102,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Test Sub",
+      "type": 2,
+      "code": 117,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Test Dono",
+      "type": 2,
+      "code": 111,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Scene Game",
+      "type": 2,
+      "code": 49,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Scene Chat",
+      "type": 2,
+      "code": 50,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Scene Break",
+      "type": 2,
+      "code": 51,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Toggle Mic",
+      "type": 2,
+      "code": 109,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Thank you for Sub!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Thank you so much for the sub! Welcome to the family! \ud83d\udc96\n"
+    },
+    {
+      "label": "Thank you Dono!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Thank you so much for the donation! Highly appreciate the support! \ud83d\ude4f\n"
+    },
+    {
+      "label": "Play Pause",
+      "type": 1,
+      "code": 205,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Audio",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Streamlabs Web",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://streamlabs.com/dashboard"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Screenshot",
+      "type": 2,
+      "code": 115,
+      "mod": 10,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

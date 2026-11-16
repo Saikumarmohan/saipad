@@ -1,0 +1,131 @@
+{
+  "id": "discord_comms",
+  "name": "Discord Gamer & Comms",
+  "category": "Streaming & Comms",
+  "desc": "Discord chat & voice: Toggle Mute, Deafen, Push-to-Talk, Screen Share, Quick Server.",
+  "color": "#5865f2",
+  "r": 88,
+  "g": 101,
+  "b": 242,
+  "tags": [
+    "discord",
+    "chat",
+    "voice",
+    "gamer",
+    "comms"
+  ],
+  "keys": [
+    {
+      "label": "Toggle Mute",
+      "type": 2,
+      "code": 109,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Deafen",
+      "type": 2,
+      "code": 100,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Screen Share",
+      "type": 2,
+      "code": 115,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Quick Switch",
+      "type": 2,
+      "code": 107,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Server Up",
+      "type": 2,
+      "code": 218,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Server Down",
+      "type": 2,
+      "code": 217,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Channel Up",
+      "type": 2,
+      "code": 218,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Channel Down",
+      "type": 2,
+      "code": 217,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "GG WP!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "GG WP! Well played everyone! \ud83c\udfae\n"
+    },
+    {
+      "label": "BRB 2 mins",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "BRB getting some water! \ud83e\udd64\n"
+    },
+    {
+      "label": "Join Voice",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Hop in voice channel! \ud83c\udf99\ufe0f\n"
+    },
+    {
+      "label": "Mute Mic",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Open Discord",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start discord:"
+    },
+    {
+      "label": "Spotify",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start spotify"
+    },
+    {
+      "label": "Emoji Pick",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

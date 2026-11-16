@@ -1,0 +1,131 @@
+{
+  "id": "pandas_data_wrangling",
+  "name": "Pandas & Exploratory Data",
+  "category": "AI & Data Science",
+  "desc": "Pandas speed tokens: read_csv, groupby, value_counts, dropna, describe.",
+  "color": "#130754",
+  "r": 19,
+  "g": 7,
+  "b": 84,
+  "tags": [
+    "pandas",
+    "data analysis",
+    "python",
+    "numpy",
+    "eda"
+  ],
+  "keys": [
+    {
+      "label": "pd.read_csv",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "df = pd.read_csv(\""
+    },
+    {
+      "label": "df.shape",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "print(df.shape)\n"
+    },
+    {
+      "label": "df.columns",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "print(df.columns.tolist())\n"
+    },
+    {
+      "label": "df.describe()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "print(df.describe())\n"
+    },
+    {
+      "label": "value_counts",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "df[''].value_counts()\n"
+    },
+    {
+      "label": "isnull().sum()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "print(df.isnull().sum())\n"
+    },
+    {
+      "label": "dropna()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "df = df.dropna()\n"
+    },
+    {
+      "label": "groupby()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "df.groupby('')"
+    },
+    {
+      "label": ".apply(lambda)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": ".apply(lambda x: )"
+    },
+    {
+      "label": "df.to_csv",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "df.to_csv('output.csv', index=False)\n"
+    },
+    {
+      "label": "import seaborn",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "import matplotlib.pyplot as plt\nimport seaborn as sns\n"
+    },
+    {
+      "label": "Jupyter Lab",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://localhost:8888"
+    },
+    {
+      "label": "Run Cell",
+      "type": 2,
+      "code": 176,
+      "mod": 2,
+      "macro": ""
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "vintage_crt_terminal",
+  "name": "Retro 1980s CRT Terminal",
+  "category": "System & Scripts",
+  "desc": "Vintage mainframe vibes: Amber CRT green, DIR, TREE, CLS, VER, MEM, ECHO.",
+  "color": "#33ff33",
+  "r": 51,
+  "g": 255,
+  "b": 51,
+  "tags": [
+    "retro",
+    "dos",
+    "crt",
+    "terminal",
+    "1980s"
+  ],
+  "keys": [
+    {
+      "label": "DIR /W",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DIR /W\n"
+    },
+    {
+      "label": "TREE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "TREE /F\n"
+    },
+    {
+      "label": "CLS",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "CLS\n"
+    },
+    {
+      "label": "VER",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "VER\n"
+    },
+    {
+      "label": "MEM",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "MEM\n"
+    },
+    {
+      "label": "DATE",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DATE\n"
+    },
+    {
+      "label": "TIME",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "TIME\n"
+    },
+    {
+      "label": "TYPE README",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "TYPE README.TXT\n"
+    },
+    {
+      "label": "ECHO HELLO",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ECHO HELLO WORLD!\n"
+    },
+    {
+      "label": "EDIT",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "EDIT\n"
+    },
+    {
+      "label": "DEBUG",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DEBUG\n"
+    },
+    {
+      "label": "FORMAT A:",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "FORMAT A: /Q\n"
+    },
+    {
+      "label": "CMD Console",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "cmd"
+    },
+    {
+      "label": "Enter",
+      "type": 1,
+      "code": 176,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Backspace",
+      "type": 1,
+      "code": 178,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

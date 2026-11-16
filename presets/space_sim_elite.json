@@ -1,0 +1,131 @@
+{
+  "id": "space_sim_elite",
+  "name": "Space Sim (Elite / Star Citizen)",
+  "category": "Gaming & Esports",
+  "desc": "Spaceship thrusters: Landing gear, Quantum drive, Target lock, Chaff, Supercruise.",
+  "color": "#303f9f",
+  "r": 48,
+  "g": 63,
+  "b": 159,
+  "tags": [
+    "space",
+    "elite dangerous",
+    "star citizen",
+    "scifi",
+    "simulator"
+  ],
+  "keys": [
+    {
+      "label": "Landing Gear (L)",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Quantum / FSD (J)",
+      "type": 0,
+      "code": 106,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Target Lock (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Highest Threat (H)",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Deploy Hardpoint",
+      "type": 0,
+      "code": 117,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Flight Assist (Z)",
+      "type": 0,
+      "code": 122,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Boost Engine (Tab)",
+      "type": 0,
+      "code": 179,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Deploy Chaff (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Shield Cell (V)",
+      "type": 0,
+      "code": 118,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Night Vision",
+      "type": 0,
+      "code": 110,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Cargo Scoop (Home)",
+      "type": 0,
+      "code": 111,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Headlights (Insert)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "External Cam",
+      "type": 0,
+      "code": 48,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Comms Window",
+      "type": 0,
+      "code": 50,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mute Discord",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

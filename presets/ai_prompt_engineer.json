@@ -1,0 +1,131 @@
+{
+  "id": "ai_prompt_engineer",
+  "name": "AI Prompt Engineer & ChatGPT",
+  "category": "AI & Data Science",
+  "desc": "Master prompts: System Prompt, Few-Shot, Code Refactor, Explain Like I'm 5, JSON.",
+  "color": "#06b6d4",
+  "r": 6,
+  "g": 182,
+  "b": 212,
+  "tags": [
+    "ai",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "prompts"
+  ],
+  "keys": [
+    {
+      "label": "System:",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "System: You are an expert "
+    },
+    {
+      "label": "Refactor Code",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Refactor this code for readability, performance and clean architecture:\n"
+    },
+    {
+      "label": "Explain ELI5",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Explain this complex topic simply, using everyday analogies (ELI5):\n"
+    },
+    {
+      "label": "Output JSON",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Return ONLY valid JSON with no markdown wrapping or preamble:\n"
+    },
+    {
+      "label": "Unit Tests",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Write comprehensive unit tests with edge cases for this function:\n"
+    },
+    {
+      "label": "Fix Bugs",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Find any edge-case bugs, security vulnerabilities or performance traps:\n"
+    },
+    {
+      "label": "Summarize TLDR",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Summarize the key insights, action items and takeaways as bullet points:\n"
+    },
+    {
+      "label": "Step-by-Step",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Think through this problem step-by-step before answering:\n"
+    },
+    {
+      "label": "ChatGPT",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://chatgpt.com"
+    },
+    {
+      "label": "Claude AI",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://claude.ai"
+    },
+    {
+      "label": "Gemini AI",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://gemini.google.com"
+    },
+    {
+      "label": "Hugging Face",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://huggingface.co"
+    },
+    {
+      "label": "Paste & Send",
+      "type": 2,
+      "code": 118,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Copy All",
+      "type": 2,
+      "code": 97,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

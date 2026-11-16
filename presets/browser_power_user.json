@@ -1,0 +1,131 @@
+{
+  "id": "browser_power_user",
+  "name": "Chrome & Edge Power Browsing",
+  "category": "Office & Finance",
+  "desc": "High-speed tab & window navigation: Reopen tab, Duplicate, DevTools, Zoom.",
+  "color": "#4285f4",
+  "r": 66,
+  "g": 133,
+  "b": 244,
+  "tags": [
+    "chrome",
+    "edge",
+    "browser",
+    "web",
+    "internet"
+  ],
+  "keys": [
+    {
+      "label": "New Tab",
+      "type": 2,
+      "code": 116,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Close Tab",
+      "type": 2,
+      "code": 119,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Reopen Tab",
+      "type": 2,
+      "code": 116,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Next Tab",
+      "type": 2,
+      "code": 179,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Prev Tab",
+      "type": 2,
+      "code": 179,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "New Window",
+      "type": 2,
+      "code": 110,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Incognito",
+      "type": 2,
+      "code": 110,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Address Bar",
+      "type": 2,
+      "code": 108,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "DevTools F12",
+      "type": 2,
+      "code": 201,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "History",
+      "type": 2,
+      "code": 104,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Downloads",
+      "type": 2,
+      "code": 106,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Bookmark",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Zoom Reset",
+      "type": 2,
+      "code": 48,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Refresh",
+      "type": 2,
+      "code": 114,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Hard Refresh",
+      "type": 2,
+      "code": 114,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

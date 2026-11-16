@@ -1,0 +1,131 @@
+{
+  "id": "email_inbox_zero",
+  "name": "Email & Inbox Zero (Gmail / Outlook)",
+  "category": "Office & Finance",
+  "desc": "Email speed processing: Archive, Reply, Reply All, Forward, Star, Send.",
+  "color": "#ea4335",
+  "r": 234,
+  "g": 67,
+  "b": 53,
+  "tags": [
+    "email",
+    "gmail",
+    "outlook",
+    "inbox zero",
+    "office"
+  ],
+  "keys": [
+    {
+      "label": "Archive (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Reply (R)",
+      "type": 0,
+      "code": 114,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Reply All (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Forward (F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark Read (Shift+I)",
+      "type": 0,
+      "code": 73,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark Unread (Shift+U)",
+      "type": 0,
+      "code": 85,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Star / Flag (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Delete (#)",
+      "type": 0,
+      "code": 35,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Snooze (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Compose (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Send Email",
+      "type": 2,
+      "code": 176,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Thanks! Best regards,",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Thanks so much,\nBest regards,\nSai\n"
+    },
+    {
+      "label": "Open Gmail",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://mail.google.com"
+    },
+    {
+      "label": "Open Outlook",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start outlook:"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

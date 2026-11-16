@@ -1,0 +1,131 @@
+{
+  "id": "coreldraw_vector",
+  "name": "CorelDRAW Vector Studio",
+  "category": "Creative & Design",
+  "desc": "CorelDRAW fast tools: Pick, Shape, Pen, Rectangle, Ellipse, Align Center.",
+  "color": "#00833e",
+  "r": 0,
+  "g": 131,
+  "b": 62,
+  "tags": [
+    "coreldraw",
+    "vector",
+    "print",
+    "cutting",
+    "sign"
+  ],
+  "keys": [
+    {
+      "label": "Pick Tool",
+      "type": 1,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Shape (F10)",
+      "type": 1,
+      "code": 200,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Zoom (F2)",
+      "type": 1,
+      "code": 192,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Freehand (F5)",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Pen Tool",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Rect (F6)",
+      "type": 1,
+      "code": 196,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ellipse (F7)",
+      "type": 1,
+      "code": 197,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Text (F8)",
+      "type": 0,
+      "code": 56,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Align C (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Align E (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Align T (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Align B (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Group",
+      "type": 2,
+      "code": 103,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Ungroup",
+      "type": 2,
+      "code": 117,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Convert Curve",
+      "type": 2,
+      "code": 113,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

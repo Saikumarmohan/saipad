@@ -1,0 +1,131 @@
+{
+  "id": "moba_lol_dota",
+  "name": "League of Legends & Dota 2",
+  "category": "Gaming & Esports",
+  "desc": "MOBA quick-actions: Ability level-up, Danger ping, Missing ping, Ward, Shop, Surrender.",
+  "color": "#f1c40f",
+  "r": 241,
+  "g": 196,
+  "b": 15,
+  "tags": [
+    "lol",
+    "dota2",
+    "moba",
+    "gaming",
+    "esports"
+  ],
+  "keys": [
+    {
+      "label": "Level Up Q",
+      "type": 2,
+      "code": 113,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Level Up W",
+      "type": 2,
+      "code": 119,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Level Up E",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Level Up R",
+      "type": 2,
+      "code": 114,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Shop (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ward (4)",
+      "type": 0,
+      "code": 52,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Potion (1)",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Flash (F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Ping: Missing!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "v"
+    },
+    {
+      "label": "Ping: On My Way",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "g"
+    },
+    {
+      "label": "Ping: Danger!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ctrl+v"
+    },
+    {
+      "label": "Team: Baron Now!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "y BARON NOW TEAM!\n"
+    },
+    {
+      "label": "Team: Dragon",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "y DRAGON IN 30S GROUP UP\n"
+    },
+    {
+      "label": "/ff Surrender",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "/ff\n"
+    },
+    {
+      "label": "Mute Discord",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

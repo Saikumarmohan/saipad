@@ -1,0 +1,131 @@
+{
+  "id": "linux_bash_terminal",
+  "name": "Linux & Bash Terminal",
+  "category": "Developer & Git",
+  "desc": "Linux navigation: htop, tail, grep, chmod, systemctl, tar, ssh, kill.",
+  "color": "#f1502f",
+  "r": 241,
+  "g": 80,
+  "b": 47,
+  "tags": [
+    "linux",
+    "bash",
+    "shell",
+    "ubuntu",
+    "server"
+  ],
+  "keys": [
+    {
+      "label": "htop",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "htop\n"
+    },
+    {
+      "label": "tail -f",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "tail -f "
+    },
+    {
+      "label": "grep -rn",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "grep -rn \""
+    },
+    {
+      "label": "chmod +x",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "chmod +x "
+    },
+    {
+      "label": "sudo su",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "sudo -i\n"
+    },
+    {
+      "label": "systemctl",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "sudo systemctl status "
+    },
+    {
+      "label": "restart svc",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "sudo systemctl restart "
+    },
+    {
+      "label": "netstat",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "netstat -tulnp\n"
+    },
+    {
+      "label": "df -h",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "df -h\n"
+    },
+    {
+      "label": "free -m",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "free -m\n"
+    },
+    {
+      "label": "ps aux",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ps aux | grep "
+    },
+    {
+      "label": "kill -9",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "kill -9 "
+    },
+    {
+      "label": "tar -xvf",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "tar -xvf "
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

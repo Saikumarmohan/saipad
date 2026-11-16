@@ -1,0 +1,131 @@
+{
+  "id": "word_document_pro",
+  "name": "Microsoft Word & Authoring",
+  "category": "Office & Finance",
+  "desc": "Document drafting: Heading styles, Page Break, Alignment, Find/Replace, Print.",
+  "color": "#2b579a",
+  "r": 43,
+  "g": 87,
+  "b": 154,
+  "tags": [
+    "word",
+    "authoring",
+    "writing",
+    "office",
+    "documents"
+  ],
+  "keys": [
+    {
+      "label": "Heading 1",
+      "type": 2,
+      "code": 49,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Heading 2",
+      "type": 2,
+      "code": 50,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Heading 3",
+      "type": 2,
+      "code": 51,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Normal Style",
+      "type": 2,
+      "code": 110,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Page Break",
+      "type": 2,
+      "code": 176,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Align Left",
+      "type": 2,
+      "code": 108,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Align Center",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Align Justify",
+      "type": 2,
+      "code": 106,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Find & Replace",
+      "type": 2,
+      "code": 104,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Bold",
+      "type": 2,
+      "code": 98,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Italic",
+      "type": 2,
+      "code": 105,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Underline",
+      "type": 2,
+      "code": 117,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Insert Link",
+      "type": 2,
+      "code": 107,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Print",
+      "type": 2,
+      "code": 112,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

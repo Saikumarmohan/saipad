@@ -1,0 +1,131 @@
+{
+  "id": "solidworks_cad",
+  "name": "SolidWorks & Fusion 360",
+  "category": "Creative & Design",
+  "desc": "3D CAD mechanical modeling: Sketch, Extrude, Revolve, Fillet, Chamfer, Measure.",
+  "color": "#da291c",
+  "r": 218,
+  "g": 41,
+  "b": 28,
+  "tags": [
+    "solidworks",
+    "fusion360",
+    "cad",
+    "3d print",
+    "engineering"
+  ],
+  "keys": [
+    {
+      "label": "Sketch (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Extrude",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "e"
+    },
+    {
+      "label": "Revolve",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "r"
+    },
+    {
+      "label": "Fillet",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "f"
+    },
+    {
+      "label": "Chamfer",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "c"
+    },
+    {
+      "label": "Dimension",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "d"
+    },
+    {
+      "label": "Measure",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "m"
+    },
+    {
+      "label": "Front View",
+      "type": 2,
+      "code": 49,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Top View",
+      "type": 2,
+      "code": 53,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Right View",
+      "type": 2,
+      "code": 52,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Isometric",
+      "type": 2,
+      "code": 55,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Normal To",
+      "type": 2,
+      "code": 56,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Rebuild",
+      "type": 2,
+      "code": 98,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "ESC",
+      "type": 1,
+      "code": 177,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

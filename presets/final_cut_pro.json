@@ -1,0 +1,131 @@
+{
+  "id": "final_cut_pro",
+  "name": "Final Cut Pro X Master",
+  "category": "Video & Audio",
+  "desc": "Final Cut Pro magnetic timeline: Blade, Select, Trim, Connect, Snapping, Export.",
+  "color": "#1e88e5",
+  "r": 30,
+  "g": 136,
+  "b": 229,
+  "tags": [
+    "final cut",
+    "fcpx",
+    "mac",
+    "video",
+    "apple"
+  ],
+  "keys": [
+    {
+      "label": "Blade (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Select (A)",
+      "type": 0,
+      "code": 97,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Trim (T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Position (P)",
+      "type": 0,
+      "code": 112,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Connect (Q)",
+      "type": 0,
+      "code": 113,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Insert (W)",
+      "type": 0,
+      "code": 119,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Append (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark In (I)",
+      "type": 0,
+      "code": 105,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Mark Out (O)",
+      "type": 0,
+      "code": 111,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Playhead (Space)",
+      "type": 0,
+      "code": 32,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Snapping (N)",
+      "type": 0,
+      "code": 110,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Split Clip",
+      "type": 2,
+      "code": 98,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Detached Audio",
+      "type": 2,
+      "code": 115,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Export Master",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

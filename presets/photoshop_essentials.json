@@ -1,0 +1,131 @@
+{
+  "id": "photoshop_essentials",
+  "name": "Adobe Photoshop Essentials",
+  "category": "Creative & Design",
+  "desc": "Photoshop speed tools: Layers, Brush, Lasso, Transform, Healing, Invert, Save.",
+  "color": "#31a8ff",
+  "r": 49,
+  "g": 168,
+  "b": 255,
+  "tags": [
+    "photoshop",
+    "adobe",
+    "photo",
+    "retouch",
+    "raster"
+  ],
+  "keys": [
+    {
+      "label": "Brush (B)",
+      "type": 0,
+      "code": 98,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Eraser (E)",
+      "type": 0,
+      "code": 101,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lasso (L)",
+      "type": 0,
+      "code": 108,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Marquee (M)",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Free Trans",
+      "type": 2,
+      "code": 116,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "New Layer",
+      "type": 2,
+      "code": 110,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Duplicate",
+      "type": 2,
+      "code": 106,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Deselect",
+      "type": 2,
+      "code": 100,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Invert",
+      "type": 2,
+      "code": 105,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Healing (J)",
+      "type": 0,
+      "code": 106,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Stamp (S)",
+      "type": 0,
+      "code": 115,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Crop (C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Merge Down",
+      "type": 2,
+      "code": 101,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Save Web",
+      "type": 2,
+      "code": 115,
+      "mod": 7,
+      "macro": ""
+    },
+    {
+      "label": "Undo Step",
+      "type": 2,
+      "code": 122,
+      "mod": 5,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

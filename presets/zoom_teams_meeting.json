@@ -1,0 +1,131 @@
+{
+  "id": "zoom_teams_meeting",
+  "name": "Zoom & Teams Meeting Master",
+  "category": "Streaming & Comms",
+  "desc": "Remote work video calls: Mute Mic, Toggle Camera, Share Screen, Raise Hand.",
+  "color": "#2d8cff",
+  "r": 45,
+  "g": 140,
+  "b": 255,
+  "tags": [
+    "zoom",
+    "teams",
+    "meetings",
+    "video call",
+    "work"
+  ],
+  "keys": [
+    {
+      "label": "Mute Zoom (Alt+A)",
+      "type": 2,
+      "code": 97,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Camera Zoom",
+      "type": 2,
+      "code": 118,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Share Zoom",
+      "type": 2,
+      "code": 115,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Raise Hand Zoom",
+      "type": 2,
+      "code": 121,
+      "mod": 4,
+      "macro": ""
+    },
+    {
+      "label": "Mute Teams",
+      "type": 2,
+      "code": 109,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Camera Teams",
+      "type": 2,
+      "code": 111,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Share Teams",
+      "type": 2,
+      "code": 101,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Raise Hand Teams",
+      "type": 2,
+      "code": 107,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Can everyone hear?",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Can everyone see my screen and hear me clearly?\n"
+    },
+    {
+      "label": "Thanks for time!",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Thanks everyone, have a great rest of the day!\n"
+    },
+    {
+      "label": "Drop in chat",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "I've dropped the link in the meeting chat.\n"
+    },
+    {
+      "label": "Stay-Awake",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Audio Mute",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Calculator",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "calc"
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

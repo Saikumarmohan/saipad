@@ -1,0 +1,131 @@
+{
+  "id": "pdf_reader_annotation",
+  "name": "PDF Reader & Highlight Deck",
+  "category": "Office & Finance",
+  "desc": "Acrobat & PDF tools: Highlight, Comment, Sticky note, Zoom fit, Rotate.",
+  "color": "#ff2d20",
+  "r": 255,
+  "g": 45,
+  "b": 32,
+  "tags": [
+    "pdf",
+    "acrobat",
+    "documents",
+    "reader",
+    "highlight"
+  ],
+  "keys": [
+    {
+      "label": "Highlight Tool",
+      "type": 2,
+      "code": 104,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Comment Note",
+      "type": 2,
+      "code": 99,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Text Box",
+      "type": 2,
+      "code": 116,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Rotate Right",
+      "type": 2,
+      "code": 114,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Fit Width",
+      "type": 2,
+      "code": 50,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Fit Page",
+      "type": 2,
+      "code": 48,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Page",
+      "type": 1,
+      "code": 215,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Prev Page",
+      "type": 1,
+      "code": 216,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Find Text",
+      "type": 2,
+      "code": 102,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Save PDF",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Print PDF",
+      "type": 2,
+      "code": 112,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Adobe Reader",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start acrord32"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Undo",
+      "type": 2,
+      "code": 122,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Redo",
+      "type": 2,
+      "code": 122,
+      "mod": 3,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

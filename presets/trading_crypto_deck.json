@@ -1,0 +1,131 @@
+{
+  "id": "trading_crypto_deck",
+  "name": "TradingView & Crypto Trading",
+  "category": "AI & Data Science",
+  "desc": "Financial charting: Timeframe switch, Trendline, Horizontal level, Long/Short, Buy/Sell.",
+  "color": "#2962ff",
+  "r": 41,
+  "g": 98,
+  "b": 255,
+  "tags": [
+    "trading",
+    "crypto",
+    "tradingview",
+    "bitcoin",
+    "stocks"
+  ],
+  "keys": [
+    {
+      "label": "Trendline (Alt+T)",
+      "type": 0,
+      "code": 116,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Horizontal (Alt+H)",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Crosshair (Alt+C)",
+      "type": 0,
+      "code": 99,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Fibonacci (Alt+F)",
+      "type": 0,
+      "code": 102,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "1m Timeframe",
+      "type": 0,
+      "code": 49,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "5m Timeframe",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "15m Timeframe",
+      "type": 0,
+      "code": 53,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "1h Timeframe",
+      "type": 0,
+      "code": 104,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "1D Timeframe",
+      "type": 0,
+      "code": 100,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Measure Tool",
+      "type": 0,
+      "code": 109,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "TradingView",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://tradingview.com/chart"
+    },
+    {
+      "label": "CoinMarketCap",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://coinmarketcap.com"
+    },
+    {
+      "label": "Calculator",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "calc"
+    },
+    {
+      "label": "Screenshot",
+      "type": 1,
+      "code": 195,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "pytorch_deep_learning",
+  "name": "PyTorch & Deep Learning",
+  "category": "AI & Data Science",
+  "desc": "PyTorch training loop: loss.backward(), optimizer.step(), zero_grad(), cuda.",
+  "color": "#ee4c2c",
+  "r": 238,
+  "g": 76,
+  "b": 44,
+  "tags": [
+    "pytorch",
+    "deep learning",
+    "cuda",
+    "neural network",
+    "python"
+  ],
+  "keys": [
+    {
+      "label": "zero_grad()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "optimizer.zero_grad()\n"
+    },
+    {
+      "label": "loss.backward",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "loss.backward()\n"
+    },
+    {
+      "label": "optimizer.step",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "optimizer.step()\n"
+    },
+    {
+      "label": ".to(device)",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": ".to(device)"
+    },
+    {
+      "label": "torch.cuda",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "device = 'cuda' if torch.cuda.is_available() else 'cpu'\n"
+    },
+    {
+      "label": "model.eval()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "model.eval()\nwith torch.no_grad():\n"
+    },
+    {
+      "label": "model.train()",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "model.train()\n"
+    },
+    {
+      "label": "DataLoader",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "DataLoader(dataset, batch_size=32, shuffle=True)\n"
+    },
+    {
+      "label": "nvidia-smi",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "nvidia-smi -l 2\n"
+    },
+    {
+      "label": "tensorboard",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "tensorboard --logdir=runs\n"
+    },
+    {
+      "label": "GPU Monitor",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt nvidia-smi -l 1"
+    },
+    {
+      "label": "Jupyter",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://localhost:8888"
+    },
+    {
+      "label": "Save Code",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

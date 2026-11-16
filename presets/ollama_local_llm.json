@@ -1,0 +1,131 @@
+{
+  "id": "ollama_local_llm",
+  "name": "Ollama & Local LLM Runner",
+  "category": "AI & Data Science",
+  "desc": "Local LLM management: ollama run, pull, list, ps, serve, prompt templates.",
+  "color": "#111111",
+  "r": 17,
+  "g": 17,
+  "b": 17,
+  "tags": [
+    "ollama",
+    "llm",
+    "local ai",
+    "llama3",
+    "mistral"
+  ],
+  "keys": [
+    {
+      "label": "ollama list",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ollama list\n"
+    },
+    {
+      "label": "run llama3",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ollama run llama3:8b\n"
+    },
+    {
+      "label": "run mistral",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ollama run mistral\n"
+    },
+    {
+      "label": "run qwen",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ollama run qwen2.5-coder:7b\n"
+    },
+    {
+      "label": "run deepseek",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ollama run deepseek-coder-v2\n"
+    },
+    {
+      "label": "ollama ps",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ollama ps\n"
+    },
+    {
+      "label": "ollama serve",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ollama serve\n"
+    },
+    {
+      "label": "curl API",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "curl http://localhost:11434/api/generate -d '{\"model\": \"llama3\", \"prompt\": \"hello\"}'\n"
+    },
+    {
+      "label": "Open WebUI",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start http://localhost:3000"
+    },
+    {
+      "label": "Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "stop model",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "ollama stop "
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Presence",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Copy Output",
+      "type": 2,
+      "code": 99,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Paste",
+      "type": 2,
+      "code": 118,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

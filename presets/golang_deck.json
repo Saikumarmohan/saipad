@@ -1,0 +1,131 @@
+{
+  "id": "golang_deck",
+  "name": "Go / Golang Engine",
+  "category": "Developer & Git",
+  "desc": "Go commands: go run, test, build, vet, fmt, mod tidy, err handling.",
+  "color": "#00add8",
+  "r": 0,
+  "g": 173,
+  "b": 216,
+  "tags": [
+    "go",
+    "golang",
+    "google",
+    "backend",
+    "microservices"
+  ],
+  "keys": [
+    {
+      "label": "go run .",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "go run .\n"
+    },
+    {
+      "label": "go test -v",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "go test -v ./...\n"
+    },
+    {
+      "label": "go build",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "go build\n"
+    },
+    {
+      "label": "mod tidy",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "go mod tidy\n"
+    },
+    {
+      "label": "if err!=nil",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "if err != nil {\n\treturn err\n}\n"
+    },
+    {
+      "label": "fmt.Println",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "fmt.Println("
+    },
+    {
+      "label": "func main",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "func main() {\n\n}\n"
+    },
+    {
+      "label": "go fmt",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "go fmt ./...\n"
+    },
+    {
+      "label": "go vet",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "go vet ./...\n"
+    },
+    {
+      "label": "goroutine",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "go func() {\n\n}()\n"
+    },
+    {
+      "label": "make test",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "make test\n"
+    },
+    {
+      "label": "make run",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "make run\n"
+    },
+    {
+      "label": "Terminal",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "wt"
+    },
+    {
+      "label": "Save",
+      "type": 2,
+      "code": 115,
+      "mod": 1,
+      "macro": ""
+    },
+    {
+      "label": "clear",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "clear\n"
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}

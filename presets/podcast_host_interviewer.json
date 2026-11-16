@@ -1,0 +1,131 @@
+{
+  "id": "podcast_host_interviewer",
+  "name": "Podcast Host & Interviewer",
+  "category": "Streaming & Comms",
+  "desc": "Host console: Question prompt, Sound effect trigger, Timer mark, Cough mute.",
+  "color": "#ff9800",
+  "r": 255,
+  "g": 152,
+  "b": 0,
+  "tags": [
+    "podcast",
+    "interview",
+    "host",
+    "radio",
+    "audio"
+  ],
+  "keys": [
+    {
+      "label": "Cough Mute",
+      "type": 1,
+      "code": 226,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Intro Greeting",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "Welcome back to the podcast! Today we have an amazing guest.\n"
+    },
+    {
+      "label": "Question 1",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[Q: Can you tell us about your background and how you got started?]\n"
+    },
+    {
+      "label": "Question 2",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[Q: What was the biggest turning point in your career?]\n"
+    },
+    {
+      "label": "Question 3",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[Q: Where can our listeners find you and your work?]\n"
+    },
+    {
+      "label": "Timecode Mark",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[TIMECODE MARK] "
+    },
+    {
+      "label": "Sound: Bell",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[SFX_BELL]"
+    },
+    {
+      "label": "Sound: Claps",
+      "type": 3,
+      "code": 0,
+      "mod": 0,
+      "macro": "[SFX_APPLAUSE]"
+    },
+    {
+      "label": "Open Notes",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "notepad D:\\podcast_notes.txt"
+    },
+    {
+      "label": "Open Browser",
+      "type": 5,
+      "code": 0,
+      "mod": 0,
+      "macro": "start https://google.com"
+    },
+    {
+      "label": "Vol Up",
+      "type": 1,
+      "code": 233,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Vol Down",
+      "type": 1,
+      "code": 234,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Play Audio",
+      "type": 1,
+      "code": 205,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Stay-Awake",
+      "type": 4,
+      "code": 2,
+      "mod": 0,
+      "macro": ""
+    },
+    {
+      "label": "Lock PC",
+      "type": 2,
+      "code": 108,
+      "mod": 8,
+      "macro": ""
+    },
+    {
+      "label": "Next Layer",
+      "type": 4,
+      "code": 1,
+      "mod": 0,
+      "macro": ""
+    }
+  ]
+}
